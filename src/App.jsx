@@ -65,6 +65,7 @@ export default function App() {
         menuOpen={menuOpen}
         onNavigate={handleNavigate}
         loggedIn={loggedIn}
+        userEmail={userEmail}
       />
       <MenuOverlay
         open={menuOpen}
