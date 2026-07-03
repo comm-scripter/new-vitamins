@@ -17,8 +17,8 @@ export default function LandingPage({ onNavigate }) {
     <div className="page-enter" style={{
       width:'100%', height:'100%',
       display:'flex', flexDirection:'column',
-      alignItems:'center', justifyContent:'center',
-      position:'relative', overflow:'hidden',
+      alignItems:'center',
+      position:'relative', overflowX:'hidden', overflowY:'auto',
       background:'radial-gradient(ellipse at 50% 0%, #1e0a3c 0%, #0d0820 60%)',
     }}>
       <StarField/>
@@ -33,7 +33,9 @@ export default function LandingPage({ onNavigate }) {
         top:'50%', left:'50%', transform:'translate(-50%,-50%)',
         pointerEvents:'none',
       }}/>
-      <div style={{textAlign:'center', zIndex:10, padding:'0 24px', maxWidth:600}}>
+      {/* margin:auto centers when there's room but keeps the top reachable
+          (scrollable) when the hero is taller than the viewport */}
+      <div style={{textAlign:'center', zIndex:10, padding:'88px 24px 48px', maxWidth:600, margin:'auto 0', flexShrink:0}}>
         <div style={{marginBottom:32, animation:'capsuleGlow 3s ease-in-out infinite'}}>
           <CapsuleSVG color1="#a855f7" color2="#ec4899" size={48}/>
         </div>

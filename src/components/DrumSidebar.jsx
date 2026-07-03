@@ -37,7 +37,7 @@ function GroupSlider({ activeGroup, onSelect }) {
     <div style={{
       width: 44, flexShrink: 0, display: 'flex',
       alignItems: 'center', justifyContent: 'center',
-      padding: '20px 0', margin: '0 40px 0 48px', cursor: 'grab',
+      padding: '20px 0', margin: '0 6% 0 8%', cursor: 'grab',
     }}
       onMouseDown={onMouseDown}
       onTouchStart={onTouchStart}
@@ -192,12 +192,17 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
         <GroupSlider activeGroup={activeGroup} onSelect={setActiveGroup} />
 
         {/* Drum area: CSS 3D prism.
-            Each face carries its own full rotateY+translateZ transform instead
-            of living inside one rotating preserve-3d container. The rendered
-            motion is identical, but the active face's transform is always a
-            plain frontal translateZ — browsers cannot hit-test descendants of
-            an ancestor rotated exactly 90°/270°, which is what made sides 2
-            and 4 unclickable. */}
+            Each face carries its own full transform instead of living inside
+            one rotating preserve-3d container. The rendered motion is
+            identical, but the active face's transform is always a plain
+            frontal one — browsers cannot hit-test descendants of an ancestor
+            rotated exactly 90°/270°, which is what made sides 2 and 4
+            unclickable.
+            The leading translateZ(-radius) pushes the rotation axis behind
+            the screen plane so the active face lands exactly at z=0: no
+            perspective magnification, so the face fits the drum area with no
+            top/right clipping, while off-axis faces still recede in 3D
+            during the spin. */}
         <div ref={drumAreaRef} style={{ position: 'relative', flex: 1, overflow: 'hidden' }}>
           <div style={{
             width: '100%', height: '100%', position: 'relative',
@@ -214,7 +219,7 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
                   key={group.id}
                   style={{
                     position: 'absolute', inset: 0,
-                    transform: `rotateY(${(gi - activeGroup) * faceAngle}deg) translateZ(${radius}px)`,
+                    transform: `translateZ(${-radius}px) rotateY(${(gi - activeGroup) * faceAngle}deg) translateZ(${radius}px)`,
                     transition: 'transform 0.55s cubic-bezier(0.4,0,0.2,1)',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',

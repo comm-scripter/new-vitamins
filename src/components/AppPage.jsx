@@ -19,7 +19,7 @@ export default function AppPage({ userEmail, onNavigate, savedCat, savedDay, onC
           Good day, <em style={{color:'#d8b4fe'}}>{username}</em> ✨
         </h2>
       </div>
-      <div style={{flex:1, overflow:'hidden'}}>
+      <div className="app-content">
         <AllVitaminsView onNavigate={onNavigate}
           savedCat={savedCat} savedDay={savedDay}
           onCatChange={onCatChange} onDayChange={onDayChange}/>

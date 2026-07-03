@@ -1,13 +1,30 @@
 import CapsuleSVG from './CapsuleSVG';
 import { useWindowWidth } from '../hooks';
+import { DAYS, TODAY_IDX } from '../data';
 
-export default function Header({ onMenuToggle, menuOpen, onNavigate }) {
+export default function Header({ onMenuToggle, menuOpen, onNavigate, loggedIn, userEmail }) {
   const isLarge = useWindowWidth() >= 1024;
   const capsuleSize = isLarge ? 26 : 18;
   const barWidth = isLarge ? 30 : 24;
+  const username = userEmail ? userEmail.split('@')[0] : '';
 
   return (
     <header className="app-header">
+      {/* Date + greeting live in the header on large screens to free
+          vertical space for the vitamin card and day picker below */}
+      {isLarge && loggedIn && username && (
+        <div style={{
+          position: 'absolute', left: '50%', transform: 'translateX(-50%)',
+          display: 'flex', alignItems: 'baseline', gap: 12, whiteSpace: 'nowrap',
+        }}>
+          <span style={{ fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', color: 'rgba(196,181,253,0.7)' }}>
+            {DAYS[TODAY_IDX]}, {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
+          </span>
+          <span style={{ fontFamily: 'Playfair Display', fontSize: 'var(--fs-lg)', color: '#f3e8ff', fontWeight: 700 }}>
+            Good day, <em style={{ color: '#d8b4fe' }}>{username}</em> ✨
+          </span>
+        </div>
+      )}
       <button onClick={()=>onNavigate('home')} style={{
         background:'none', border:'none', cursor:'pointer',
         display:'flex', alignItems:'center', gap:12,
