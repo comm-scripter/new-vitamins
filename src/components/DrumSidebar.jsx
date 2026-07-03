@@ -1,60 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { CATEGORY_GROUPS, CATEGORIES } from '../data';
-import { hexToRgb } from '../utils';
-
-// ── Topic button ──────────────────────────────────────────────
-function TopicBtn({ cat, selected, onSelect, onNavigate }) {
-  const r0 = hexToRgb(cat.color[0]);
-  const r1 = hexToRgb(cat.color[1]);
-  return (
-    <div>
-      <button
-        onClick={() => onSelect(cat.id)}
-        style={{
-          display: 'flex', alignItems: 'center', gap: 9,
-          width: '100%', padding: '7px 10px', borderRadius: 10,
-          border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'all 0.18s',
-          background: selected
-            ? `linear-gradient(135deg,rgba(${r0},0.28),rgba(${r1},0.13))`
-            : 'transparent',
-          outline: selected ? `1px solid rgba(${r0},0.45)` : 'none',
-        }}
-      >
-        <span style={{
-          width: 26, height: 26, borderRadius: 7, flexShrink: 0, fontSize: 14,
-          background: `linear-gradient(135deg,${cat.color[0]},${cat.color[1]})`,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>{cat.emoji}</span>
-        <span style={{
-          fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-          fontWeight: selected ? 600 : 400,
-          color: selected ? '#f3e8ff' : '#c4b5fd',
-        }}>{cat.label}</span>
-      </button>
-      {selected && (
-        <button
-          onClick={() => onNavigate(`devotional:${cat.id}`)}
-          style={{
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '3px 10px 3px 45px', width: '100%',
-            border: 'none', background: 'transparent', cursor: 'pointer',
-            color: '#a78bfa', fontFamily: 'DM Sans', fontSize: 12, fontWeight: 500,
-            transition: 'color 0.2s',
-          }}
-          onMouseEnter={e => e.currentTarget.style.color = '#f3e8ff'}
-          onMouseLeave={e => e.currentTarget.style.color = '#a78bfa'}
-        >
-          📖 Read Devotional
-        </button>
-      )}
-    </div>
-  );
-}
+import TopicBtn from './TopicBtn';
 
 // ── Vertical group slider ─────────────────────────────────────
 function GroupSlider({ activeGroup, onSelect }) {
   const trackRef = useRef(null);
-  const n = CATEGORY_GROUPS.length; // 4
+  const n = CATEGORY_GROUPS.length;
 
   const pickGroup = useCallback((clientY) => {
     const rect = trackRef.current?.getBoundingClientRect();
@@ -95,7 +46,6 @@ function GroupSlider({ activeGroup, onSelect }) {
         position: 'relative', width: 6, height: '100%',
         background: 'rgba(168,85,247,0.15)', borderRadius: 6,
       }}>
-        {/* filled track */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
           height: `${activePct}%`,
@@ -104,7 +54,6 @@ function GroupSlider({ activeGroup, onSelect }) {
           boxShadow: `0 0 8px ${activeG.color[0]}55`,
         }} />
 
-        {/* tick marks */}
         {CATEGORY_GROUPS.map((g, i) => {
           const pct = (i / (n - 1)) * 100;
           return (
@@ -123,7 +72,6 @@ function GroupSlider({ activeGroup, onSelect }) {
           );
         })}
 
-        {/* Vitamin-shaped drag handle */}
         <div style={{
           position: 'absolute', left: '50%', top: `${activePct}%`,
           transform: 'translate(-50%, -50%)',
@@ -132,16 +80,13 @@ function GroupSlider({ activeGroup, onSelect }) {
           boxShadow: `0 2px 14px ${activeG.color[0]}88, 0 0 0 2px rgba(255,255,255,0.15)`,
           transition: 'top 0.4s cubic-bezier(0.4,0,0.2,1), background 0.4s',
           pointerEvents: 'none',
-          // shine overlay
           backgroundImage: `linear-gradient(160deg, ${activeG.color[0]}, ${activeG.color[1]}),
             linear-gradient(135deg, rgba(255,255,255,0.35) 0%, transparent 55%)`,
           backgroundBlendMode: 'normal',
         }}>
-          {/* inner shine */}
           <div style={{
             position: 'absolute', top: 3, left: 3, right: 3, height: '40%',
-            borderRadius: 9999,
-            background: 'rgba(255,255,255,0.25)',
+            borderRadius: 9999, background: 'rgba(255,255,255,0.25)',
           }} />
         </div>
       </div>
@@ -156,8 +101,10 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
     return gi >= 0 ? gi : 0;
   });
   const [search, setSearch] = useState('');
-  const [drumW, setDrumW] = useState(200);
-  const drumRef = useRef(null);
+  const [halfW, setHalfW] = useState(110);
+  const drumAreaRef = useRef(null);
+  const drumRowRef  = useRef(null);
+  const wheelLastFired = useRef(0);
 
   // Keep active group in sync when category is selected externally
   useEffect(() => {
@@ -165,27 +112,38 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
     if (gi >= 0 && gi !== activeGroup) setActiveGroup(gi);
   }, [selectedCat]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Measure drum container WIDTH — this is the translateZ distance (half of square prism side)
+  // Measure drum area width — determines the translateZ prism radius
   useEffect(() => {
-    const el = drumRef.current;
+    const el = drumAreaRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(([e]) => setDrumW(e.contentRect.width));
+    const ro = new ResizeObserver(([e]) => setHalfW(e.contentRect.width / 2));
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
 
-  const halfW = drumW / 2;
-  const wheelLastFired = useRef(0);
-
-  const handleWheel = useCallback((e) => {
-    e.preventDefault();
-    const now = Date.now();
-    if (now - wheelLastFired.current < 550) return;
-    wheelLastFired.current = now;
-    setActiveGroup(g => e.deltaY > 0
-      ? Math.min(CATEGORY_GROUPS.length - 1, g + 1)
-      : Math.max(0, g - 1));
+  // Non-passive wheel listener so we can preventDefault
+  useEffect(() => {
+    const el = drumRowRef.current;
+    if (!el) return;
+    const handler = (e) => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - wheelLastFired.current < 550) return;
+      wheelLastFired.current = now;
+      setActiveGroup(g => e.deltaY > 0
+        ? Math.min(CATEGORY_GROUPS.length - 1, g + 1)
+        : Math.max(0, g - 1));
+    };
+    el.addEventListener('wheel', handler, { passive: false });
+    return () => el.removeEventListener('wheel', handler);
   }, []);
+
+  // N-sided prism geometry: works for any number of groups in data.js.
+  // radius is the apothem — distance from the rotation axis to each face
+  // (equals halfW for a 4-sided square prism, so the look is unchanged).
+  const n = CATEGORY_GROUPS.length;
+  const faceAngle = 360 / n;
+  const radius = n >= 3 ? halfW / Math.tan(Math.PI / n) : halfW;
 
   const filtered = search.trim()
     ? CATEGORIES.filter(c => c.label.toLowerCase().includes(search.toLowerCase()))
@@ -215,7 +173,7 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
       {/* Divider */}
       <div style={{ height: 1, background: 'rgba(168,85,247,0.12)', flexShrink: 0 }} />
 
-      {/* ── Search results — always mounted, hidden when not searching ── */}
+      {/* Search results */}
       <div style={{
         display: filtered ? 'block' : 'none',
         flex: 1, overflowY: 'auto', padding: '8px 10px 16px', scrollbarWidth: 'thin',
@@ -226,44 +184,46 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
         )}
       </div>
 
-      {/* ── Drum + slider — always mounted, hidden during search ── */}
+      {/* Drum + slider */}
       <div
-        style={{ display: filtered ? 'none' : 'flex', flex: 1, overflow: 'hidden', padding: '8px 0' }}
-        onWheel={handleWheel}
+        ref={drumRowRef}
+        style={{ display: filtered ? 'none' : 'flex', flex: 1, overflow: 'hidden' }}
       >
         <GroupSlider activeGroup={activeGroup} onSelect={setActiveGroup} />
 
-        {/* 3-D drum */}
-        <div
-          ref={drumRef}
-          style={{
-            flex: 1, overflow: 'visible',
-            perspective: `${Math.max(drumW * 3, 600)}px`,
-            perspectiveOrigin: '50% 0%',
-          }}
-        >
+        {/* Drum area: CSS 3D prism.
+            Each face carries its own full rotateY+translateZ transform instead
+            of living inside one rotating preserve-3d container. The rendered
+            motion is identical, but the active face's transform is always a
+            plain frontal translateZ — browsers cannot hit-test descendants of
+            an ancestor rotated exactly 90°/270°, which is what made sides 2
+            and 4 unclickable. */}
+        <div ref={drumAreaRef} style={{ position: 'relative', flex: 1, overflow: 'hidden' }}>
           <div style={{
-            width: '100%', height: '100%',
-            position: 'relative', transformStyle: 'preserve-3d',
-            transform: `rotateY(${-activeGroup * 90}deg)`,
-            transition: 'transform 0.55s cubic-bezier(0.4,0,0.2,1)',
+            width: '100%', height: '100%', position: 'relative',
+            perspective: `${Math.max(radius * 6, 800)}px`,
+            perspectiveOrigin: '50% 50%',
           }}>
             {CATEGORY_GROUPS.map((group, gi) => {
               const cats = group.categoryIds
                 .map(id => CATEGORIES.find(c => c.id === id))
                 .filter(Boolean);
+              const isActive = gi === activeGroup;
               return (
                 <div
                   key={group.id}
                   style={{
                     position: 'absolute', inset: 0,
+                    transform: `rotateY(${(gi - activeGroup) * faceAngle}deg) translateZ(${radius}px)`,
+                    transition: 'transform 0.55s cubic-bezier(0.4,0,0.2,1)',
                     backfaceVisibility: 'hidden',
                     WebkitBackfaceVisibility: 'hidden',
-                    transform: `rotateY(${gi * 90}deg) translateZ(${halfW}px)`,
-                    overflowY: 'auto', scrollbarWidth: 'thin',
-                    padding: '12px 8px 16px',
+                    overflowY: isActive ? 'auto' : 'hidden',
+                    scrollbarWidth: 'thin',
                     display: 'flex', flexDirection: 'column',
-                    pointerEvents: gi === activeGroup ? 'auto' : 'none',
+                    padding: '12px 8px 16px',
+                    pointerEvents: isActive ? 'auto' : 'none',
+                    background: `linear-gradient(160deg, ${group.color[0]}20, ${group.color[1]}0c)`,
                   }}
                 >
                   <div style={{
@@ -287,6 +247,7 @@ export default function DrumSidebar({ selectedCat, onSelectCat, onNavigate }) {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
