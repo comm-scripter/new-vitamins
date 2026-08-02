@@ -1,0 +1,117 @@
+{
+  "id": "churches",
+  "order": 48,
+  "label": "The Seven Churches",
+  "emoji": "⛪",
+  "color": [
+    "#818cf8",
+    "#6366f1"
+  ],
+  "group": "g3",
+  "vitamins": [
+    {
+      "scripture": {
+        "ref": "Revelation 3:21",
+        "verse": "\"I know your works, that you are neither cold or hot. I wish you were cold or hot. As many as I love, I rebuke and chasten. Therefore be zealous and repent. To him who overcomes I will grant to sit with Me and with My Father on His throne.\""
+      },
+      "quote": {
+        "verse": "\"Unconfessed sin in the soul is like a bullet in the body.\"",
+        "author": "Dwight L. Moody"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 2:7",
+        "verse": "\"Christ holds the seven stars in His right hand. He commends their deeds and hard work. He does not tolerate their losing their first love. He promises that whoever overcomes will eat from the tree of life.\""
+      },
+      "quote": {
+        "verse": "\"The lampstand was positioned strategically to do one thing. Cast light on the table and on the bread that represented God's goodness and provision.\"",
+        "author": "Reggie Joiner"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 2:11",
+        "verse": "\"I know your works, tribulation, and poverty, but you are rich; Do not fear any of those things which you are about to suffer. He who overcomes shall not be hurt by the second death.\""
+      },
+      "quote": {
+        "verse": "\"As long as the church remains an effective platform for God's light to reveal to the world the sacrifice Jesus made, the church will be naturally irresistible.\"",
+        "author": "Reggie Joiner"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 2:17",
+        "verse": "\"I know your works, and where you dwell, where Satan's throne is. Repent, or else I will come to you quickly and will fight against them with the sword of My mouth. To him who overcomes I will give some of the hidden manna to eat.\""
+      },
+      "quote": {
+        "verse": "\"Jesus compares the church to the lampstands in Revelation - a strong reminder of the church's responsibility.\"",
+        "author": "Reggie Joiner"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 2:26",
+        "verse": "\"I know your works, love, service, faith, and your patience; as for your works, the last are more than the first. And he who overcomes and keeps My works until the end, I will give power over the nations.\""
+      },
+      "quote": {
+        "verse": "\"Conscience is a divinely implanted ability in Man, telling him that he ought to do right.\"",
+        "author": "Dwight L. Moody"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 3:5",
+        "verse": "\"I have not found your works perfect before God. Therefore how you have received and heard, hold fast and repent. He who overcomes shall be clothed in white garments and I will not blot out his name in the Book of Life.\""
+      },
+      "quote": {
+        "verse": "\"The first step on the way to victory is to recognize the enemy.\"",
+        "author": "Corrie Ten Boom"
+      }
+    },
+    {
+      "scripture": {
+        "ref": "Revelation 3:12",
+        "verse": "\"I know your works, I have set before you an open door, and no one can shut it; Because you have kept My command to persevere I also will keep you from the hour of trial. He who overcomes, I will make him a pillar in the temple of My God and he shall go out no more.\""
+      },
+      "quote": {
+        "verse": "\"A person who wholly follows the Lord is the one who believes that the promises of God are trustworthy, that He is with His people, and that they are well able to overcome.\"",
+        "author": "Watchman Nee"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "ref": "Revelation 21:7",
+      "verse": "\"I am the Alpha and the Omega, the beginning and the end. He who overcomes shall inherit all things.\""
+    },
+    "quote": {
+      "verse": "\"By relying on God's power and being obedient to His word, you can be an overcomer in any situation.\"",
+      "author": "John C. Broger"
+    }
+  },
+  "devotional": {
+    "title": "The Seven Churches Overcome letter - May 2024",
+    "scripture": {
+      "ref": "Revelation 1:5-6",
+      "verse": "\"To Him who loved us and washed us from our sins in His own blood, and has made us Kings and Priests to His God and Father.\""
+    },
+    "body": [
+      "Revelation was written by the disciple John, who was a prisoner on the Isle of Patmos, to the 7 churches located in Asia. The 7 Spirits before the throne is the Holy Spirit. The mystery of the 7 stars seen by John is revealed as the 7 Angels of the 7 churches who hold the lampstands. The lampstands are not the light, but hold the light of God and His instructions to pass on to future believers. John then writes down the names of the 7 churches who hold the light, and the messages for us.",
+      "My thanks for the information, footnotes and charts used from the Jeremiah Bible, as well as help and enlighten from the Bible Knowledge Commentary by Dr. John F. Walvoord and Dr. Roy B. Zuck. \"He who has an ear, let him hear what the Spirit says to the churches.\"",
+      "Each church has 4 areas of Praise plus a Promise from Christ Jesus.",
+      "1. COMMENDATION, Christ knows their work. (except Laodicea)",
+      "2. A REBUKE, I have this against you, (except Smyrma and Philadelphia)",
+      "3. EXHORTATION, Repent, be overcomers.",
+      "4. AN ENCOURAGING PROMISE (each church receives a different promise)",
+      "A. The Church at Ephesus: I know your deeds and your toils and perseverance. But I have this against you. You have left your first love. Christ's Overcomer Promise:Eat from the tree of life. Revelation 2:7",
+      "B. The Church at Smyrma: I know your tribulation and poverty. Satan will test you. Overcomer Promise: Not experience second death. Revelation 2:11",
+      "C. The Church at Pergamos: You hold fast My Name and do not deny My faith. But I have a few things against you. Teach of Balaam, a blunder to the Jews, eat food sacrificed to idols, acts of immorality. Overcomer Promise: Eat of the hidden manna. Revelation 2:17",
+      "D. The Church at Thyatira: Your deeds are greater than first. But I have this against you.Tolerated Jezebel, immorality. Overcomer Promise: Have power over the nations. Revelation 2:26.",
+      "E. The Church at Sardis: I know your incomplete deeds. A few people are unsoiled. Overcomer Promise: Clothed in white garments. Revelation 3:5",
+      "F. The Church at Philadelphia: I know your deeds. I give you an open door. You have a little power. You have kept My Word and My Name. Revelation 3:8",
+      "G. Overcomer Promise: A Pillar in the Temple of God. Revelation 3:12 The Church at Laodicea: I know your deeds. You are Lukewarm so I will spit you out of My mouth. Those I love I discipline. Repent. Overcomer Promise: . Sit with Me on My Throne. Revelation 3:21",
+      "H. I Am the Alpha and Omega. He who overcomes will inherit all things."
+    ]
+  }
+}

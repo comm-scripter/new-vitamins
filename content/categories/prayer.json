@@ -1,0 +1,115 @@
+{
+  "id": "prayer",
+  "order": 7,
+  "label": "The Lord's Prayer",
+  "emoji": "🙏",
+  "color": [
+    "#c084fc",
+    "#818cf8"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"Forgive us our debts as we have forgiven our debtors.\"",
+        "ref": "Matthew 6:12"
+      },
+      "quote": {
+        "verse": "\"The glory of Christianity is to conquer by forgiveness.\"",
+        "author": "William Blake"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Our Father who is in heaven:\"",
+        "ref": "Matthew 6:9a"
+      },
+      "quote": {
+        "verse": "\"If you are too busy to pray, then you are too busy.\"",
+        "author": "W.E. Sangster"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Hallowed be Your name,\"",
+        "ref": "Matthew 6:9b"
+      },
+      "quote": {
+        "verse": "\"Lord and Savior, true and kind, be the master of my mind; Bless and guide and strengthen still, all my powers of thought and will.\"",
+        "author": "Handley Moule"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Your kingdom come.\"",
+        "ref": "Matthew 6:10a"
+      },
+      "quote": {
+        "verse": "\"Before we can pray, 'Lord, Thy kingdom come,' we must be willing to pray, 'Lord, my kingdom go.'\"",
+        "author": "Alan Redpath"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Your will be done\"",
+        "ref": "Matthew 6:10b"
+      },
+      "quote": {
+        "verse": "\"Reading the Bible is not like reading any other book in the world. It's the only book able to conform us to the image of its author.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"On earth as it is in heaven.\"",
+        "ref": "Matthew 6:10c"
+      },
+      "quote": {
+        "verse": "\"The universe in its immensity was especially created for us humans so that we could see and appreciate the glory and the power of God.\"",
+        "author": "Werner Gitt"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Give us this day our daily bread.\"",
+        "ref": "Matthew 6:11"
+      },
+      "quote": {
+        "verse": "\"When our bodies need energy, we eat food. But when our souls need hope, we are nourished by God's precious and very great promises.\"",
+        "author": "Jon Bloom"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Do not lead us into temptation, but deliver us from evil.\"",
+      "ref": "Matthew 6:13"
+    },
+    "quote": {
+      "verse": "\"Satan and his demons never, never act against God's people without the permission of God.\"",
+      "author": "John MacArthur"
+    }
+  },
+  "devotional": {
+    "title": "The Lord's Prayer",
+    "scripture": {
+      "ref": "Matthew 6:9-13 & Luke 11:1-4",
+      "verse": "“It happened that while Jesus was praying in a certain place, after He had finished one of the disciples said to Him, Lord, teach us to pray just as John (the Baptist) taught his disciples.”"
+    },
+    "body": [
+      "We have taken this prayer as a model prayer for believers of the Christian faith. The disciples also looked to this prayer as their model when given by Jesus.",
+      "In doing a little research I learned that it was customary in Israel, at this time, for famous Rabbis to compose a special prayer for those students who were part of his Rabbinical school. Scripture seems to be telling us that John the Baptist followed this custom for the disciples who were traveling with him. Those who were identified as part of Christ’s teaching ask for this privilege also.",
+      "This prayer given by the Son of God whose abode was heaven, and before His birth, knew the FATHER intimately. So Jesus directs His disciples to address their prayers as He did, “Our Father---",
+      "Verse 1 identifies the home of our Creator which is HEAVEN.",
+      "Verse 2 identifies the specialness of His name, -- HALLOWED.",
+      "Verse 3 identifies the region of God’s domain, -- KINGDOM.",
+      "Verse 4 identifies the authority of God’s purpose, -- HIS WILL.",
+      "Verse 5 identifies where God’s commitment is done. --EARTH.",
+      "Verse 6 identifies our most important sustenance, -- DAILY FOOD.",
+      "Verse 7 identifies our great spiritual human need, -- FORGIVENESS.",
+      "Verse 8 identifies our deliverance from TEMPTATIONS.",
+      "Jesus tells us to worship God in secret, and that the Father, who is unseen will see us and answer our prayers. In summary:",
+      "Worship is the essence of all prayer. The Name of the LORD is Holy and to be Revered. We long for God’s kingdom to come in which He will fulfill all His Covenant Promises. We pray that God’s will be accomplished on earth today as it is in heaven. We ask God to meet Personal needs. Bread represents both physical and spiritual nourishment; We ask God’s Forgiveness and forgive others; We must pray to God to help us live righteous lives and to protect us from Evil Temptation."
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "think",
+  "order": 35,
+  "label": "Think About...",
+  "emoji": "💭",
+  "color": [
+    "#64748b",
+    "#475569"
+  ],
+  "group": "g2",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "Psalm 145:18\n\"The Lord is near to all who call upon Him, to all who call upon Him in TRUTH.\"",
+        "ref": "TRUTH"
+      },
+      "quote": {
+        "verse": "\"There comes a time when one must take a position that is neither safe nor politic nor popular, but he must take it because concience tells him it is right.\"",
+        "author": "Martin Luther King, Jr."
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Luke 8:15\n\"But the seed in the good soil, these are the ones who have heard the word in an HONEST and good heart, and hold it fast and bear fruit with perseverance.\"",
+        "ref": "HONESTY"
+      },
+      "quote": {
+        "verse": "\"Integrity is doing the right thing, even when no one is watching.\"",
+        "author": "C.S. Lewis"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Psalm 19:8\n\"The precepts of the Lord are RIGHT, rejoicing the heart.\"",
+        "ref": "RIGHT"
+      },
+      "quote": {
+        "verse": "\"Praise, like sunshine, helps all things grow.\"",
+        "author": "Croft M. Pentz"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "1 Timothy 1:5\n\"But the goal of our instruction is love from a PURE heart and a good conscience and a sincere faith.\"",
+        "ref": "PURITY"
+      },
+      "quote": {
+        "verse": "\"Knowing what's right doesn't mean much unless you do what's right.\"",
+        "author": "Theodore Roosevelt"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Isaiah 52:7\n\"How LOVELY on the mountains are the feet of him who brings good news, who announces peace and brings good news of happiness, and who announces salvation...your God reigns!\"",
+        "ref": "LOVELY"
+      },
+      "quote": {
+        "verse": "\"For I am persuaded that the Lord has more truth and light yet to break forth from His holy word.\"",
+        "author": "John Robinson"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "John 12:36-38\n\"These things Jesus spoke,...But though He had performed so many signs before them, yet they were not believing in Him...Lord, who has believed our REPORT?\"",
+        "ref": "GOOD REPUTE"
+      },
+      "quote": {
+        "verse": "\"I hope I shall possess firmness and virtue enough to maintain what I consider the most enviable of all titles, the character of an honest man.\"",
+        "author": "George Washington"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "1 Peter 2:9\n\"But you are a chosen race, a royal priesthood, a holy nation, a people for God's own possession so that you may proclaim the EXCELLENCE of Him.\"",
+        "ref": "EXCELLENCE"
+      },
+      "quote": {
+        "verse": "\"The right kind of heart is a kind heart like God's.\"",
+        "author": "Unknown"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "Psalm 103:1\n\"BLESS the Lord O my soul; and all that is within me, BLESS His Holy Name.\"",
+      "ref": "PRAISE"
+    },
+    "quote": {
+      "verse": "\"The Word of God is perfect and pure, it is truth itself.\"",
+      "author": "Martin Luther"
+    }
+  },
+  "devotional": {
+    "title": "Think About These Things",
+    "scripture": {
+      "ref": "Philippians 4:8-9",
+      "verse": "“In conclusion, my brothers, fill your minds with those things that are good and deserve praise: things that are true, noble, right, pure, lovely, and honorable. Put into practice what you learned and received from me, both from my words and from my deeds.” (Good News for Modern Man)"
+    },
+    "body": [
+      "As the days and weeks have collected in 2021 the news reports and actions of leaders all over our world have been worrying, lawless, and in shambles. I have found it difficult to stay happy and optimistic about our nation’s future. In reading Philippians 4:8-9 however, I understand that Paul, the author, meant these passages for growth, good instruction and a positive action for both his times and ours. I encourage you to join me as we dig into these 8 scripture skills and seek a deeper personal understanding of God’s truth.",
+      "TRUTH = The word translates to be SURE. Only God’s Word, the Bible, can be known and depended upon for absolute TRUTH.",
+      "HONEST = Here is another basic word which means GOOD or TRUE. Many times the reports we receive in this present age are slanted to tell us information that is other than completely honest.",
+      "RIGHT = The full biblical meaning of RIGHT is JUST or JUSTICE. As flawed people we fail perfect justice. Only GOD’S justice is perfect!",
+      "PURE = GENUINE or UNDEFILED are the hallmark of this word. Back in the 1940’s the product Ivory Soap had a slogan which called their soap 99 and 44/100% pure. Today we are called to follow Christ’s example of living a life of PURE moral behavior.",
+      "LOVELY = We seek this word’s meaning, which is BEAUTIFUL as our outward character. Our LORD seeks a person who speaks lovely words, thinks lovely thoughts, and uses lovely actions.",
+      "GOOD REPUTE = Here is a real challenge. REPUTE translates as REPORT. GOD has sent us many good reports. The major report is the Good News of Jesus Christ. EXCELLENCE = This skill is translated PERFECTION or PREEMINENT. This would describe one such as a king, ruler, or lord. This describes GOD, the LORD of LIFE.",
+      "PRAISE= Translated from the Greek we have the meaning of BLESSED or COMMENDED. We need to continually remember all the blessings we receive come continually from our Heavenly Father"
+    ]
+  }
+}

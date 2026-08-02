@@ -1,0 +1,111 @@
+{
+  "id": "faith-2",
+  "order": 1,
+  "label": "Faith",
+  "emoji": "🕯️",
+  "color": [
+    "#8b5cf6",
+    "#a855f7"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"Cling to what is good. Be kindly affectionate to one another with brotherly love.\"",
+        "ref": "Romans 12:10"
+      },
+      "quote": {
+        "verse": "\"Kind words can be short yet only to speak, but their echoes are truly endless.\"",
+        "author": "Mother Teresa"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"(Christians) are protected by the power of God through faith for a salvation ready to be revealed in the last time.\"",
+        "ref": "1 Peter 1:5"
+      },
+      "quote": {
+        "verse": "\"Faith literally means to give up, surrender, or commit. Faith is complete confidence.\"",
+        "author": "Billy Graham"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Do not be deceived. Bad company corrupts good morals.\"",
+        "ref": "1 Corinthians 15:33"
+      },
+      "quote": {
+        "verse": "\"Virtue - even attempted virtue - brings light, indulgence brings fog.\"",
+        "author": "C.S. Lewis"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Who has directed the Spirit of the Lord,… Who taught Him knowledge, and showed Him the way of understanding?\"",
+        "ref": "Isaiah 40:13"
+      },
+      "quote": {
+        "verse": "\"Of all treasures of knowledge, the most vital knowledge is His existence, power, love, and promises.\"",
+        "author": "Spencer W. Kimball"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For man will be lovers of themselves, lovers of money, boasters, proud ... unthankful, unholy, unloving, unforgiving, slanderers without self control.\"",
+        "ref": "2 Timothy 3:2-4"
+      },
+      "quote": {
+        "verse": "\"We must have a spirit of power toward the enemy, a spirit of love towards men, and a spirit of self-control.\"",
+        "author": "Watchman Nee"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Because you have kept My command to persevere, I will also keep you from the hour of trial which shall come upon the whole world.\"",
+        "ref": "Revelation 3:10"
+      },
+      "quote": {
+        "verse": "\"Storms make the oak grow deeper roots.\"",
+        "author": "George Herbert"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"And without controversy great is the mystery of godliness. God was manifest in the flesh, justified in the Spirit, seen by angels, preached among the gentiles, believed on in the world, received up into glory.\"",
+        "ref": "1 Timothy 2:4"
+      },
+      "quote": {
+        "verse": "\"The key to godliness is not more knowledge but more obedience.\"",
+        "author": "Woodrow Kroll"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"But now abide faith, hope, love, these three; but the greatest of these is love.\"",
+      "ref": "1 Corinthians 13:13"
+    },
+    "quote": {
+      "verse": "\"God proved His love on the cross. When Christ hung, and bled, it was God saying to the world, I love you.\"",
+      "author": "Billy Graham"
+    }
+  },
+  "devotional": {
+    "title": "July 2024 - Faith",
+    "scripture": {
+      "ref": "1 Peter 1:23",
+      "verse": "\"For you have been born again, not of seed which is perishable, but imperishable.\""
+    },
+    "body": [
+      "Seven Steps to Follow Faith in Christ",
+      "The very best definition of faith is found in Hebrews 11:1 in the Bible. \"Now faith is the substance of things hoped for, the evidence of things not seen.” This verse teaches we can be sure about God, (hypostasis). Being certain (elencho), about unseen hopes and realities. The Bible says Faith wins Gods acceptance and reward.",
+      "The next step after Faith is Virtue. The disciple, Paul is concerned about the immorality in the Corinthians Church and quotes a pagan writer, Menander, with an ancient definition. \"Bad company corrupts good character. My grandmother used to quote, \"One rotten apple spoils the whole barrel.\"",
+      "Knowledge is the third topic after Faith and Virtue. Knowledge is understanding and related to discern. Love of Christ surpasses knowledge of Christ.",
+      "Self-Control is fourth in our walk. It is a big challenge for most of us. We see the lack of it daily on television. The Bible lists 19 negative traits of faithlessness in 2 Timothy 3:1-9. without self- control. Galatians 5:23 names it as fruit from the Holy Spirit.",
+      "The fifth step is Perseverance. Iwo Churches in Revelation were commended for their steadfast perseverance. Thyatira is promised authority over the nations, and the Philidelphia church would be a pillar in the temple of God. Rewards are given by God for perseverance.",
+      "Godliness, which is next step holds a great mystery. The mystery concerns Christ and was hidden in previous years but now revealed. Here is the revelation. 1. Christ appeared in body. 2. Was vindicated by the Holy Spirit. 3. Seen by Angels. 4. Preached among nations. 5. Believed on by the world. 6. Taken up in glory.",
+      "Our last step, number seven is Brotherly kindness and Brotherly love. We who are a part of the Christian faith are expected to experience God's Faithful Love and reproduce it in our life.",
+      "We end with a snapshot of the facets of faith as we remember the scripture on Love. 1 Corinthians 13:13. The images of Faith, Hope and Love are excellent, but Love is eternal."
+    ]
+  }
+}

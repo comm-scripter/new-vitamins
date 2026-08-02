@@ -1,0 +1,114 @@
+{
+  "id": "holy",
+  "order": 11,
+  "label": "Holy Lord",
+  "emoji": "👑",
+  "color": [
+    "#fbbf24",
+    "#f59e0b"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"My mouth will speak the praise of the LORD; and all flesh will bless His Holy name forever and ever.\"",
+        "ref": "Psalm 145:21"
+      },
+      "quote": {
+        "verse": "\"A holy life will produce the deepest impression. Lighthouses blow no horns; they only shine.\"",
+        "author": "Dwight L. Moody"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But the LORD is in His holy temple. Let all the earth be silent before Him.\"",
+        "ref": "Habakkuk 2:20"
+      },
+      "quote": {
+        "verse": "\"Holiness is not just for some select few spiritual giants; ... everyone who names the name of the Lord is called to live a holy life.\"",
+        "author": "Nancy Leigh DeMoss"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Therefore, having these promises, beloved, let us cleanse ourselves from all defilement of flesh and spirit, perfecting holiness in the fear of God.\"",
+        "ref": "2 Corinthians 7:1"
+      },
+      "quote": {
+        "verse": "\"You want to make a difference in your world? Live a holy life. People are watching the way we act more than they are listening to what we say.\"",
+        "author": "Max Lucado"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"I urge you therefore, brethren, by the mercies of God present your bodies a living and holy sacrifice, acceptable to God.\"",
+        "ref": "Romans 12:1"
+      },
+      "quote": {
+        "verse": "\"May all Christians be found worthy of either the pure white crown of a holy life or the royal red crown of martyrdom.\"",
+        "author": "Cyprian"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Glory in His Holy name; let the heart of those who seek the Lord be glad.\"",
+        "ref": "1 Chronicles 16:10"
+      },
+      "quote": {
+        "verse": "\"If there is not at least a yearning in our hearts to live a holy life pleasing to God, we need to seriously question whether our faith in Christ is genuine.\"",
+        "author": "Jerry Bridges"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For You will not abandon my soul to Sheol neither will You allow Your Holy One to see the pit.\"",
+        "ref": "Psalm 16:10"
+      },
+      "quote": {
+        "verse": "\"Grace is not the freedom to sin, it is the power to live a holy life.\"",
+        "author": "Joyce Meyer"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Observe the sabbath day to keep it holy as the LORD your God commanded you.\"",
+        "ref": "Deuteronomy 5:12"
+      },
+      "quote": {
+        "verse": "\"A holy life is in itself a wonderful power, and will make up for many deficiencies; it is in fact the best sermon a man can ever deliver.\"",
+        "author": "Charles Spurgeon"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Do not give what is holy to dogs, and do not throw your pearls before swine lest they trample them under their feet, and turn and tear you to pieces.\"",
+      "ref": "Matthew 7:6"
+    },
+    "quote": {
+      "verse": "\"The Christian is a holy rebel loose in the world with access to the throne of God.\"",
+      "author": "A.W. Tozer"
+    }
+  },
+  "devotional": {
+    "title": "April 2023 - The Holiness of the Lord",
+    "scripture": {
+      "ref": "Isaiah 6:3",
+      "verse": "\"HOLY, HOLY, HOLY. And one (angel) called out to another and said, 'Holy, Holy, Holy, is the LORD of hosts, the whole earth is full of His glory.\""
+    },
+    "body": [
+      "In 1969 at age 31 While living in Tucson, Arizona I accepted Jesus as my savior. My family and I joined a small church near our home named Evangelical Covet Church. It was small but welcomed us with warm hospitality.",
+      "A small choir of about 8-10 people were loyal and were robed for duty every Sunday. When Tim and I joined the choir it expanded to a full dozen. The morning service always opened with the Hymn, \"The LORD is in His Holy Temple\" as we processed down the center aisle and the congregation prepared their hearts to silently join in the second stanza, \"Let all the earth keep silence before Him\" thereby showing their love and respect for the worship of the LORD.",
+      "Those memories have remained with me for over 50 years and caused me to seek to share some of my ideas on God's Holiness this month.",
+      "The definition of Holy is Sanctified, dedicated or Sacred. From Exodus in the Old Testament to the books of Romans and 1 Peter in the New Testament God has chosen to enlighten us on His Holiness and to tell us what else is Holy, namely:",
+      "1. The Trinity is Holy. Father, Son and Holy Spirit. (read Acts 3:14) From Genesis to Exodus and in Moses' Song in Habakkuk 1:12 the Lord gives us proof.",
+      "2. God's Name is Holy. (read Psalm 145:21 and Luke 1:49)",
+      "3. The Sabbath Day is Holy. (see Genesis 2:3 and Exodus 20:8)",
+      "4. The Name of the Lord is Holy. (read 2 Timothy 1:9 and 2 Timothy 3:16)",
+      "5. Believers who are devoted to God and are dedicated to the work of God are called Saints. (read Romans 12:1)",
+      "What did I learn about our Holy God from these verses? God is sacred and worthy of our love and worship because of His Holiness! All He has created is provided in His holiness for believers. Faith in the \"Holy One\" is our key to living a holy life. Holiness is much to be desired!",
+      "Psalm 11:4 The Lord is in His holy temple, the Lord's throne is in heaven.",
+      "Note: On day 3 of the accompanying vitamins, I quote Cyprian, who lived from 210 to 258. He was the Bishop of Carthage and an early church writer."
+    ]
+  }
+}

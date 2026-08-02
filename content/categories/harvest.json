@@ -1,0 +1,111 @@
+{
+  "id": "harvest",
+  "order": 33,
+  "label": "Harvest",
+  "emoji": "🧺",
+  "color": [
+    "#ca8a04",
+    "#84cc16"
+  ],
+  "group": "g2",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"But when the crop permits, he immediately puts in the sickle, because the harvest has come.\"",
+        "ref": "Mark 4:29"
+      },
+      "quote": {
+        "verse": "\"When God talks to you about a seed, He has a harvest on His mind.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Then Jesus said to His disciples \"The harvest truly is plentiful, but the laborers are few.\"\"",
+        "ref": "Matthew 9:37"
+      },
+      "quote": {
+        "verse": "\"Your future is a harvest produced by the seed you are willing to sow.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"You have multiplied the nation and increased its joy. They rejoice before you according to the joy of harvest.\"",
+        "ref": "Isaiah 9:3"
+      },
+      "quote": {
+        "verse": "\"An uncommon seed always creates an uncommon harvest.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Therefore pray the Lord of the harvest to send out laborers into His harvest.\"",
+        "ref": "Matthew 9:38"
+      },
+      "quote": {
+        "verse": "\"When you ask God for a harvest, He will always ask you for a seed.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The harvest is past, the summer is ended. And we are not saved.\"",
+        "ref": "Jeremiah 8:20"
+      },
+      "quote": {
+        "verse": "\"The quality of your seed determines the quality of your harvest.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The Lord said, I will never again curse the ground... while the earth remains, Seedtime and Harvest, Cold and Heat, Winter and Summer, Day and Night, shall not cease!\"",
+        "ref": "Genesis 8:21-22"
+      },
+      "quote": {
+        "verse": "\"Honor becomes your seed before you reap it as a harvest.\"",
+        "author": "Mike Murdock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"He who gathers in summer is a son who acts wisely. But he who sleeps in harvest is a son who acts shamefully.\"",
+        "ref": "Proverbs 10:5"
+      },
+      "quote": {
+        "verse": "\"Your seed is anything that benefits another, your harvest is anything that benefits you.\"",
+        "author": "Mike Murdock"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"For in this case the saying is true, One sows and another reaps (the harvest).\"",
+      "ref": "John 4:37"
+    },
+    "quote": {
+      "verse": "\"If what you hold in your hand is not enough to be your harvest, it must be your seed.\"",
+      "author": "Mike Murdock"
+    }
+  },
+  "devotional": {
+    "title": "Harvest",
+    "scripture": {
+      "ref": "John 4:35",
+      "verse": "“You have a saying, ‘Four more months and then the harvest.’ I tell you, take a good look at the fields: the crops are now ripe and ready to be harvested!”"
+    },
+    "body": [
+      "The LORD has much to tell us about harvest as it relates to planting seeds of salvation to His created people. Soul winning is God’s plan for all Christians. I find evangelism difficult. These vitamin verses my be useful in meeting the challenges. I hope you will find them effective in harvesting souls for Christ. Thanksgiving was a celebration for the joy of having an abundant food harvest. A soul harvest is important. Celebrate soul saving.",
+      "Monday’s vitamin will direct your thinking to the activity of labor. The time and sometimes the inconvenience it takes to read and share scripture with a friend or even a new acquaintance is a labor of love.",
+      "When Tuesday appears it directs our thinking to the joy we feel in our effort for sharing Jesus with someone. It is a success in which we need to rejoice because in that success a life is saved.",
+      "Wednesday’s vitamin thoughts will hopefully lead us to contemplate the success we have when we listen to God’s leadership, His plans and desires for our witnessing are evident in scripture. God’s Word gives us success.",
+      "The Thursday vitamin encourage us to remember how very short our span of life is to harvest a field of lost people. “Go and share the good news with every nation!” This is God’s command.",
+      "Friday’s vitamin teaches the importance of God’s help in achieving a harvest. He created the plan and the possibility of a successful eternity.",
+      "Saturday’s harvest vitamin teaches us that wisdom and work are related. But lazy “sleep” is shameful. Labor achieves the harvest.",
+      "Sunday’s vitamin advises us that God alone does the harvesting by His will. He alone determines the harvest and uses the sickle to cut the harvest.",
+      "The Bonus vitamin will begin a new concept on harvesting. This new direction will help us understand that the harvesting is not a one person job. We work in tandem with people to evangelize others. God helps us harvest and the successful labor is the bounty. Revelation 14:19 \"And the Angel swung his sickle to the earth,...and gathered the clusters of the vine,... and thew them into the wine press of the wrath of God.\""
+    ]
+  }
+}

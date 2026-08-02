@@ -1,0 +1,106 @@
+{
+  "id": "worship",
+  "order": 6,
+  "label": "Worship the Lord",
+  "emoji": "🎵",
+  "color": [
+    "#f472b6",
+    "#a855f7"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "Worship the Lord with reverence and rejoice with trembling.",
+        "ref": "Psalm 2:11"
+      },
+      "quote": {
+        "verse": "Worship the Lord with reverence and rejoice with trembling.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "All the earth will worship You (God), and will sing praises to You.",
+        "ref": "Psalm 66:4"
+      },
+      "quote": {
+        "verse": "All the earth will worship You (God), and will sing praises to You.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "People honor Me with their lips but their heart is far away from Me.",
+        "ref": "Isaiah 29:13"
+      },
+      "quote": {
+        "verse": "People honor Me with their lips but their heart is far away from Me.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "God is spirit and those who worship Him must worship in spirit and truth.",
+        "ref": "John 4:24"
+      },
+      "quote": {
+        "verse": "God is spirit and those who worship Him must worship in spirit and truth.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "For you shall not worship any other god, for the Lord, whose name is Jealous is a jealous God.",
+        "ref": "Exodus 34:14"
+      },
+      "quote": {
+        "verse": "For you shall not worship any other god, for the Lord, whose name is Jealous is a jealous God.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Jesus said,\"Begone Satan, for it is written: you shall worship the Lord your God, and serve Him only.\"",
+        "ref": "Matthew 4:10"
+      },
+      "quote": {
+        "verse": "Jesus said,\"Begone Satan, for it is written: you shall worship the Lord your God, and serve Him only.\"",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Worthy are You our Lord and our God, to receive glory and honor and power for You created all things.",
+        "ref": "Revelation 4:11"
+      },
+      "quote": {
+        "verse": "Worthy are You our Lord and our God, to receive glory and honor and power for You created all things.",
+        "author": null
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "Worship the Lord with reverence and rejoice with trembling.",
+      "ref": "Psalm 2:11"
+    },
+    "quote": {
+      "verse": "Worship the Lord with reverence and rejoice with trembling.",
+      "author": null
+    }
+  },
+  "devotional": {
+    "title": "Worship the Lord",
+    "scripture": {
+      "ref": "2 CHRONICLES 29:28",
+      "verse": "While the whole assembly worshiped, the singers also sang and the trumpets sounded, all this continued until the burnt offering was finished."
+    },
+    "body": [
+      "Noah and his family were in the Ark 377 days. Nearly 54 weeks. They were all safe, and all the animals were safe. I bet there were many days when Noah and his family were frightened of the lightning, thunder and bored with the constant sound of the rain on the roof of the Ark. They had no place to turn except to place their trust in God. Have you ever felt frustration or fear and knew that the events were out of your hands? lf you have, remember you can trust God. He is trustworthy!",
+      "After the land had dried and the flood had disappeared God opened the door and instructed Noah to release all the animals and leave the Ark with his family. We read in Genesis 9:1 that God blessed Noah and his sons and said to them, \"Be fruitful and multiply, and fill the earth.\" Then God repeated His Covenant with Noah and his sons and promised never to flood the earth again. He also gave them permission to include animals as part of their diet. For the first time God called out the sons by name. They were Shem, Ham, and Japheth, and they would populate the whole earth. They must have felt happy and free again.",
+      "In the days of Noah, the proper way to worship God was to build an altar and to sacrifice a perfect lamb, bull or bird as an offering to the LORD. This was a picture of the future Son of God whose blood would be an offering of forgiveness for our sin.",
+      "We no longer use burnt offerings as worship because Christ's death and resurrection is our offering. Our worship is thanking God, praying to Him, loving Him, and reading the Bible. Think about how you can spend time worshiping the Creator who loves you so much He sent His Son Jesus to die for your sin."
+    ]
+  }
+}

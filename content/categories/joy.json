@@ -1,0 +1,111 @@
+{
+  "id": "joy",
+  "order": 15,
+  "label": "Joy",
+  "emoji": "😊",
+  "color": [
+    "#f59e0b",
+    "#ef4444"
+  ],
+  "group": "g1",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"And when they saw the star, they rejoiced exceedingly with great joy.\"",
+        "ref": "Matthew 2:10"
+      },
+      "quote": {
+        "verse": "\"Deep contented joy comes from a place of complete security and confidence (in God).\"",
+        "author": "Charles Swindoll"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"O come let us sing for joy to the Lord. Let us shout joyfully to the rock of our salvation.\"",
+        "ref": "Psalm 95:1"
+      },
+      "quote": {
+        "verse": "\"The truest, purest joy flows from a discovery of Jesus Christ. He is the hidden treasure that gives such joy to the finder.\"",
+        "author": "Robert Murry McCheyne"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Sing for joy to God our strength; shout joyfully to the God of Jacob.\"",
+        "ref": "Psalm 81:1"
+      },
+      "quote": {
+        "verse": "\"Ask for all joy; open thy mouth wide, and He (God) will fill it.\"",
+        "author": "Matthew Henry"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Rejoice and be glad for your reward in heaven is great, for so they persecuted the prophets who were before you.\"",
+        "ref": "Matthew 5:12"
+      },
+      "quote": {
+        "verse": "\"Joy is not necessarily the absence of suffering, it is the presence of God.\"",
+        "author": "Pierre de Chardin"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"In the same way, I tell you, there is joy in the presence of the angels of God over one sinner who repents.\"",
+        "ref": "Luke 15:10"
+      },
+      "quote": {
+        "verse": "\"But if you possess faith, your heart cannot do otherwise than laugh for joy in the Lord.\"",
+        "author": "Martin Luther"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Make my joy complete by being of the same mind, maintaining the same love, united in spirit, intent on one purpose.\"",
+        "ref": "Philippians 2:2"
+      },
+      "quote": {
+        "verse": "\"Surely we serve a good Master (the Lord), who makes peace and joy essential to our religion.\"",
+        "author": "Matthew Henry"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"And these things we write, so that our joy may be made complete.\"",
+        "ref": "1 John 4:1"
+      },
+      "quote": {
+        "verse": "\"Praise is the mode of love which always has some element of joy in it\"",
+        "author": "C.S. Lewis"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"For the kingdom of God is not eating and drinking but righteousness and peace and joy in the Holy Spirit.\"",
+      "ref": "Romans 14:17"
+    },
+    "quote": {
+      "verse": "\"He is our joy and our happiness, even as He is our peace.\"",
+      "author": "Martyn Lloyd-Jones"
+    }
+  },
+  "devotional": {
+    "title": "December 2023 - Christmas Joy",
+    "scripture": {
+      "ref": "Galatians 5:22",
+      "verse": "\"But the fruit of the Spirit is Love, Joy, Peace, Patience, Kindness, Goodness, Faithfulness, Gentleness, and Self-Control.\""
+    },
+    "body": [
+      "As we approach the Christmas celebration this December none of the joy has lost the luster it held for me as a child. The sparkle of lights on the Christmas tree, holiday music, baking cookies, the manger scene in the front yard, candles or angels in the window all have special memories. I grew up in Ohio so Christmas without snow was unacceptable. On Christmas eve my mother would walk to the midnight Church service with my brother on one side of her and myself on the other side. Snow scrunched under our shoes with its own particular sound. Sometimes if we were lucky a few snowflakes would float down making me snuggle under my mother's arm. I felt comfy and safe and full of quiet joy. Christmas Eve was the only time my mother went to church. That made it special for me.",
+      "A few weeks ago I heard a television report about a group in Michigan who requested that this year they wanted people to decorate in other colors than red and green. They also ask that people decorate with snowmen, snowflakes and other non religious symbols. No Baby Jesus in a manger, no Shepherds, no Angels! What were they thinking? No religious symbols? Christmas is a Christian religious, faith based holiday! Jesus' birth is the entire reason for Christians to spread God's great love, peace, and joy for a few short weeks a year. I selected JOY for the December vitamins because JOY is what I feel at this time of year. I know that there are some who do not feel JOY of Christmas. I understand that they may feel this way for various reasons, but I challenge anyone feeling this way to read the Bible and find the JOY! Here are some people who felt like myself.",
+      "1. John the cousin of Jesus while still in the womb: Luke 1:44",
+      "2. Mary the mother of Jesus in her song to the LORD: Luke 1:47",
+      "3. An Angel with a host of Angels: Luke 2:10",
+      "4. The Magi when the star led them to Jesus: Matthew 2:9-10",
+      "5. Mary Magdalene and the other Mary at the tomb: Matthew 28:1-8",
+      "6. Jesus Himself while speaking to His Disciples: John 15:10-11",
+      "Jude 24: \"Now to Him who is able to keep you from stumbling, and to make you stand in the presence of His glory with great joy, to the only God our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. AMEN.\""
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "wisdom",
+  "order": 25,
+  "label": "Wisdom from Above",
+  "emoji": "🦉",
+  "color": [
+    "#f59e0b",
+    "#f97316"
+  ],
+  "group": "g2",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"Your faith should not rest on the wisdom of men, but on the power of God. Yet we do speak wisdom among those who are mature.\"",
+        "ref": "1 Corinthians 2:5-6"
+      },
+      "quote": {
+        "verse": "\"Some view the Spiritual quest as one of seeking wisdom, knowledge, and understanding - a learning process.\"",
+        "author": "Alice Camille"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The fear (awe) of the Lord is the beginning of wisdom, and knowledge of the Holy One is understanding.\"",
+        "ref": "Proverbs 9:10"
+      },
+      "quote": {
+        "verse": "\"Wisdom opens the eyes both to the glories of heaven and to the hollowness of earth.\"",
+        "author": "J.A. Motyer"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Yet wisdom is vindicated by her deeds.\"",
+        "ref": "Matthew 11:19"
+      },
+      "quote": {
+        "verse": "\"Wise men talk because they have something to say, fools, because they have to say something.\"",
+        "author": "Plato"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"From childhood you have known the Sacred Scriptures which are able to give you the wisdom that leads to salvation through faith which is in Jesus Christ.\"",
+        "ref": "2 Timothy 3:15"
+      },
+      "quote": {
+        "verse": "\"The chief means for attaining wisdom, and suitable gifts for the ministry, are the Holy Scripture, and prayer.\"",
+        "author": "John Newton"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But if any of you lacks wisdom, let him ask of God, Who gives to all men generously without reproach.\"",
+        "ref": "James 1:5"
+      },
+      "quote": {
+        "verse": "\"Christ is the true light of the world; it is through Him alone that true wisdom is imparted to the mind.\"",
+        "author": "Jonathan Edwards"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Do not be wise in your own eyes; Fear the Lord and turn away from evil.\"",
+        "ref": "Proverbs 1:7"
+      },
+      "quote": {
+        "verse": "\"Never argue with a fool. Onlookers may not be able to tell the difference.\"",
+        "author": "Mark Twain"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Make your ear attentive to wisdom. Incline your heart to understanding.\"",
+        "ref": "Proverbs 2:2"
+      },
+      "quote": {
+        "verse": "\"Patience is a companion of wisdom.\"",
+        "author": "Augustine"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"It is written, I (the Lord) will destroy the wisdom of the wise, and the cleverness of the clever I will set aside ... Has not God made foolish the wisdom of the world?\"",
+      "ref": "1 Corinthians 1:19-20"
+    },
+    "quote": {
+      "verse": "\"For it is not our natural reasoning powers that will guide us correctly or give us right judgment in all things. No, Christ alone is our wisdom.\"",
+      "author": "Al Bryant"
+    }
+  },
+  "devotional": {
+    "title": "Wisdom From Above",
+    "scripture": {
+      "ref": "Proverbs 2:6,7",
+      "verse": "For the Lord gives wisdom; from His mouth comes knowledge and understanding. He stores up sound wisdom for the upright; He is a shield to those who walk in integrity.”"
+    },
+    "body": [
+      "WHY HAVE WISDOM? The above verse establishes the truth of Biblical Wisdom. Christians believe that God is the giver of all good gifts. Wisdom is certainly a wonderful and useful gift from our loving God and we should be very thankful for His shield of knowledge and wisdom.",
+      "WHAT IS WISDOM? After reading Scripture I think Wisdom is a combination of Knowledge and Truth. Without knowledge (and the leading word in knowledge is the word know), we are unable to discern problems and situations correctly. Truth is the twin to knowledge. Without truth we lack a foundation for decision-making. Without truth we are blind and helpless. God has given us these basic and important tools to live worthy lives in service to Him.",
+      "WHO WANTS WISDOM? Just about everyone wants wisdom, but how many of us are willing to work for it? How many of us seek God’s wisdom? Christians only need to ask for knowledge and wisdom and the Holy Spirit will generously give it. We know that the evil world misuses knowledge and wisdom for power and domination.",
+      "WHERE CAN WE LOOK FOR WISDOM? Two of the wisest men to have ever lived on the earth were Solomon, who is credited for having written most of the Proverbs, and Jesus Christ, who was living wisdom. Look to Scripture for wisdom written by them. We can trust the Holy Scripture, the Holy Spirit and the Holy God for guidance. Don’t look to the world, Satan, or television. They all will lead you down a dark empty path.",
+      "I END WITH PAUL’S PROFOUND STATEMENT OF WISDOM. Romans 11:33 “Oh the depth of the riches both of the wisdom and knowledge of God. How unsearchable are His judgements and unfathomable His Ways!",
+      "HOW IS YOUR WISDOM DOING TODAY?"
+    ]
+  }
+}

@@ -7,6 +7,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const [saved, setSaved] = useState(false);
   const isMobile = useWindowWidth() < 640;
 
+  const { scripture, quote } = vitamin;
+
   const pillRef = useRef(null);
   const [pillW, setPillW] = useState(0);
 
@@ -21,9 +23,9 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
 
   const handleShare = (e) => {
     e.stopPropagation();
-    const text = vitamin.ref
-      ? `"${vitamin.verse}" — ${vitamin.ref}`
-      : `"${vitamin.verse}" — ${vitamin.author}`;
+    const text = flipped && quote.author
+      ? `"${quote.verse}" — ${quote.author}`
+      : `"${scripture.verse}"${scripture.ref ? ` — ${scripture.ref}` : ''}`;
     if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text });
     else navigator.clipboard.writeText(text).then(() => alert('Copied!'));
   };
@@ -48,7 +50,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
    * Because the verse is flex-centered in usableH, we need equal clearance
    * top and bottom, so reserve 2× that intrusion.
    */
-  function calcFontPx(text, isBack) {
+  function calcFontPx(text, isBack, hasCaption) {
     if (!pillW) return null;
 
     const usableW  = pillW * 0.75;
@@ -59,8 +61,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     const ctrlsTopFromBot = 16 + controlsH;
     const ctrlsInContent = Math.max(0, ctrlsTopFromBot - facePadBot);
 
-    // On the back face, ref sits in the flex group with the verse (gap: 8 + ~20px text)
-    const refH = isBack ? 28 : 0;
+    // The reference/author caption sits in the flex group with the verse (gap: 8 + ~20px text)
+    const refH = hasCaption ? 28 : 0;
 
     const maxVerseH = usableH - refH - 2 * ctrlsInContent;
 
@@ -75,8 +77,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     return `${Math.max(fs, 11)}px`;
   }
 
-  const verseFontFront = calcFontPx(vitamin.verse, false) ?? 'var(--fs-base)';
-  const verseFontBack  = calcFontPx(vitamin.verse, true)  ?? 'var(--fs-base)';
+  const verseFontFront = calcFontPx(scripture.verse, false, !!scripture.ref) ?? 'var(--fs-base)';
+  const verseFontBack  = calcFontPx(quote.verse, true, !!quote.author)  ?? 'var(--fs-base)';
 
   /* ── Mobile: stacked card (no pill) ── */
   if (isMobile) {
@@ -99,7 +101,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           transition: 'transform 0.75s cubic-bezier(0.4,0,0.2,1)',
           transform: flipped ? 'rotateY(180deg)' : 'none',
         }}>
-          {/* FRONT */}
+          {/* FRONT — scripture */}
           <div style={{ ...face, background: `linear-gradient(145deg, ${c0}, ${c1})` }}>
             <div style={{ fontSize: 40 }}>{category.emoji}</div>
             <div style={{
@@ -112,24 +114,32 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               fontSize: 'var(--fs-base)', color: 'white', lineHeight: 1.8,
               textAlign: 'center', margin: 0,
               textShadow: '0 1px 6px rgba(0,0,0,0.35)',
-            }}>{vitamin.verse}</p>
+            }}>{scripture.verse}</p>
+            {scripture.ref && (
+              <p style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
+              }}>— {scripture.ref}</p>
+            )}
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
               color: 'rgba(255,255,255,0.65)',
-            }}>↻ tap to flip</div>
+            }}>↻ tap for quote</div>
           </div>
-          {/* BACK */}
+          {/* BACK — quote */}
           <div style={{ ...face, transform: 'rotateY(180deg)', background: `linear-gradient(145deg, ${c1}, ${c0})` }}>
             <p style={{
               fontFamily: 'Playfair Display', fontStyle: 'italic',
               fontSize: 'var(--fs-base)', color: 'white', lineHeight: 1.8,
               textAlign: 'center', margin: 0,
               textShadow: '0 1px 6px rgba(0,0,0,0.35)',
-            }}>{vitamin.verse}</p>
-            <p style={{
-              fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
-              color: 'rgba(255,255,255,0.92)', textAlign: 'center',
-            }}>— {vitamin.ref || vitamin.author}</p>
+            }}>{quote.verse}</p>
+            {quote.author && (
+              <p style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                color: 'rgba(255,255,255,0.92)', textAlign: 'center',
+              }}>— {quote.author}</p>
+            )}
             <div style={{ display: 'flex', gap: 12 }}>
               <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }} style={{
                 padding: '11px 24px', borderRadius: 50,
@@ -151,7 +161,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
               color: 'rgba(255,255,255,0.6)',
-            }}>↻ tap to flip back</div>
+            }}>↻ tap for scripture</div>
           </div>
         </div>
       </div>
@@ -225,34 +235,43 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           transform: flipped ? 'rotateY(180deg)' : 'none',
         }}>
 
-          {/* FRONT */}
+          {/* FRONT — scripture */}
           <div style={{ ...sharedFace, background: pillBg }}>
             <p style={{
               fontFamily: 'Playfair Display', fontStyle: 'italic',
               fontSize: verseFontFront, color: 'white', lineHeight: 1.75,
               textAlign: 'center', margin: 0, textShadow: '0 1px 6px rgba(0,0,0,0.5)',
-            }}>{vitamin.verse}</p>
+            }}>{scripture.verse}</p>
+            {scripture.ref && (
+              <p style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
+                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
+                textShadow: '0 1px 4px rgba(0,0,0,0.4)',
+              }}>— {scripture.ref}</p>
+            )}
             {/* hint pinned to bottom */}
             <div style={ctrlRow}>
               <span style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
                 color: 'rgba(255,255,255,0.6)',
-              }}>↻ tap to flip</span>
+              }}>↻ tap for quote</span>
             </div>
           </div>
 
-          {/* BACK */}
+          {/* BACK — quote */}
           <div style={{ ...sharedFace, transform: 'rotateY(180deg)', background: pillBgFlip }}>
             <p style={{
               fontFamily: 'Playfair Display', fontStyle: 'italic',
               fontSize: verseFontBack, color: 'white', lineHeight: 1.75,
               textAlign: 'center', margin: 0, textShadow: '0 1px 5px rgba(0,0,0,0.5)',
-            }}>{vitamin.verse}</p>
-            <p style={{
-              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-              color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
-              textShadow: '0 1px 4px rgba(0,0,0,0.4)',
-            }}>— {vitamin.ref || vitamin.author}</p>
+            }}>{quote.verse}</p>
+            {quote.author && (
+              <p style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
+                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
+                textShadow: '0 1px 4px rgba(0,0,0,0.4)',
+              }}>— {quote.author}</p>
+            )}
             {/* save / share / hint pinned to bottom */}
             <div style={ctrlRow}>
               <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }}
@@ -267,7 +286,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               <span style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
                 color: 'rgba(255,255,255,0.6)',
-              }}>↻ tap to flip back</span>
+              }}>↻ tap for scripture</span>
             </div>
           </div>
 
