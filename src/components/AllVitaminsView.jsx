@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CATEGORIES, TODAY_IDX, VITAMINS, BONUS_VITAMINS, DAYS } from '../data';
-import { hexToRgb } from '../utils';
+import { hexToRgb, measureTextWidth } from '../utils';
 import LargeVitaminCard from './LargeVitaminCard';
 import DrumSidebar from './DrumSidebar';
+
+// Fixed chrome around each drum-sidebar topic label (icon, gaps, paddings,
+// the group-slider column) that the label's own text width doesn't cover —
+// see DrumSidebar's TopicBtn/GroupSlider layout for where each figure comes from.
+const SIDEBAR_CHROME_PX = 161;
+const SIDEBAR_MIN_PX = 220;
 
 export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatChange, onDayChange }) {
   const defaultCat = CATEGORIES[TODAY_IDX % CATEGORIES.length].id;
@@ -23,6 +29,23 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
   useEffect(() => {
     activeDayRef.current?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
   }, [selectedDay]);
+
+  // Widen the drum sidebar to fit the longest category label at the current
+  // responsive font size, so labels never word-wrap on wide screens where
+  // there's plenty of room to spare.
+  const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_MIN_PX);
+  useEffect(() => {
+    const recompute = () => {
+      const fsXs = getComputedStyle(document.documentElement).getPropertyValue('--fs-xs').trim() || '14px';
+      const font = `600 ${fsXs} "DM Sans"`;
+      const longest = CATEGORIES.reduce((max, c) => Math.max(max, measureTextWidth(c.label, font)), 0);
+      setSidebarWidth(Math.max(SIDEBAR_MIN_PX, Math.ceil(longest + SIDEBAR_CHROME_PX)));
+    };
+    recompute();
+    window.addEventListener('resize', recompute);
+    document.fonts?.ready?.then(recompute);
+    return () => window.removeEventListener('resize', recompute);
+  }, []);
 
   const vitaminCard = cat && (showBonus
     ? <LargeVitaminCard key="bonus" vitamin={bv} category={cat} dayLabel="Bonus" />
@@ -89,7 +112,7 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
       </div>
 
       {/* ── Desktop: drum sidebar (hidden on mobile) ── */}
-      <div className="vitamins-sidebar">
+      <div className="vitamins-sidebar" style={{ width: sidebarWidth }}>
         <DrumSidebar
           selectedCat={selectedCat}
           onSelectCat={selectCat}

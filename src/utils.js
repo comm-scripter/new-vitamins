@@ -1,3 +1,13 @@
+let measureCtx = null;
+
+// Pixel width of `text` rendered with the given CSS font shorthand,
+// e.g. measureTextWidth('Hope of Glory', '600 19px "DM Sans"').
+export function measureTextWidth(text, font) {
+  if (!measureCtx) measureCtx = document.createElement('canvas').getContext('2d');
+  measureCtx.font = font;
+  return measureCtx.measureText(text).width;
+}
+
 export function hexToRgb(hex) {
   const r = parseInt(hex.slice(1,3),16);
   const g = parseInt(hex.slice(3,5),16);

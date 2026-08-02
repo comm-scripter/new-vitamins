@@ -174,7 +174,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
   .vitamins-sidebar {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 220px; /* fallback before AllVitaminsView measures & sets the real width inline */
     flex-shrink: 0;
     border-right: 1px solid rgba(168,85,247,0.15);
     overflow: hidden;
@@ -187,7 +187,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
 }
 
 @media (min-width: 1024px) {
-  .vitamins-sidebar { width: 260px; }
   .vitamins-main { padding: 28px 48px 48px; gap: 24px; }
 }
 
@@ -202,7 +201,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
     --fs-2xl:  48px;
   }
   .app-header { padding: 0 56px; }
-  .vitamins-sidebar { width: 300px; }
   .vitamins-main { padding: 32px 56px 40px; gap: 24px; }
   .vitamin-card-wrap { max-width: clamp(340px, calc(250vh - 800px), 1000px); }
 }
@@ -218,7 +216,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
     --fs-2xl:  58px;
   }
   .app-header { padding: 0 80px; }
-  .vitamins-sidebar { width: 390px; }
   .vitamins-main { padding: 40px 80px 48px; gap: 32px; }
   .vitamin-card-wrap { max-width: clamp(360px, calc(250vh - 880px), 1160px); }
 }
