@@ -4,6 +4,7 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLog
   const items = [
     { id:'home',     label:'Home',        icon:'🏠' },
     { id:'app',      label:'My Vitamins', icon:'💊', requireAuth:true },
+    { id:'favorites',label:'Favorites',   icon:'💛', requireAuth:true },
     { id:'info',     label:'Info',        icon:'ℹ️' },
     { id:'about',    label:'About',       icon:'✨' },
     { id:'feedback', label:'Feedback',    icon:'💬' },

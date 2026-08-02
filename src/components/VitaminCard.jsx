@@ -2,9 +2,14 @@ import { useState } from 'react';
 import CapsuleSVG from './CapsuleSVG';
 import { hexToRgb } from '../utils';
 
-export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100 }) {
+export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100, favorited, onToggleFavorite }) {
   const [flipped, setFlipped] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const [localSaved, setLocalSaved] = useState(false);
+  const saved = favorited ?? localSaved;
+  const handleSave = (e) => {
+    e.stopPropagation();
+    onToggleFavorite ? onToggleFavorite() : setLocalSaved(s => !s);
+  };
 
   const handleShare = (e) => {
     e.stopPropagation();
@@ -101,7 +106,7 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
             </p>
           </div>
           <div style={{display:'flex', justifyContent:'center', gap:12, marginTop:12}}>
-            <button onClick={e=>{e.stopPropagation();setSaved(s=>!s)}} style={{
+            <button onClick={handleSave} style={{
               padding:'7px 16px', borderRadius:50,
               background: saved ? `linear-gradient(90deg,${category.color[0]},${category.color[1]})` : 'rgba(255,255,255,0.08)',
               border:'none', cursor:'pointer', color:'white',
