@@ -37,7 +37,7 @@ function GroupSlider({ activeGroup, onSelect }) {
     <div style={{
       width: 44, flexShrink: 0, display: 'flex',
       alignItems: 'center', justifyContent: 'center',
-      padding: '20px 0', margin: '0 6% 0 8%', cursor: 'grab',
+      padding: '20px 0', margin: '0 14px 0 18px', cursor: 'grab',
     }}
       onMouseDown={onMouseDown}
       onTouchStart={onTouchStart}
