@@ -1,21 +1,48 @@
 import { useState } from 'react';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 import CapsuleSVG from './CapsuleSVG';
 import StarField from './StarField';
 import { DAYS, TODAY_IDX, CATEGORIES } from '../data';
 
-export default function LoginPage({ onLogin }) {
+function mapFirebaseError(code) {
+  switch (code) {
+    case 'auth/invalid-email': return 'Please enter a valid email address.';
+    case 'auth/user-not-found':
+    case 'auth/wrong-password':
+    case 'auth/invalid-credential': return 'Incorrect email or password.';
+    case 'auth/email-already-in-use': return 'An account with that email already exists. Try signing in instead.';
+    case 'auth/weak-password': return 'Password must be at least 6 characters.';
+    case 'auth/too-many-requests': return 'Too many attempts. Please wait a moment and try again.';
+    case 'auth/network-request-failed': return 'Network error. Check your connection and try again.';
+    default: return 'Something went wrong. Please try again.';
+  }
+}
+
+export default function LoginPage({ onAuthenticated }) {
+  const [mode, setMode] = useState('signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const isSignUp = mode === 'signup';
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.includes('@')) { setError('Please enter a valid email.'); return; }
-    if (password.length < 4) { setError('Password must be at least 4 characters.'); return; }
+    if (password.length < 6) { setError('Password must be at least 6 characters.'); return; }
     setLoading(true);
     setError('');
-    setTimeout(()=>{ setLoading(false); onLogin(email); }, 1000);
+    try {
+      if (isSignUp) await createUserWithEmailAndPassword(auth, email, password);
+      else await signInWithEmailAndPassword(auth, email, password);
+      onAuthenticated();
+    } catch (err) {
+      setError(mapFirebaseError(err.code));
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputStyle = {
@@ -42,11 +69,11 @@ export default function LoginPage({ onLogin }) {
         <h2 style={{
           fontFamily:'Playfair Display', fontSize:28, color:'#f3e8ff',
           textAlign:'center', marginBottom:6, fontWeight:700,
-        }}>Welcome Back</h2>
+        }}>{isSignUp ? 'Create Your Account' : 'Welcome Back'}</h2>
         <p style={{
           fontFamily:'DM Sans', color:'rgba(233,213,255,0.6)',
           textAlign:'center', fontSize:14, marginBottom:32, fontWeight:300,
-        }}>Sign in to receive your daily vitamin</p>
+        }}>{isSignUp ? 'Sign up to receive your daily vitamin' : 'Sign in to receive your daily vitamin'}</p>
 
         <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:16}}>
           <div>
@@ -78,18 +105,25 @@ export default function LoginPage({ onLogin }) {
             transition:'opacity 0.2s, transform 0.2s',
             boxShadow:'0 8px 24px rgba(168,85,247,0.35)',
           }}>
-            {loading ? '✨ Preparing your vitamin...' : 'Sign In'}
+            {loading ? '✨ Preparing your vitamin...' : (isSignUp ? 'Create Account' : 'Sign In')}
           </button>
         </form>
 
         <div style={{
-          marginTop:24, padding:'16px', borderRadius:12,
-          background:'rgba(168,85,247,0.08)', border:'1px solid rgba(168,85,247,0.15)',
-          textAlign:'center',
+          marginTop:24, textAlign:'center',
         }}>
-          <p style={{fontFamily:'DM Sans', fontSize:13, color:'rgba(233,213,255,0.5)', lineHeight:1.6}}>
-            ✨ <em>Demo mode:</em> enter any email &amp; 4+ character password
-          </p>
+          <button
+            onClick={() => { setMode(m => m === 'signin' ? 'signup' : 'signin'); setError(''); }}
+            style={{
+              background:'none', border:'none', cursor:'pointer',
+              fontFamily:'DM Sans', fontSize:13, color:'rgba(233,213,255,0.6)',
+            }}
+          >
+            {isSignUp
+              ? 'Already have an account? '
+              : "Don't have an account? "}
+            <span style={{color:'#c4b5fd', fontWeight:600}}>{isSignUp ? 'Sign In' : 'Create one'}</span>
+          </button>
         </div>
 
         <p style={{

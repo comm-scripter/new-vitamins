@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebase';
+import { useAuth } from './hooks';
 import Header from './components/Header';
 import MenuOverlay from './components/MenuOverlay';
 import LandingPage from './components/LandingPage';
@@ -11,9 +14,10 @@ import DevotionalPage from './components/DevotionalPage';
 import { CATEGORIES } from './data';
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem('loggedIn') === 'true');
-  const [userEmail, setUserEmail] = useState(() => localStorage.getItem('userEmail') || '');
-  const [page, setPage] = useState(() => localStorage.getItem('loggedIn') === 'true' ? 'app' : 'home');
+  const { user, authLoading } = useAuth();
+  const loggedIn = !!user;
+  const userEmail = user?.email ?? '';
+  const [page, setPage] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [devotionalCatId, setDevotionalCatId] = useState(null);
   const [savedCat, setSavedCat] = useState(null);
@@ -25,16 +29,20 @@ export default function App() {
     return ()=>window.removeEventListener('keydown', handler);
   },[]);
 
-  const handleLogin = (email) => {
-    setLoggedIn(true);
-    setUserEmail(email);
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('userEmail', email);
-    setPage('app');
+  // Jump returning (already-logged-in) visitors past the landing page once
+  // the initial auth check resolves, mirroring the old localStorage-seeded
+  // page state without needing localStorage.
+  useEffect(() => {
+    if (!authLoading && user && page === 'home') setPage('app');
+  }, [authLoading]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    setPage('home');
   };
 
   const handleNavigate = (p) => {
-    if (p==='app' && !loggedIn) { setPage('login'); return; }
+    if ((p==='app' || p==='favorites') && !loggedIn) { setPage('login'); return; }
     if (p==='home' && loggedIn) { setPage('app'); return; }
     if (p.startsWith('devotional:')) {
       setDevotionalCatId(p.split(':')[1]);
@@ -46,7 +54,7 @@ export default function App() {
 
   const pageMap = {
     home:       <LandingPage onNavigate={handleNavigate}/>,
-    login:      <LoginPage onLogin={handleLogin}/>,
+    login:      <LoginPage onAuthenticated={()=>setPage('app')}/>,
     app:        <AppPage userEmail={userEmail} onNavigate={handleNavigate}
                   savedCat={savedCat} savedDay={savedDay}
                   onCatChange={setSavedCat} onDayChange={setSavedDay}/>,
@@ -57,6 +65,10 @@ export default function App() {
                   category={CATEGORIES.find(c => c.id === devotionalCatId)}
                   onNavigate={handleNavigate}/>,
   };
+
+  if (authLoading) {
+    return <div style={{width:'100%', height:'100%', background:'#0d0820'}}/>;
+  }
 
   return (
     <div style={{width:'100%', height:'100%', position:'relative', overflow:'hidden'}}>
@@ -72,6 +84,7 @@ export default function App() {
         onClose={()=>setMenuOpen(false)}
         onNavigate={handleNavigate}
         loggedIn={loggedIn}
+        onLogout={handleLogout}
       />
       <div style={{width:'100%', height:'100%'}}>
         {pageMap[page] || pageMap.home}
