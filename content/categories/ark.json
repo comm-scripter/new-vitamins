@@ -1,0 +1,106 @@
+{
+  "id": "ark",
+  "order": 44,
+  "label": "Noah's Ark",
+  "emoji": "🚢",
+  "color": [
+    "#0369a1",
+    "#0ea5e9"
+  ],
+  "group": "g3",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "Then God looked over all He had made, and He saw that it was very good.",
+        "ref": "Genesis 1:31"
+      },
+      "quote": {
+        "verse": "Then God looked over all He had made, and He saw that it was very good.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Surrender your whole being to God to be used for righteous purpose.",
+        "ref": "Romans 6:13"
+      },
+      "quote": {
+        "verse": "Surrender your whole being to God to be used for righteous purpose.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "In repentance and rest is your salvation, in quietness and trust is your strength.",
+        "ref": "Isaiah 30:15"
+      },
+      "quote": {
+        "verse": "In repentance and rest is your salvation, in quietness and trust is your strength.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Jesus stood and cried out, \"If anyone thirsts, let him come to Me and drink.\" (living water)",
+        "ref": "John 7:37"
+      },
+      "quote": {
+        "verse": "Jesus stood and cried out, \"If anyone thirsts, let him come to Me and drink.\" (living water)",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "Do not let your heart envy sinners, but live in fear of the Lord.",
+        "ref": "Proverb 23:17"
+      },
+      "quote": {
+        "verse": "Do not let your heart envy sinners, but live in fear of the Lord.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "He (the person) who guards his/her tongue guards their soul from trouble.",
+        "ref": "Proverb 21:23"
+      },
+      "quote": {
+        "verse": "He (the person) who guards his/her tongue guards their soul from trouble.",
+        "author": null
+      }
+    },
+    {
+      "scripture": {
+        "verse": "And so we know and rely on the love God has for us. God is love.",
+        "ref": "1 John 4:16"
+      },
+      "quote": {
+        "verse": "And so we know and rely on the love God has for us. God is love.",
+        "author": null
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "Then God looked over all He had made, and He saw that it was very good.",
+      "ref": "Genesis 1:31"
+    },
+    "quote": {
+      "verse": "Then God looked over all He had made, and He saw that it was very good.",
+      "author": null
+    }
+  },
+  "devotional": {
+    "title": "Noah 1",
+    "scripture": {
+      "ref": "Exodus 20:5-6",
+      "verse": "\"You shall not worship them (other gods), for I the LORD your God am a jealous God visiting the sins of the fathers on the children to the 3rd and 4th generation of those who hate me, but showing lovingkindness to thousands to those who love me and keep my commandments.\""
+    },
+    "body": [
+      "GOD used Noah as an example for us.",
+      "If you open your Bible to Genesis Chapter 5 Noah's life begins. In Genesis 6:1-22 we read about the condition of the world in Noah's time. God tells about how corrupt and evil all the people were. It is much like that today in America and even the rest of the world. Everyone except Noah was wicked and evil and without a love for the LORD GOD, our creator.",
+      "The Ark was God's protection for the only man, Noah, who was righteous in God's world. Noah's wife, three sons and their wives were covered under Noah's goodness and were saved on the Ark with two of each animal.",
+      "The story gets better for Noah. In another vitamin, I will share scripture on how you can be a Noah and not have to suffer the spiritual death that all of Noah's neighbors did."
+    ]
+  }
+}

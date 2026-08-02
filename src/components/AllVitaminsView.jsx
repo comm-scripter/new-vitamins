@@ -12,7 +12,7 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
 
   const cat = CATEGORIES.find(c => c.id === selectedCat);
   const vitamin = VITAMINS[selectedCat]?.[selectedDay] ?? null;
-  const bv = BONUS_VITAMINS[0];
+  const bv = BONUS_VITAMINS[selectedCat];
 
   const updateCat = (id) => { setSelectedCat(id); onCatChange?.(id); };
   const updateDay = (i) => { setSelectedDay(i); onDayChange?.(i); };
@@ -25,10 +25,7 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
   }, [selectedDay]);
 
   const vitaminCard = cat && (showBonus
-    ? <LargeVitaminCard key="bonus"
-        vitamin={{ verse: bv.verse, ref: bv.ref, author: bv.author }}
-        category={{ color: bv.color, emoji: '✨', label: bv.label }}
-        dayLabel="Bonus" />
+    ? <LargeVitaminCard key="bonus" vitamin={bv} category={cat} dayLabel="Bonus" />
     : <LargeVitaminCard key={`${selectedCat}-${selectedDay}`}
         vitamin={vitamin} category={cat} dayLabel={DAYS[selectedDay]} />
   );
@@ -54,7 +51,7 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
       <button onClick={() => setShowBonus(b => !b)} style={{
         padding: '9px 16px', borderRadius: 50,
         background: showBonus
-          ? `linear-gradient(90deg,${bv.color[0]},${bv.color[1]})`
+          ? `linear-gradient(90deg,${cat.color[0]},${cat.color[1]})`
           : 'rgba(251,191,36,0.12)',
         border: showBonus ? 'none' : '1px solid rgba(251,191,36,0.3)',
         color: showBonus ? 'white' : '#fbbf24',

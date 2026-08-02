@@ -1,0 +1,113 @@
+{
+  "id": "mystery",
+  "order": 23,
+  "label": "Mystery",
+  "emoji": "🔮",
+  "color": [
+    "#6d28d9",
+    "#a855f7"
+  ],
+  "group": "g1",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"A certain nobleman went into a far country to receive for himself a kingdom and to return. So he called three of his servants, gave minas to each. Do business until I return ...And so when he returned ...first earned 10 minas; second earned 5 minas; third earned none and said, \"Master ... I put your minas in a handkerchief.\"",
+        "ref": "TEN MINAS Luke 19:11-27"
+      },
+      "quote": {
+        "verse": "\"You are encircled by the arms of the mystery of God.\"",
+        "author": "Hildegard Bingen"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Behold, a sower went out to sow. And as he sowed, some seed fell by the wayside. And the birds came and devoured them.\"",
+        "ref": "THE SOWER Matthew 13:3-18"
+      },
+      "quote": {
+        "verse": "\"Mystery creates wonder and wonder is the basis of man’s desire to understand.\"",
+        "author": "Neil Armstrong"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Again the kingdom of heaven is like a merchant seeking beautiful pearls, who when he had found one pearl of great price, went and sold all that he had and bought it.\"",
+        "ref": "THE PEARL Matthew 13:45-46"
+      },
+      "quote": {
+        "verse": "\"The mystery of God - His plan that was previously hidden, even though He made it for our ultimate glory before the world began.\"",
+        "author": "Unknown"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The kingdom of heaven is like a mustard seed, which a man took and sowed it in a field ...least of all seeds ...it becomes a tree that the birds of the air come and nest in its branches.\"",
+        "ref": "MUSTARD SEED Matthew 13:31-32"
+      },
+      "quote": {
+        "verse": "\"The Bible considers five mysteries. 1. The mystery of the universe, 2. The mystery of man, 3. The mystery of God, 4. The mystery of Christ, and 5. The mystery of the church.\"",
+        "author": "Unknown"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Again the kingdom of heaven is like a treasure hidden in a field which a man found and hid and for joy over it he goes and sells all he has and buys the field.\"",
+        "ref": "HIDDEN TREASURE Matthew 13:44"
+      },
+      "quote": {
+        "verse": "\"Jesus did not give the parables to teach us how to live. He gave them, I believe, to correct our notions about who God is and who God loves.\"",
+        "author": "Phillip Yancy"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Again the kingdom of heaven is like a dragnet that was cast into the sea and gathered some of every kind, ...angels sat down and separated the wicked from among the just.\"",
+        "ref": "THE DRAGNET Matthew 13:47"
+      },
+      "quote": {
+        "verse": "\"Christian life is centered in the mystery of the incarnation of Christ, the union of God and man\"",
+        "author": "Xavier University"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The kingdom of heaven is like a man who sows good seed in his field, but while men slept, his enemy came and sowed tares among the wheat ...let both grow together until harvest ...first gather tares and bind them and burn them, then gather the wheat into my barn.\"",
+        "ref": "WHEAT AND TARES Matthew 13:24-25"
+      },
+      "quote": {
+        "verse": "\"Let the study of the Bible become central in your life - not just so you will know it, but that you will obey it.\"",
+        "author": "Billy Graham"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Husbands ought to love their own wives as their own bodies ...for no one hates his own flesh, but cherishes it, just as the Lord does the church. This is a great mystery, but I speak concerning Christ and the church.\"",
+      "ref": "CHRIST AND THE CHURCH Ephesians 5:28-32"
+    },
+    "quote": {
+      "verse": "\"If you refuse Christ until you understand all mysteries, you will perish in your sins. Come while the gate is open.\"",
+      "author": "Charles H. Spurgeon"
+    }
+  },
+  "devotional": {
+    "title": "March 2024 - March Mysteries",
+    "scripture": {
+      "ref": "Matthew 13:10-11",
+      "verse": "\"And the Disciples came and said to Him (Jesus), why do you speak to them in parables? Because it has been given to you to know the mysteries of the kingdom of heaven, but to them it has not been given.\""
+    },
+    "body": [
+      "I love a good mystery - a book by Agatha Christy or an evening with sherlock Holmes. I enjoy watching the detective untangle clues and decipher the complex plots.",
+      "Solomon and Jesus are recorded to be the wisest men to have lived. Solomon used proverbs which are word pictures to present a truth. Jesus used parables which is a story constructed to tell a previous unknown truth. The Parables are not understood by those who have eyes but cannot see and ears who cannot hear. Jesus used parables to teach about future events that were not given in the Old Testament about the kingdom of God. They were hidden from Israel and the Pharisees. The disciples and true believers can now fully understand these kingdom truths.",
+      "PARABLE OF THE SOWER: Matthew 13:18-23 The good news of the gospel will be rejected by most people.",
+      "PARABLE OF THE PEARL OF GREAT PRICE: Matthew 13:45-46 Christ gave His life to provide redemption for the church.",
+      "PARABLE OF THE MUSTARD SEED: Matthew 13:31-32 Believers and unbelievers will grow rapidly from a small beginning.",
+      "PARABLE OF THE HIDDEN TREASURE: Matthew 13:44 Christ came to purchase (redeem) Israel.",
+      "PARABLE OF THE DRAGNET: Matthew 13:47-50 Angels will come and separate the wicked from the righteous when Christ comes.",
+      "PARABLE OF THE WHEAT AND THE TARES(WEEDS): Matthew 13:24-30 People of faith and people of false faith will exist together between Christ's two advents.",
+      "PARABLE OF THE 10 MINAS: Luke 19:11-14 Jesus teaches the disciples and the nation about stewardship and responsibilities.",
+      "PARABLES OF CHRIST AND CHURCH: Ephesians 5:28 Christ is the Savior of the church. The great mystery is the husband and wife becoming one and the bond of Jesus and the church.",
+      "May God bless you as you discover the truths contained in these mysteries!"
+    ]
+  }
+}

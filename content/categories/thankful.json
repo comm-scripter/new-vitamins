@@ -1,0 +1,109 @@
+{
+  "id": "thankful",
+  "order": 18,
+  "label": "Thankful Hearts",
+  "emoji": "🙌",
+  "color": [
+    "#fbbf24",
+    "#f97316"
+  ],
+  "group": "g1",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"O give thanks to the Lord, call upon His name. Make known His deeds among the people. Let the heart of those who seek the Lord be glad.\"",
+        "ref": "Psalm 105:1,3"
+      },
+      "quote": {
+        "verse": "\"Thanksgiving day is a jewel to set in the hearts of honest men; but be careful that you do not take the day and leave out the gratitude.\"",
+        "author": "E.P. Powell"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"I will give thanks to the Lord with all my heart. I will tell of all Your wonders. I will be glad and exalt in You. I will sing praise to Your name, O Most High.\"",
+        "ref": "Psalm 9:1"
+      },
+      "quote": {
+        "verse": "\"The unthankful heart discovers no mercies; but the thankful heart will find, in every hour, some heavenly blessings.\"",
+        "author": "Henry Ward Beecher"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"I will give to the Lord according to His righteousness and will sing praise to the name of the Lord Most High.\"",
+        "ref": "Psalm 7:17"
+      },
+      "quote": {
+        "verse": "\"So once in every year we throng upon a day apart, to praise the Lord with feast and song with thankfulness of heart.\"",
+        "author": "Arthur Guiterman"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But thanks be to God that though you were slaves to sin, you became obedient from the heart to that form of teaching to which you were committed.\"",
+        "ref": "Romans 6:17"
+      },
+      "quote": {
+        "verse": "\"Reflect upon your present blessings, of which every man has plenty; not on your past misfortunes, of which all men have some.\"",
+        "author": "Charles Dickens"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Always giving thanks for all things in the name of our Lord Jesus Christ to God even the Father.\"",
+        "ref": "Ephesians 5:20"
+      },
+      "quote": {
+        "verse": "\"In happy moments, praise God. In difficult moments, seek God. In quiet moments, worship God. In painful moments, trust God. Every moment, thank God.\"",
+        "author": "Rick Warren"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"O give thanks to the Lord for He is good; for His lovingkindness is everlasting.\"",
+        "ref": "1 Chronicles 16:34"
+      },
+      "quote": {
+        "verse": "\"Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow.\"",
+        "author": "Melody Beattie"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Let us come before the Lord's presence with thanksgiving, let us shout joyfully to Him with psalms. For the Lord is a great God and a great King above all gods.\"",
+        "ref": "Psalm 95:2-3"
+      },
+      "quote": {
+        "verse": "\"God is pleased with no music below so much as with the thankful songs of relieved widows and supported orphans; of rejoicing, comforted, and thankful persons.\"",
+        "author": "Jeremy Taylor"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"We ought always to give thanks to God for you brethren...your faith is greatly enlarged and the love of each one of you towards one another grows even greater.\"",
+      "ref": "1 Thessalonians 1:3"
+    },
+    "quote": {
+      "verse": "\"Perhaps it takes a purer faith to praise God for unrealized blessings than for those we once enjoyed or those we enjoy now.\"",
+      "author": "A.W. Tozer"
+    }
+  },
+  "devotional": {
+    "title": "Thankful Hearts",
+    "scripture": {
+      "ref": "Psalm 100: 3-4",
+      "verse": "Know that the LORD Himself is GOD, It is He who has made us, and not we ourselves; We are His people and the sheep of His pastures .... Give thanks to Him and bless His name, for the LORD is good."
+    },
+    "body": [
+      "America’s Thanksgiving Day has changed from our nation’s first Thanksgiving. I thought it would be good for me to refresh my memory of this historic beginning of the celebration and share a small memory of it with you in our November Spiritual Vitamins.",
+      "The Mayflower landed on Plymouth Rock in 1620 with just over 100 people surviving the trip from Europe. There are only two written reports of the events which took place for the Pilgrims durning their first year in America. Both the voyage and the winter were brutal. One account by Edward Winslow dated December 1621 and another manuscript written about 20 years later by William Bradford, who was the first Governor of the colony. They tell us it was a 3 day event with feasting, games, and military training.",
+      "According to accounts it was a celebration of survival from a cruel winter for which the Pilgrims were unprepared but a good harvest. It was attended by some 50 colonist that included 22 men, 4 married women and 25 children and teenagers. The colonists were likely out numbered two to one by their Native American guests who were in the area hunting and fishing. The guests provided 5 deer for the celebration. Both the colonists and the Native Americans are reported to have thanked the Lord for His provision.",
+      "The food for the first Thanksgiving meal probably consisted of fruit and vegetables from the community garden, such as cabbage, carrots, cucumbers, leeks, lettuce, parsnips, and pumpkins. There were no potatoes nor cranberry sauce as we know it and no pumpkin pie.This was due to the fact that there was no butter, wheat flour or even an oven to prepare the meals that we enjoy today. Wild Turkeys were shot in the woods.",
+      "Today many Americans continue to join as a family, inviting guests to enjoy the Thanksgiving meal with them. Some people go to homeless shelters and serve food to the less fortunate. We live in a nation that has indeed enjoyed the bounty of provisions from a loving God. Are we as grateful as the first Pilgrims who struggled in the new world under great hardship?. Some of the new activities that have crept into our celebrations are: watching Football Games, anticipating Black Friday Shopping, and sleeping off a much too full tummy. What would the Pilgrims think of these activities? Let’s be sure to remember both our Thanks and our Giving.",
+      "“But the wisdom from above is pure, first of all; it is also peaceful, gentle, and friendly; it is full of compassion and produces a harvest of good deeds; it is free from prejudice and hypocrisy. And righteousness is the harvest that is produced from the seeds the peacemakers planted in peace.” James 3:17-18",
+      "HOW DO YOU CELEBRATE THANKSGIVING?"
+    ]
+  }
+}

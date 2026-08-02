@@ -63,72 +63,38 @@ export default function DevotionalPage({ category, onNavigate }) {
         }} />
 
         {/* Scripture card */}
-        <div style={{
-          padding: '22px 26px', borderRadius: 16, marginBottom: 28,
-          background: `linear-gradient(135deg,rgba(${hexToRgb(c1)},0.14),rgba(${hexToRgb(c2)},0.07))`,
-          border: `1px solid rgba(${hexToRgb(c1)},0.3)`,
-        }}>
-          <p style={{
-            fontFamily: 'Playfair Display', fontSize: 16, color: '#f3e8ff',
-            lineHeight: 1.85, fontStyle: 'italic', margin: '0 0 10px',
+        {devotional.scripture && (
+          <div style={{
+            padding: '22px 26px', borderRadius: 16, marginBottom: 28,
+            background: `linear-gradient(135deg,rgba(${hexToRgb(c1)},0.14),rgba(${hexToRgb(c2)},0.07))`,
+            border: `1px solid rgba(${hexToRgb(c1)},0.3)`,
           }}>
-            {devotional.scripture.verse}
-          </p>
-          <p style={{
-            fontFamily: 'DM Sans', fontSize: 13, fontWeight: 600, margin: 0,
-            color: c1,
-          }}>
-            — {devotional.scripture.ref}
-          </p>
-        </div>
+            <p style={{
+              fontFamily: 'Playfair Display', fontSize: 16, color: '#f3e8ff',
+              lineHeight: 1.85, fontStyle: 'italic', margin: '0 0 10px',
+            }}>
+              {devotional.scripture.verse}
+            </p>
+            {devotional.scripture.ref && (
+              <p style={{
+                fontFamily: 'DM Sans', fontSize: 13, fontWeight: 600, margin: 0,
+                color: c1,
+              }}>
+                — {devotional.scripture.ref}
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Body paragraphs */}
         {devotional.body.map((para, i) => (
           <p key={i} style={{
             fontFamily: 'DM Sans', fontSize: 15, color: 'rgba(233,213,255,0.75)',
-            lineHeight: 1.9, marginBottom: 18,
+            lineHeight: 1.9, marginBottom: i === devotional.body.length - 1 ? 40 : 18,
           }}>
             {para}
           </p>
         ))}
-
-        {/* For Reflection */}
-        <div style={{
-          padding: '20px 24px', borderRadius: 16, marginBottom: 20,
-          background: 'rgba(168,85,247,0.07)', border: '1px solid rgba(168,85,247,0.18)',
-        }}>
-          <h3 style={{
-            fontFamily: 'Playfair Display', fontSize: 16, color: '#d8b4fe',
-            fontWeight: 600, marginBottom: 10,
-          }}>
-            📖 For Reflection
-          </h3>
-          <p style={{
-            fontFamily: 'DM Sans', fontSize: 14, color: 'rgba(233,213,255,0.72)',
-            lineHeight: 1.85, margin: 0,
-          }}>
-            {devotional.reflection}
-          </p>
-        </div>
-
-        {/* Closing Prayer */}
-        <div style={{
-          padding: '20px 24px', borderRadius: 16, marginBottom: 40,
-          background: `rgba(${hexToRgb(c1)},0.07)`, border: `1px solid rgba(${hexToRgb(c1)},0.22)`,
-        }}>
-          <h3 style={{
-            fontFamily: 'Playfair Display', fontSize: 16, color: '#d8b4fe',
-            fontWeight: 600, marginBottom: 10,
-          }}>
-            🙏 Closing Prayer
-          </h3>
-          <p style={{
-            fontFamily: 'DM Sans', fontSize: 14, color: 'rgba(233,213,255,0.72)',
-            lineHeight: 1.85, fontStyle: 'italic', margin: 0,
-          }}>
-            {devotional.prayer}
-          </p>
-        </div>
 
         {/* Bottom nav */}
         <div

@@ -1,0 +1,107 @@
+{
+  "id": "pray",
+  "order": 8,
+  "label": "Pray Daily",
+  "emoji": "🕊️",
+  "color": [
+    "#a78bfa",
+    "#818cf8"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"And Jesus answered and said to them, 'If you have faith, and do not doubt...everything you ask in prayer, believing, you shall receive.'\"",
+        "ref": "Matthew 21:21-22"
+      },
+      "quote": {
+        "verse": "\"All I know is that when I pray, coincidences happen, and when I don't pray they don't happen.\"",
+        "author": "Dan Hayes"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Devote yourself to prayer, keeping alert in it with an attitude of thanksgiving.\"",
+        "ref": "Colossians 4:2"
+      },
+      "quote": {
+        "verse": "\"God warms His hands at man's heart when man prays.\"",
+        "author": "John Masefield"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"When you pray go into your inner room...shut your door, pray to your Father who is in secret, and your Father...will repay you.\"",
+        "ref": "Matthew 6:6"
+      },
+      "quote": {
+        "verse": "\"Any concerns too small to be turned into prayer is too small to be made into a burden.\"",
+        "author": "Corrie Ten Boom"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But I say to you, 'Love your enemies and pray for those who persecute you.'\"",
+        "ref": "Matthew 5:44"
+      },
+      "quote": {
+        "verse": "\"In worship God imparts Himself to us.\"",
+        "author": "C.S. Lewis"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Answer me when I call O God of my righteousness, and God's ears attend to my prayer.\"",
+        "ref": "Psalm 4:1"
+      },
+      "quote": {
+        "verse": "\"Prayer is exhaling the spirit of man and inhaling the Spirit of God.\"",
+        "author": "Edwin Keith"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Pray without ceasing.\"",
+        "ref": "1 Thessalonians 5:17"
+      },
+      "quote": {
+        "verse": "\"I have lived long enough to thank God that not all my prayers have been answered.\"",
+        "author": "Jean Ingelow"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Then Hannah prayed and said, 'My heart exalts in the Lord...because I rejoice in Your salvation.'\"",
+        "ref": "1 Samuel 2:1"
+      },
+      "quote": {
+        "verse": "\"If your day is hemmed in with prayer, it is less likely to come unravelled.\"",
+        "author": "Cynthia Lewis"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"And Jesus answered and said to them, 'If you have faith, and do not doubt...everything you ask in prayer, believing, you shall receive.'\"",
+      "ref": "Matthew 21:21-22"
+    },
+    "quote": {
+      "verse": "\"All I know is that when I pray, coincidences happen, and when I don't pray they don't happen.\"",
+      "author": "Dan Hayes"
+    }
+  },
+  "devotional": {
+    "title": "How to Pray",
+    "scripture": {
+      "ref": "Matthew 6:9-13 & Luke 11:1-4",
+      "verse": "One day Jesus was praying in a certain place. When He finished, one of His disciples said to Him, “Lord, teach us to pray, just as John taught his disciples.” Jesus said to them, “This is what you should pray”: “Our Father in heaven; May Your name be kept holy, May Your Kingdom come, May Your will be done on earth as it is in heaven, Give us today the food we need, Forgive us the wrongs that we have done, as we forgive the wrongs that others have done to us; Do not bring us to hard testing, but keep us safe from the Evil One.”"
+    },
+    "body": [
+      "The disciples wanted to talk to their Heavenly Father. The Being who had created them. The LORD of salvation and the GOD they worshipped. In Psalm 100 scripture says that God created us, we did not create ourselves. This puts God in a very special place, with very special gifts. Have you every wanted to talk to someone famous, or wise, or someone very special? We have a small hand held device with which we can call a special human. It’s called a cell phone. No wires. No limit to miles a voice can travel. A short mile away, a thousand miles away, or perhaps one day into space. There is only one drawback! The person on the other end of the call has to answer our connection.",
+      "Prayer is like a cell phone where we connect with our Creator God. He always answers our calls and is always available to give us advice, will answer our requests or just likes to hear our thanks and praise.",
+      "God is the most famous, loving, wisest, being we will ever communicate with. Our connection to Him is never “out of order”. Prayer is powerful!",
+      "Both Prayer and God’s Word (the Bible) are used by God to link up with those who Believe and Trust His Son Jesus Christ. These people are called Christians. This Father gave His only son Jesus to bring you to eternal life if you believe that Jesus death was payment for your sins. God wants to talk to you about this very special gift of eternal life. John 3:16-17 “For God loved the world so much that He gave His only Son, so that everyone who believes in Him may not die but have eternal life. For God did not send His Son into the world to be its Judge, but to be its Savior.”",
+      "In Matthew 14:22-33; Mark 6:45; John 6:15-21 Jesus is our example for Prayer with our Father God. After feeding and teaching 5000 people, He left His disciple and went alone to a hill to pray till evening. In John 17 the entire chapter Jesus prays for the disciples. In Matthew 26:36-46; Mark 14:32-42 Luke 22:39-46 Jesus prays for help in the Garden of Gethsemane. Practice Prayer!"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "time",
+  "order": 43,
+  "label": "Time",
+  "emoji": "⏳",
+  "color": [
+    "#a3e635",
+    "#65a30d"
+  ],
+  "group": "g3",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"Today, if you hear his voice, do not harden your hearts as in the rebellion.\"",
+        "ref": "Hebrews 3:15"
+      },
+      "quote": {
+        "verse": "\"Life is hard - but God is good, and heaven is real.\"",
+        "author": "Billy Graham"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For a thousand years in Your sight are like yesterday when it passes by, or as a watch in the night.\"",
+        "ref": "Psalm 90:4"
+      },
+      "quote": {
+        "verse": "\"The devil is not afraid of a Bible that has dust on it.\"",
+        "author": "Anonymous"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"There is an appointed time for everything. And there is a time for every event under heaven — A time to weep and a time to laugh;\"",
+        "ref": "Ecclesiastes 3:1,3"
+      },
+      "quote": {
+        "verse": "\"The object of a new year is not that we should have a new year, but rather that we should have a new soul.\"",
+        "author": "G.K. Chesterton"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"As for the days of our life, they contain seventy years, Or if due to strength, eighty years, Yet their pride is but labor and sorrow; For soon it is gone and we fly away.\"",
+        "ref": "Psalm 90:10"
+      },
+      "quote": {
+        "verse": "\"Life can only be enjoyed as one acquires a true perspective of life and death and of the real purpose of life.\"",
+        "author": "Spiros Zodhiutes"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Yet you do not know what your life will be like tomorrow. You are just a vapor that appears for a little while and then vanishes away.\"",
+        "ref": "James 4:14"
+      },
+      "quote": {
+        "verse": "\"The year is made up of minutes. Let these be watched as having been dedicated to God.\"",
+        "author": "G. Campbell Morgan"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"And inasmuch as it is appointed for men to die once and after this comes judgment,\"",
+        "ref": "Hebrews 9:27"
+      },
+      "quote": {
+        "verse": "\"Look up in simple faith to the crucified Savior, who alone can lift you to a higher plane of life.\"",
+        "author": "Ruth Paxson"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Your eyes have seen my unformed substance; And in Your book were all written the days that were ordained for me,\"",
+        "ref": "Psalm 139:16"
+      },
+      "quote": {
+        "verse": "\"God has staked His reputation on the work of Jesus Christ in the souls of men and women whom He has saved and sanctified.\"",
+        "author": "Oswald Chambers"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"BLESS the Lord O my soul; and all that is within me, BLESS His Holy Name.\"",
+      "ref": "Psalm 103:1"
+    },
+    "quote": {
+      "verse": "\"The Word of God is perfect and pure, it is truth itself.\"",
+      "author": "Martin Luther"
+    }
+  },
+  "devotional": {
+    "title": "Time",
+    "scripture": null,
+    "body": [
+      "“We glide along the tides of time as swiftly as a dashing river and then vanish as quickly as a dream.” Psalm 90:5 (Living Bible) As I was deciding how to begin this new year, many topics floated through my mind. This last year found all of us frustrated in many ways, which seemed to change the use of our time.",
+      "What is time? It is what God made for us to use while we lives on this earth. We all have a birth - a beginning of our years, days, hours, minutes, and seconds - and a death, which is the end of our time on this earth. It is a proven fact that 100% of all people who are born die.",
+      "Did you know that time continues for all of us when God calls us to our eternal home? There we no longer count the years, days, hours, and minutes of our lives. We are all created by God for eternity. Try to imagine eternity. It is forever!",
+      "How we spend our time in our present lives and the choices we make will determine how and where we will spend the rest of our eternal existence. The most important decision you will ever make is what you will do with Jesus. Will you accept His free gift of eternal life in heaven, wrapped in love, joy, and peace, or will you make excuses to reject the free gift provided by Jesus’ death on the cross? His death was payment for your sin. To reject that free gift will land you in hell for all eternity!",
+      "I made the choice to place my faith in Jesus fifty years ago and I congratulate you if have also placed your faith in Jesus. If you haven’t decided to place your faith and eternal destiny in Christ’s hands, I urge you to do so today.",
+      "The apostle Paul wrote to this to the people living in Corinth: “Behold now is the acceptable time, behold now is the day of salvation” (2 Corinthians 6:2) What he was saying is, “After you die, it will be too late!”"
+    ]
+  }
+}

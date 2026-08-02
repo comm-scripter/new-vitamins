@@ -1,0 +1,94 @@
+{
+  "id": "purity",
+  "order": 29,
+  "label": "Purity",
+  "emoji": "🤍",
+  "color": [
+    "#e2e8f0",
+    "#cbd5e1"
+  ],
+  "group": "g2",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"I will greatly rejoice in the Lord; my soul will exalt my God. He has clothed me in a garment of salvation and wrapped me in a robe of righteousness.\"",
+        "ref": "Isaiah 61:10"
+      },
+      "quote": {
+        "verse": "\"Become pure in heart. The pure heart shall see God.\"",
+        "author": "Henry Drummond"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Pure and genuine religion in the sight of God the Father means caring for widows and orphans ...and refusing to let the world corrupt you.\"",
+        "ref": "James 1:27"
+      },
+      "quote": {
+        "verse": "\"When saints cease to seek holiness, purity, righteousness, truth ...then it is that Satan comes.\"",
+        "author": "Smith Wigglesworth"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Be at peace with everyone, and work out living a holy life; those who are not holy will not see the Lord.\"",
+        "ref": "Hebrews 12:14"
+      },
+      "quote": {
+        "verse": "\"The proof of spiritual maturity is not how pure you are, but an awareness of your impurity.\"",
+        "author": "Philip Brooks"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Do everything without grumbling or arguing, so that you may become blameless and pure children of God.\"",
+        "ref": "Philippians 2:14"
+      },
+      "quote": {
+        "verse": "\"Pure morality points you to the purest one of all - Jesus, Son of God.\"",
+        "author": "Ravi Zacharias"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For the love of money is the root of all evil. But you pursue righteousness, godliness, faith, love, patience, and gentleness.\"",
+        "ref": "1 Timothy 6:10-11"
+      },
+      "quote": {
+        "verse": "\"God has guarded His Word so that only the pure in heart can see its secrets.\"",
+        "author": "Winkie Pratney"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"To the pure, all things are pure but to those who are defiled and unbelieving, nothing is pure.\"",
+        "ref": "Titus 1:15"
+      },
+      "quote": {
+        "verse": "\"He that loves the Word and the purity of its precepts cannot turn traitor.\"",
+        "author": "William Gurnell"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"I will set nothing wicked before my eyes.\"",
+        "ref": "Psalm 101:3"
+      },
+      "quote": {
+        "verse": "\"O Lord keep our heart, keep our eyes, keep our feet, keep our tongues.\"",
+        "author": "William Tiptaft"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Wash me thoroughly from my iniquity, and cleanse me from my sin.\"",
+      "ref": "Psalm 51:2"
+    },
+    "quote": {
+      "verse": "\"This desire for a heart of purity is a creation of the Holy Spirit at work in the heart.\"",
+      "author": "Duncan Campbell"
+    }
+  },
+  "devotional": null
+}

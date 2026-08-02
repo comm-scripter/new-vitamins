@@ -1,0 +1,106 @@
+{
+  "id": "faith",
+  "order": 0,
+  "label": "Fellowship of Faith",
+  "emoji": "✨",
+  "color": [
+    "#a855f7",
+    "#ec4899"
+  ],
+  "group": "g0",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"So faith comes from hearing, and hearing by the word of Christ.\"",
+        "ref": "Romans 10:17"
+      },
+      "quote": {
+        "verse": "\"Faith is God's antidote for fear.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Behold as for the proud one, his soul is not right within him. But the righteous will live by his faith.\"",
+        "ref": "Habakkuk 2:4"
+      },
+      "quote": {
+        "verse": "\"If you only have a little ray of light, show out distinctly that you are for Jesus.\"",
+        "author": "G.V. Wigam"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But now the righteousness of God apart from the law is revealed...through faith in Jesus Christ, to all and on all who believe.\"",
+        "ref": "Romans 3:21"
+      },
+      "quote": {
+        "verse": "\"Doubt can strengthen your faith as God provides the answers to our most heartfelt questions.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For by grace we have been saved by faith, and that not of yourself, it is a gift from God.\"",
+        "ref": "Ephesians 2:8"
+      },
+      "quote": {
+        "verse": "\"Faith is the engine driving all your actions.\"",
+        "author": "John Blanchard"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Consider it all joy my brethren when you encounter various trials, knowing that the testing of your faith produces endurance.\"",
+        "ref": "James 1:2-3"
+      },
+      "quote": {
+        "verse": "\"Down through the centuries in times of trouble...God has brought courage to the hearts of those who love Him.\"",
+        "author": "Billy Graham"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"By faith we understand that the worlds were prepared by the word of God, so that what is seen was not made out of things which are visible.\"",
+        "ref": "Hebrews 10:3"
+      },
+      "quote": {
+        "verse": "\"Assurance is a fruit that grows out of the root of faith\"",
+        "author": "Stephen Charnock"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Test yourselves to see if you are in the faith, examine yourselves! Jesus Christ is in you unless you fail the test.\"",
+        "ref": "2 Corinthians 13:5"
+      },
+      "quote": {
+        "verse": "\"Nothing needs to be added to Christ's finished work, and nothing can be added to Christ's finished work.\"",
+        "author": "Francis Schaeffer"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"BLESS the Lord O my soul; and all that is within me, BLESS His Holy Name.\"",
+      "ref": "Psalm 103:1"
+    },
+    "quote": {
+      "verse": "\"The Word of God is perfect and pure, it is truth itself.\"",
+      "author": "Martin Luther"
+    }
+  },
+  "devotional": {
+    "title": "The Fellowship of Faith",
+    "scripture": null,
+    "body": [
+      "Chapter 11 of the book of Hebrews contains a record of all the faithful of God who believed the Lord's Promises but had not received the Promises at their death. Hebrews 12:2 calls us to \"Keep our eyes fixed on Jesus, on whom our faith depends, from beginning to end.\"",
+      "What exactly is this FAITH that we are called to focus upon?",
+      "We all have faith. When we drive down the highway we believe that the white Line down the center is going to keep unknown drivers on their side so that they will not crash into us who are driving in the other direction. Or when we enter a dark room and switch on the Light, we believe that the room will become bathed in electric light even if we don't know how that exactly happens. Why then is it so difficult to have Faith in the creator of the universe? Hebrews 11:1 says, \"Faith is to be sure of the things we hope for, to be certain of the things we cannot see.\" Our Fellowship with Jesus is strengthen by Faith.",
+      "Who gives us this FAITH ?",
+      "We do not generate this saving faith that the Bible records by ourselves. It comes from our Creator God. Scripture, James 1:17 says, \"Every good gift and every perfect Present comes from heaven; it comes down from God, the Creator of the heavenly Lights. \"",
+      "Why is a FAITH so important?",
+      "We admit that we are sinners and cannot Live up to God's perfect plan. So in order to be justified (which is just as if we had never sinned) with God we must claim Christ's work on the cross. This admission brings us peace with God and enjoyment with the gift of grace. The Bible reports in Romans 5:1-2 \"Now that we have been put right with God through faith, we have peace with God through our Lord Jesus Christ. He has brought us, by FAITH, into the grace of God in which we now stand.\" Enjoy this month's vitamins."
+    ]
+  }
+}

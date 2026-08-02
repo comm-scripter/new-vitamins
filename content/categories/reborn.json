@@ -1,0 +1,108 @@
+{
+  "id": "reborn",
+  "order": 49,
+  "label": "Born Again",
+  "emoji": "🐣",
+  "color": [
+    "#34d399",
+    "#22c55e"
+  ],
+  "group": "g3",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"For by grace you have been saved through faith; and that not of yourselves, it is a gift of God; not as a result of works, so that no one may boast.\"",
+        "ref": "Ephesians 2:8"
+      },
+      "quote": {
+        "verse": "\"Faith is the evidence of new birth, not the cause of it.\"",
+        "author": "John Piper"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For God so loved the world, that He gave His only Son, that whoever believes in Him (Jesus) should not perish, but have eternal life.\"",
+        "ref": "John 3:16"
+      },
+      "quote": {
+        "verse": "\"If you're really born again, there's nothing can separate you from God.\"",
+        "author": "William Marrion Branham"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Truly, truly I say to you, Unless one is born again, he cannot see the kingdom of God. Truly, truly ... unless one is born of water and of the Spirit, he cannot enter into the kingdom of heaven.\"",
+        "ref": "John 3:3, 5"
+      },
+      "quote": {
+        "verse": "\"Until a man is born again, his praise is mere noise or religious entertainment. Only the living can praise the Lord.\"",
+        "author": "David O. Oyedepo"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Behold. I (Jesus) stand at the door and knock if anyone hears My voice and opens the door, I will come in to him, and dine with him, and he with me.\"",
+        "ref": "Revelation 3:20"
+      },
+      "quote": {
+        "verse": "\"The highest form of deliverance is to be born again.\"",
+        "author": "Unknown"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For all have sinned and fall short of the glory of God, being justified as a gift by His grace through redemption, which is for Christ.\"",
+        "ref": "Romans 3:23"
+      },
+      "quote": {
+        "verse": "\"The spiritual life is a gift of the Living Spirit. The spiritual is no mere development of the natural man. He is a new creation born from above.\"",
+        "author": "Henry Drummond"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.\"",
+        "ref": "Romans 6:23"
+      },
+      "quote": {
+        "verse": "\"As is true of man who is born naturally and receives a human nature from his parents, so man born anew receives a new nature, a new capacity for service and devotion to God.\"",
+        "author": "John F. Walvoord"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"that if you confess with your mouth that Jesus is old and believe in your heart that God raised Him from the dead, you shall be saved.\"",
+        "ref": "Romans 10:9"
+      },
+      "quote": {
+        "verse": "\"Eternal life is not a peculiar feeling inside. If you are born again, eternal life is that quality of life that you possess right now.\"",
+        "author": "Major Ian Thomas"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Seek the Lord while He may be found. Call upon Him while He is near ... for God will abundantly pardon.\"",
+      "ref": "Isaiah 55:6, 7b"
+    },
+    "quote": {
+      "verse": "\"Fully born again in the Lord brings a total separation from believers and unbelievers.\"",
+      "author": "Peter Korley"
+    }
+  },
+  "devotional": {
+    "title": "Born Again",
+    "scripture": {
+      "ref": "John 1:32-23",
+      "verse": "\"But as many as received him (Jesus), to them he gave the right to become children of God, even to those who believe in His name, who were not born of blood or of the will of the flesh nor of the will of man, but of God.”"
+    },
+    "body": [
+      "“Born again is God’s plan to have you and me Heaven Ready.”",
+      "Some believe that Christians are wrong in believing in a Born Again future. Some believe that to die is to cease to exist. Others believe as a man named Nicodemus did. He was a man of high position in the Jewish Sanhedrin. When he met with Jesus in person and wanted to know how to enter God’s kingdom, Jesus told him he must be born anew or born again. Nicodemus said that he did not believe that a person could be born a second time and enter his mother’s womb when he is old. I hope you do not believe this because you, like Nicodemus, are limiting the work of Jesus and of the Holy Spirit. The perfect Creator God had the perfect plan and if we believe in our hearts in His plan we are able to be Born Again!",
+      "In Romans 8:1-11 in your Bible you will find a beautifully written account by Paul relating to God’s planned rebirth. We are born with a fleshly self of sin to co-exist with the new spiritual self giving us a beautiful born again self.",
+      "Pastor Jack Willman wrote the following comment. “Jesus came to offer us salvation. This salvation involves being born out of death and sin and back into a life of joy, health, and an eternity with God. As Christians we can rejoice in this new birth, and new life. We’re no longer slaves to sin and death. We are not who we used to be. We are a new creation.”",
+      "To understand the Born Again declaration by Jesus we must be careful to understand that we do not generate salvation. God is the author and initiator of the new heart needed for salvation. By the washing of His Word we respond in faith, by obedience to the Holy Spirit’s gift of a New Birth. Jesus said we must be born again by water, (perhaps referring to the old testament use of water symbolizing the Scriptures-the Word of God) and by the blood of Jesus and His death on the cross. The Holy Spirit is the third person of the Trinity who convicts us of our sin and draws us to salvation. As you read the Spiritual Vitamins each day you will learn how to take God’s steps to experience salvation for yourself.",
+      "Pastor Rick Warren’s Quote: “Through salvation our past has been forgiven, our present is given meaning, and our future is a success."
+    ]
+  }
+}

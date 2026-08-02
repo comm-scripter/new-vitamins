@@ -1,0 +1,106 @@
+{
+  "id": "resurrection-2",
+  "order": 47,
+  "label": "The Resurrection",
+  "emoji": "🌇",
+  "color": [
+    "#fde68a",
+    "#f59e0b"
+  ],
+  "group": "g3",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"Blessed be the God and Father of our Lord Jesus Christ, Who according to His great mercy has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.\"",
+        "ref": "1 Peter 1:3"
+      },
+      "quote": {
+        "verse": "\"The cross is the victory, the resurrection is the triumph. The resurrection is the public display of the victory, the triumph of the crucified one.\"",
+        "author": "Leon Morris"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Jesus said to her, I am the resurrection and the life; he who believes in Me shall live even if he dies, everyone who lives and believes in Me shall never die.\"",
+        "ref": "John 11:25-26"
+      },
+      "quote": {
+        "verse": "\"The resurrection of Jesus changes the face of death for all His people. Death is no longer a prison, but a passage into God's presence.\"",
+        "author": "J.I. Packer"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"To the Sadducees, who say there is no resurrection, Jesus said to them, 'You are mistaken. For in the resurrection they neither marry nor are they given in marriage.'\"",
+        "ref": "Matthew 22:23,30"
+      },
+      "quote": {
+        "verse": "\"The minute you decide to receive Jesus as Savior and Lord, the power of the Holy Spirit comes into your life. It's the power of the resurrection - the same thing that raised Jesus from the dead.\"",
+        "author": "Tim Keller"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Do nor marvel at this; for the hour is coming in which all who are in the graves will hear His (Jesus') voice and come forth - those who have done good, to the resurrection of life, and those who have done evil to the resurrection of condemnation.\"",
+        "ref": "John 5:28-29"
+      },
+      "quote": {
+        "verse": "\"The resurrection is a fact better attested than any event recorded in history, whether ancient or modern.\"",
+        "author": "Charles H. Spurgeon"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"If there is no resurrection of the dead, then Christ is not risen. And if Christ is not risen, Then our preaching is empty and your faith is also empty.\"",
+        "ref": "1 Corinthians 15:13-14"
+      },
+      "quote": {
+        "verse": "\"We live and die; Christ died and lived\"",
+        "author": "John Stott"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Your dead shall live; together with my dead body they shall arise; awake and sing you who dwell in dust; for your dew is like the dew of herbs; and the earth shall cast out the dead.\"",
+        "ref": "Isaiah 26:19"
+      },
+      "quote": {
+        "verse": "\"There is more evidence that Jesus rose from the dead than there is that Julius Caesar ever lived or that Alexander the Great died at age thirty-three.\"",
+        "author": "Billy Graham"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"For if we have been united together in the likeness of His death, certainly we also shall be in the likeness of His resurrection.\"",
+        "ref": "Romans 6:5"
+      },
+      "quote": {
+        "verse": "\"To preach Christianity means primarily to preach the resurrection ... the resurrection and its consequences were the gospel or good news which the Christians brought.\"",
+        "author": "C.S. Lewis"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Blessed and Holy is the one who has a part in the first resurrection. Over these the second death has no power, but they shall be priests of God and of Christ, and shall reign with Him a thousand years.\"",
+      "ref": "Revelation 20:6"
+    },
+    "quote": {
+      "verse": "\"Every parting gives a foretaste of death; every coming together again a foretaste of resurrection.\"",
+      "author": "Arthur Schopenhauer"
+    }
+  },
+  "devotional": {
+    "title": "Easter 2024 - The Resurrection",
+    "scripture": {
+      "ref": "Job 19:25",
+      "verse": "\"I know that my Redeemer lives, and at the last He will take His stand on the earth.\""
+    },
+    "body": [
+      "Suppose you witness a serious traffic accident. Being helpful you approach each vehicle to check on the driver's condition. A 9l1 call on your cell phone brings ambulance help. The Police arrive seeking an eyewitness to the accident among the crowd. When they find you the proof and evidence of the accident is truthfully reported by you. It is important to the police when receiving testimony about an event to seek an honest eyewitness.",
+      "I can see a similar likeness between eyewitness reports on a modern accident and the eyewitness reports on Christ's death and resurrection.",
+      "Seven Hundred years before Jesus' birth the Bible predicts the events in Isaiah 53:1-12 and Psalm 22:17-18. The Apostle Paul wrote about the death and resurrection truth in 1 Corinthians 15:3-8. \"I passed on to you what I have received, which is of the greatest importance; that Christ died for our sins, as written in the scriptures; that He was buried and raised to life on the third day; that He appeared to Peter, and then to all twelve apostles.\" At the time of Paul's writing only 15-20 years had passed from Christ's death. Paul's accuracy was never questioned by the more than 500 eyewitnesses who were still living at that time, although some had died.",
+      "Why is the death and resurrection of Jesus important? The Bible clearly tells us in scripture that Adam and Eve disobeyed their Creator God and brought sin into the world. They were created for eternal fellowship with God, never to experience death. Because of the sin of disobedience, death entered the world. Paul once again wrote about a secret that had not been previously understood. I Corinthians 15:50-57 \"Listen to this secret: we shall not all die, but in an instant we shall all be changed. In the blink of an eye and the sound of the trumpet those who have given their sins to Jesus and asked for forgiveness (Christ believers) will be forgiven for their sin and will dwell in Heaven with immortal bodies. Death will be destroyed and our Victory will be complete. Satan brought sin and death into the world and those who do not believe in Jesus will be cast into the lake of fire in Hell."
+    ]
+  }
+}

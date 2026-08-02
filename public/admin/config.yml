@@ -1,0 +1,120 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Local-only editing: run `npm run cms` alongside `npm run dev`, then
+# open http://localhost:5173/admin/ — edits are written straight to
+# your working tree via the local proxy, no hosting/auth setup needed.
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    folder: "content/categories"
+    extension: "json"
+    format: "json"
+    create: false
+    delete: false
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{label}}"
+    fields:
+      - { label: "ID (do not change)", name: "id", widget: "string" }
+      - { label: "Display order", name: "order", widget: "number", value_type: "int" }
+      - { label: "Label", name: "label", widget: "string" }
+      - { label: "Emoji", name: "emoji", widget: "string" }
+      - label: "Gradient colors"
+        name: "color"
+        widget: "list"
+        min: 2
+        max: 2
+        field: { label: "Hex", name: "hex", widget: "color" }
+      - label: "Group"
+        name: "group"
+        widget: "select"
+        options:
+          - { label: "Faith & Spirit", value: "g0" }
+          - { label: "Heart & Soul", value: "g1" }
+          - { label: "Character & Virtue", value: "g2" }
+          - { label: "Life & Relationships", value: "g3" }
+      - label: "Weekly vitamins (Sunday → Saturday)"
+        name: "vitamins"
+        widget: "list"
+        minimize_collapsed: true
+        min: 7
+        max: 7
+        summary: "{{fields.scripture.verse}}"
+        fields:
+          - label: "Scripture"
+            name: "scripture"
+            widget: "object"
+            fields:
+              - { label: "Verse", name: "verse", widget: "text" }
+              - { label: "Reference", name: "ref", widget: "string", required: false }
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Verse", name: "verse", widget: "text" }
+              - { label: "Author", name: "author", widget: "string", required: false }
+      - label: "Bonus Vitamin"
+        name: "bonus"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Scripture"
+            name: "scripture"
+            widget: "object"
+            fields:
+              - { label: "Verse", name: "verse", widget: "text" }
+              - { label: "Reference", name: "ref", widget: "string", required: false }
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Verse", name: "verse", widget: "text" }
+              - { label: "Author", name: "author", widget: "string", required: false }
+      - label: "Devotional (optional)"
+        name: "devotional"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - label: "Scripture"
+            name: "scripture"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Verse", name: "verse", widget: "text", required: false }
+              - { label: "Reference", name: "ref", widget: "string", required: false }
+          - label: "Body paragraphs"
+            name: "body"
+            widget: "list"
+            required: false
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "taxonomy"
+    label: "Category Groups"
+    files:
+      - name: "groups"
+        label: "Groups"
+        file: "content/groups.json"
+        format: "json"
+        fields:
+          - label: "Groups"
+            name: "groups"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - label: "Gradient colors"
+                name: "color"
+                widget: "list"
+                min: 2
+                max: 2
+                field: { label: "Hex", name: "hex", widget: "color" }

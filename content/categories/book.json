@@ -1,0 +1,122 @@
+{
+  "id": "book",
+  "order": 24,
+  "label": "Book of Love Letters",
+  "emoji": "📖",
+  "color": [
+    "#0ea5e9",
+    "#6366f1"
+  ],
+  "group": "g1",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"The sum of Thy WORD is TRUTH.\"",
+        "ref": "Psalm 119:160a"
+      },
+      "quote": {
+        "verse": "\"If one thing lies at the basis of the whole biblical teaching about God, it is that God knows all things.\"",
+        "author": "J. Gresham Machen"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The LAW of the Lord is PERFECT, restoring the soul.\"",
+        "ref": "Psalm 19:7a"
+      },
+      "quote": {
+        "verse": "\"God's word reveals insights into the world, and we must continue in His word faithfully, if we are to see our circumstances clearly.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The TESTIMONY of the Lord is SURE, making wise the simple.\"",
+        "ref": "Psalm 19:7b"
+      },
+      "quote": {
+        "verse": "\"Bible verses have a way of entering through our eyes, swirling around in our mind, and showing up in our hands and feet.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The PRECEPTS of the Lord are RIGHT, rejoicing the heart.\"",
+        "ref": "Psalm 19:8a"
+      },
+      "quote": {
+        "verse": "\"None walks so evenly with God, as they who are assured of the love of God.\"",
+        "author": "Thomas Manton"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The COMMANDMENT of the Lord is PURE, enlightening the eyes.\"",
+        "ref": "Psalm 19:8b"
+      },
+      "quote": {
+        "verse": "\"Our obedience to God's commandments demonstrates our love for Him.\"",
+        "author": "David Jeremiah"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The FEAR of the Lord is CLEAN, enduring forever.\"",
+        "ref": "Psalm 19:9a"
+      },
+      "quote": {
+        "verse": "\"Only he who can say, 'The Lord is the strength of my life,' can go on to say, Of whom shall I be afraid?\"",
+        "author": "Alexander MacLaren"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"The JUDGMENTS of the Lord are TRUE, they are righteous altogether.\"",
+        "ref": "Psalm 19:9b"
+      },
+      "quote": {
+        "verse": "\"You never so touch the ocean of God's love as when you forgive and love your enemies.\"",
+        "author": "Corrie ten Boom"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"Every one of Thy RIGHTEOUS ORDINANCES is EVERLASTING.\"",
+      "ref": "Psalm 119:160b"
+    },
+    "quote": {
+      "verse": "\"God's love does not take a day off.\"",
+      "author": "David Jeremiah"
+    }
+  },
+  "devotional": {
+    "title": "February 2023 - The Bible: God’s Book of Love Letters",
+    "scripture": {
+      "ref": "1 Corinthians 13:13",
+      "verse": "“And now these three remain: FAITH, HOPE AND LOVE. But the greatest of these is LOVE.” ( )"
+    },
+    "body": [
+      "(My prayer) “Lord, fill my mind with Your law and scripture. Fill my heart with Your love and obedience.”",
+      "I love February and Valentine’s Day as well as Easter and Christmas. These holidays all have God’s love in common! I use Valentine’s Day to observe the Biblical Law “Love your neighbor as yourself” and the Law to “Obey all God’s commandments.” Easter presents God Incarnate. A love so great He died on the cross for Believers in Him. Christmas reveals God’s love in a gift named Immanuel (God with us). Jesus performed miracles and created teaching situations which revealed His love for mankind and His Precepts and Commandments.",
+      "This February I’ve chosen Psalm 19:7-10 and Psalm 119:160 as Vitamins to teach us how to be ALMIGHTY LOVING. Quoting C.S. Lewis: “Though our feelings come and go, (God’s) love for us does not.”",
+      "Day 1: The Law (scripture, statutes) is Perfect (flawless) Restoring (replacing, re-establishing) the Soul (life spirit or spiritual element).",
+      "Day 2: The Testimony is Sure (secure and true) and Wise (prudent).",
+      "Day 3: The Precepts (commandments) are Right (correct direction) Rejoicing:(gladness) the Heart (seat of emotion).",
+      "Day 4: The Commandments (Instructional) are Pure (genuine, undefiled) and Enlightening (illumine).",
+      "Day 5 The Fear of the Lord (awe, dread, reverence) is Clean (wash, purified) enduring Forever (eternal).",
+      "Day 6: Judgment (condemnation) is True (real, reliable) Righteous (virtuous).",
+      "Day 7: Sum (total) God’s Word (message, speech) is Truth (genuine, honest).",
+      "Day 8: Lord’s Righteous (virtuous) Ordinances (statutes) Everlasting (eternal).",
+      "SCRIPTURAL EVIDENCE:",
+      "Day 1: Law is Perfect. (James 1:21)",
+      "Day 2: Testimony is Sure. Wise. (1 Corinthians 1:7,8, Psalm 111:7, James 3:13)",
+      "Day 3: Precepts Right. (Matthew 15:7,8,9, Rejoicing: Luke 13:17, the Heart.)",
+      "Day 4: Commandments (John 13:34) are Pure (1 Timothy 1:5), Enlightening the eyes. (Ephesians 1:18)",
+      "Day 5: Fear of the Lord (Psalm 15:11), Clean (John 15:3), Forever (Psalm 9:11)",
+      "Day 6: Judgments of the Lord. (Revelation 19:1,2)",
+      "Day 7: Sum of Thy Word (Matthew 4:4) is Truth. (Proverbs 23:23)",
+      "Day 8: Lord’s Righteous Ordinances (Exodus 12:14) Everlasting. (Psalm 90:2)"
+    ]
+  }
+}

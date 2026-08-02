@@ -1,0 +1,108 @@
+{
+  "id": "study",
+  "order": 36,
+  "label": "Studying Scripture",
+  "emoji": "📚",
+  "color": [
+    "#0ea5e9",
+    "#3b82f6"
+  ],
+  "group": "g2",
+  "vitamins": [
+    {
+      "scripture": {
+        "verse": "\"For the Word of the cross is to those who are perishing foolishness; but to us who are being saved it is the power of God.\"",
+        "ref": "1 Corinthians 1:18"
+      },
+      "quote": {
+        "verse": "\"If one thing lies at the basis of the whole biblical teaching about God, it is that God knows all things.\"",
+        "author": "J.G. Gresham Machem"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"All Scripture is inspired by God and profitable for teaching, reproof, correction, for training in righteousness that the man of God may be adequately equipped for every good work.\"",
+        "ref": "2 Timothy 3:16"
+      },
+      "quote": {
+        "verse": "\"This is the power of the Scriptures - personally they speak, if we will listen, heed them, and let them take over; they will transform us forever.\"",
+        "author": "Mark Clark"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But know this first of all, that no prophesy of Scripture is a matter of one's own interpretation, for no prophesy was ever made by an act of human will, but men moved by the Holy Spirit spoke from God.\"",
+        "ref": "2 Peter 1:20-21"
+      },
+      "quote": {
+        "verse": "\"The gospel is not a doctrine of the tongue, but of life.\"",
+        "author": "John Calvin"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Your Word, Lord, I have treasured in my heart, that I may not sin against you.\"",
+        "ref": "Psalm 119:11"
+      },
+      "quote": {
+        "verse": "\"Let God's promises shine on your problems.\"",
+        "author": "Corrie Ten Boom"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"So shall My Word be which goes from my mouth; it shall not return to Me empty.\"",
+        "ref": "Isaiah 55:11"
+      },
+      "quote": {
+        "verse": "\"The Word of God well understood and religiously obeyed, is the shortest route to spiritual perfection.\"",
+        "author": "A.W. Tozer"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"But He (Jesus) answered and said, 'Man shall not live on bread alone, but on every word that proceeds out of the mouth of God.'\"",
+        "ref": "Matthew 4:4"
+      },
+      "quote": {
+        "verse": "\"Dear Father, teach me to hold fast to the Word of life. Give me a hunger for Scripture.\"",
+        "author": "Kay Arthur"
+      }
+    },
+    {
+      "scripture": {
+        "verse": "\"Watch therefore, for you know neither the day nor the hour in which the Son of Man is coming.\"",
+        "ref": "Matthew 25:13"
+      },
+      "quote": {
+        "verse": "\"Christ could come at any moment. I believe that with all my heart - not because of what I read in the newspapers, but because of what I read in Scripture.\"",
+        "author": "John McArthur"
+      }
+    }
+  ],
+  "bonus": {
+    "scripture": {
+      "verse": "\"For the Word of the cross is to those who are perishing foolishness; but to us who are being saved it is the power of God.\"",
+      "ref": "1 Corinthians 1:18"
+    },
+    "quote": {
+      "verse": "\"If one thing lies at the basis of the whole biblical teaching about God, it is that God knows all things.\"",
+      "author": "J.G. Gresham Machem"
+    }
+  },
+  "devotional": {
+    "title": "Studying Scripture",
+    "scripture": {
+      "ref": "Romans 15:4",
+      "verse": "“For what was written in earlier times was written for our instruction, that through perseverance and the encouragement of the Scripture we might have hope.”"
+    },
+    "body": [
+      "Studying the Bible informs us about the life and purpose of Jesus and your eternal life with God in Heaven. Did you know that God created you to live forever? When your life is over here on earth, whether it is 50 years or 100 years, you will continue to exist. For those who love Christ and make Him king in their life they will dwell in heaven for endless time. This is God’s perfect plan for a new earth where sin will not exist and love will reign. John 3:15 “That whoever believes in Him (Jesus) should not perish but have eternal life.”",
+      "For those who do not accept Christ’s free gift before they die, their eternity will be in the Lake of Fire. There they will experience endless pain and suffering. Revelation 20:15 “Anyone not found written in the Book of Life was cast into the Lake of Fire.”",
+      "Facts about the Scripture are: The Bible has 66 books within its cover. It was written over a period of 1,500 years by more than 40 authors who were inspired by the Holy Spirit. God’s message concerns the need to reconcile people’s relationship with a sinless loving God. Galatians 3:26; “For you all are sons of God through Christ Jesus.” Galatians 3:14 “That the blessings of Abraham might come upon Gentiles in Christ Jesus, that we might receive the promise of the Spirit through faith.”",
+      "God gave mankind the Bible as a help to learn great knowledge, gain wisdom, understand history, grow in love for Him as our Creator, and to receive the forever peace that Jesus’s death bestowed upon us.",
+      "Studying Scripture is vital! Many famous Theologians have studied the Bible in many different ways. Here are some ideas. (1) Read 1 Psalm and 1 Proverb daily; (2) Plan to read through the entire Bible in 1 year; (3) Examine as many verses as you can of God’s promises and claim them; (4) Investigate one subject such as Sin or Salvation and learn what God says about it; (5) Memorize some important verses.",
+      "“Nature forms us; Sin deforms us; School informs us; and Christ transforms us.” Anonymous"
+    ]
+  }
+}
