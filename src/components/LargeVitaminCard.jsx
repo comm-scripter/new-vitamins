@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { hexToRgb } from '../utils';
+import { hexToRgb, pickTextColor } from '../utils';
 import { useWindowWidth } from '../hooks';
 
 export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
@@ -35,6 +35,21 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const r0 = hexToRgb(c0);
   const shadow = `0 8px 48px rgba(${r0},0.45), 0 2px 16px rgba(0,0,0,0.5)`;
 
+  // The pill/card faces are solid gradients of the category's own colors —
+  // some categories are pale (e.g. #fde68a, #e0e7ff), so fixed white text
+  // can nearly disappear. Pick whichever text color survives worst-case.
+  const isLightBg = pickTextColor([c0, c1]) !== '#ffffff';
+  const textMain   = isLightBg ? '#1b1033' : '#ffffff';
+  const textStrong = isLightBg ? 'rgba(27,16,51,0.85)' : 'rgba(255,255,255,0.92)';
+  const textSoft   = isLightBg ? 'rgba(27,16,51,0.65)' : 'rgba(255,255,255,0.65)';
+  const textFaint  = isLightBg ? 'rgba(27,16,51,0.55)' : 'rgba(255,255,255,0.6)';
+  const verseShadow = isLightBg
+    ? '0 1px 2px rgba(255,255,255,0.5)'
+    : '0 1px 6px rgba(0,0,0,0.5)';
+  const btnBg      = isLightBg ? 'rgba(27,16,51,0.1)'  : 'rgba(255,255,255,0.12)';
+  const btnBgActive= isLightBg ? 'rgba(27,16,51,0.22)' : 'rgba(255,255,255,0.3)';
+  const btnBorder  = isLightBg ? 'rgba(27,16,51,0.28)' : 'rgba(255,255,255,0.35)';
+
   /**
    * Computes the largest verse font size (px) that fits inside the pill
    * without overlapping the absolutely-positioned controls pinned to the bottom.
@@ -66,15 +81,15 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
 
     const maxVerseH = usableH - refH - 2 * ctrlsInContent;
 
-    let fs = Math.min(Math.round(pillW / 30), 24);
-    while (fs > 11) {
+    let fs = Math.min(Math.round(pillW / 24), 30);
+    while (fs > 13) {
       const charsPerLine = Math.floor(usableW / (fs * 0.56));
       if (charsPerLine < 1) { fs--; continue; }
       const lines = Math.ceil(text.length / charsPerLine);
       if (lines * fs * 1.75 <= maxVerseH) break;
       fs--;
     }
-    return `${Math.max(fs, 11)}px`;
+    return `${Math.max(fs, 13)}px`;
   }
 
   const verseFontFront = calcFontPx(scripture.verse, false, !!scripture.ref) ?? 'var(--fs-base)';
@@ -106,61 +121,61 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
             <div style={{ fontSize: 40 }}>{category.emoji}</div>
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-              color: 'rgba(255,255,255,0.8)', textTransform: 'uppercase',
+              color: textSoft, textTransform: 'uppercase',
               letterSpacing: '0.1em', textAlign: 'center',
             }}>{dayLabel} · {category.label}</div>
             <p style={{
-              fontFamily: 'Playfair Display', fontStyle: 'italic',
-              fontSize: 'var(--fs-base)', color: 'white', lineHeight: 1.8,
+              fontFamily: 'Playfair Display',
+              fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
               textAlign: 'center', margin: 0,
-              textShadow: '0 1px 6px rgba(0,0,0,0.35)',
+              textShadow: verseShadow,
             }}>{scripture.verse}</p>
             {scripture.ref && (
               <p style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
-                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
+                color: textStrong, textAlign: 'center', margin: 0,
               }}>— {scripture.ref}</p>
             )}
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: 'rgba(255,255,255,0.65)',
+              color: textFaint,
             }}>↻ tap for quote</div>
           </div>
           {/* BACK — quote */}
           <div style={{ ...face, transform: 'rotateY(180deg)', background: `linear-gradient(145deg, ${c1}, ${c0})` }}>
             <p style={{
-              fontFamily: 'Playfair Display', fontStyle: 'italic',
-              fontSize: 'var(--fs-base)', color: 'white', lineHeight: 1.8,
+              fontFamily: 'Playfair Display',
+              fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
               textAlign: 'center', margin: 0,
-              textShadow: '0 1px 6px rgba(0,0,0,0.35)',
+              textShadow: verseShadow,
             }}>{quote.verse}</p>
             {quote.author && (
               <p style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
-                color: 'rgba(255,255,255,0.92)', textAlign: 'center',
+                color: textStrong, textAlign: 'center',
               }}>— {quote.author}</p>
             )}
             <div style={{ display: 'flex', gap: 12 }}>
               <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }} style={{
                 padding: '11px 24px', borderRadius: 50,
-                background: saved ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.12)',
-                border: '1px solid rgba(255,255,255,0.35)',
-                cursor: 'pointer', color: 'white',
+                background: saved ? btnBgActive : btnBg,
+                border: `1px solid ${btnBorder}`,
+                cursor: 'pointer', color: textMain,
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 600,
                 display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s',
               }}>{saved ? '♥' : '♡'} Save</button>
               <button onClick={handleShare} style={{
                 padding: '11px 24px', borderRadius: 50,
-                background: 'rgba(255,255,255,0.12)',
-                border: '1px solid rgba(255,255,255,0.3)',
-                cursor: 'pointer', color: 'white',
+                background: btnBg,
+                border: `1px solid ${btnBorder}`,
+                cursor: 'pointer', color: textMain,
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 600,
                 display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s',
               }}>↗ Share</button>
             </div>
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: 'rgba(255,255,255,0.6)',
+              color: textFaint,
             }}>↻ tap for scripture</div>
           </div>
         </div>
@@ -238,22 +253,22 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           {/* FRONT — scripture */}
           <div style={{ ...sharedFace, background: pillBg }}>
             <p style={{
-              fontFamily: 'Playfair Display', fontStyle: 'italic',
-              fontSize: verseFontFront, color: 'white', lineHeight: 1.75,
-              textAlign: 'center', margin: 0, textShadow: '0 1px 6px rgba(0,0,0,0.5)',
+              fontFamily: 'Playfair Display',
+              fontSize: verseFontFront, color: textMain, lineHeight: 1.75,
+              textAlign: 'center', margin: 0, textShadow: verseShadow,
             }}>{scripture.verse}</p>
             {scripture.ref && (
               <p style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
-                textShadow: '0 1px 4px rgba(0,0,0,0.4)',
+                color: textStrong, textAlign: 'center', margin: 0,
+                textShadow: verseShadow,
               }}>— {scripture.ref}</p>
             )}
             {/* hint pinned to bottom */}
             <div style={ctrlRow}>
               <span style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
-                color: 'rgba(255,255,255,0.6)',
+                color: textFaint,
               }}>↻ tap for quote</span>
             </div>
           </div>
@@ -261,31 +276,31 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           {/* BACK — quote */}
           <div style={{ ...sharedFace, transform: 'rotateY(180deg)', background: pillBgFlip }}>
             <p style={{
-              fontFamily: 'Playfair Display', fontStyle: 'italic',
-              fontSize: verseFontBack, color: 'white', lineHeight: 1.75,
-              textAlign: 'center', margin: 0, textShadow: '0 1px 5px rgba(0,0,0,0.5)',
+              fontFamily: 'Playfair Display',
+              fontSize: verseFontBack, color: textMain, lineHeight: 1.75,
+              textAlign: 'center', margin: 0, textShadow: verseShadow,
             }}>{quote.verse}</p>
             {quote.author && (
               <p style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-                color: 'rgba(255,255,255,0.92)', textAlign: 'center', margin: 0,
-                textShadow: '0 1px 4px rgba(0,0,0,0.4)',
+                color: textStrong, textAlign: 'center', margin: 0,
+                textShadow: verseShadow,
               }}>— {quote.author}</p>
             )}
             {/* save / share / hint pinned to bottom */}
             <div style={ctrlRow}>
               <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }}
                 title={saved ? 'Unsave' : 'Save'}
-                style={iconBtn({ background: saved ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.12)' })}>
+                style={iconBtn({ background: saved ? btnBgActive : btnBg, color: textMain })}>
                 {saved ? '♥' : '♡'}
               </button>
               <button onClick={handleShare} title="Share"
-                style={iconBtn({ background: 'rgba(255,255,255,0.12)' })}>
+                style={iconBtn({ background: btnBg, color: textMain })}>
                 ↗
               </button>
               <span style={{
                 fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
-                color: 'rgba(255,255,255,0.6)',
+                color: textFaint,
               }}>↻ tap for scripture</span>
             </div>
           </div>
