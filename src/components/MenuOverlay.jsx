@@ -1,12 +1,13 @@
 import StarField from './StarField';
 
-export default function MenuOverlay({ open, onClose, onNavigate, loggedIn }) {
+export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLogout }) {
   const items = [
     { id:'home',     label:'Home',        icon:'🏠' },
     { id:'app',      label:'My Vitamins', icon:'💊', requireAuth:true },
     { id:'info',     label:'Info',        icon:'ℹ️' },
     { id:'about',    label:'About',       icon:'✨' },
     { id:'feedback', label:'Feedback',    icon:'💬' },
+    { id:'logout',   label:'Log Out',     icon:'🚪', requireAuth:true, action:true },
   ];
   return (
     <div style={{
@@ -23,7 +24,7 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn }) {
       <StarField/>
       <nav style={{display:'flex', flexDirection:'column', gap:8, alignItems:'center'}}>
         {items.filter(it => !it.requireAuth || loggedIn).map((item, i) => (
-          <button key={item.id} onClick={()=>{ onNavigate(item.id); onClose(); }} style={{
+          <button key={item.id} onClick={()=>{ item.action ? onLogout() : onNavigate(item.id); onClose(); }} style={{
             background:'none', border:'none', cursor:'pointer',
             display:'flex', alignItems:'center', gap:16, padding:'14px 40px',
             borderRadius:16,
