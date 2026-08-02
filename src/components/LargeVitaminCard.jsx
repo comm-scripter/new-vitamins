@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { hexToRgb, pickTextColor } from '../utils';
-import { useWindowWidth } from '../hooks';
+import { useWindowWidth, useFavorites } from '../hooks';
 
 export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const [flipped, setFlipped] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const isBonus = vitamin.day === undefined;
+  const saved = isFavorite(category.id, vitamin.day, isBonus);
+  const handleSave = (e) => { e.stopPropagation(); toggleFavorite({ category, vitamin, dayLabel }); };
   const isMobile = useWindowWidth() < 640;
 
   const { scripture, quote } = vitamin;
@@ -156,7 +159,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               }}>— {quote.author}</p>
             )}
             <div style={{ display: 'flex', gap: 12 }}>
-              <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }} style={{
+              <button onClick={handleSave} style={{
                 padding: '11px 24px', borderRadius: 50,
                 background: saved ? btnBgActive : btnBg,
                 border: `1px solid ${btnBorder}`,
@@ -289,7 +292,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
             )}
             {/* save / share / hint pinned to bottom */}
             <div style={ctrlRow}>
-              <button onClick={e => { e.stopPropagation(); setSaved(s => !s); }}
+              <button onClick={handleSave}
                 title={saved ? 'Unsave' : 'Save'}
                 style={iconBtn({ background: saved ? btnBgActive : btnBg, color: textMain })}>
                 {saved ? '♥' : '♡'}

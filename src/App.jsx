@@ -11,6 +11,7 @@ import InfoPage from './components/InfoPage';
 import AboutPage from './components/AboutPage';
 import FeedbackPage from './components/FeedbackPage';
 import DevotionalPage from './components/DevotionalPage';
+import FavoritesPage from './components/FavoritesPage';
 import { CATEGORIES } from './data';
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
     app:        <AppPage userEmail={userEmail} onNavigate={handleNavigate}
                   savedCat={savedCat} savedDay={savedDay}
                   onCatChange={setSavedCat} onDayChange={setSavedDay}/>,
+    favorites:  <FavoritesPage onNavigate={handleNavigate}/>,
     info:       <InfoPage onNavigate={handleNavigate}/>,
     about:      <AboutPage onNavigate={handleNavigate}/>,
     feedback:   <FeedbackPage onNavigate={handleNavigate}/>,
