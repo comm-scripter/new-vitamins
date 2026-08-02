@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import CapsuleSVG from './CapsuleSVG';
 import { hexToRgb } from '../utils';
+import { buildShareText } from '../share';
+import ShareMenu from './ShareMenu';
 
 export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100, favorited, onToggleFavorite }) {
   const [flipped, setFlipped] = useState(false);
@@ -11,22 +13,21 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
     onToggleFavorite ? onToggleFavorite() : setLocalSaved(s => !s);
   };
 
+  const [shareMenuOpen, setShareMenuOpen] = useState(false);
+  const shareText = buildShareText(vitamin.verse, vitamin.ref || vitamin.author);
+
   const handleShare = (e) => {
     e.stopPropagation();
-    const text = vitamin.ref
-      ? `"${vitamin.verse}" — ${vitamin.ref}`
-      : `"${vitamin.verse}" — ${vitamin.author}`;
-    if (navigator.share) {
-      navigator.share({ title: 'Spiritual Vitamins', text });
-    } else {
-      navigator.clipboard.writeText(text).then(()=>alert('Copied to clipboard!'));
-    }
+    if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
+    else setShareMenuOpen(o => !o);
   };
 
   const cardW = size * 2.6;
   const cardH = size * 1.6;
 
   return (
+    <>
+    {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div style={{
       width: cardW, height: cardH,
       perspective: 1000,
@@ -128,5 +129,6 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
         </div>
       </div>
     </div>
+    </>
   );
 }
