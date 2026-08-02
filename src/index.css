@@ -49,6 +49,8 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
 @keyframes menuItemIn { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
 @keyframes spin3d { from{transform:rotateY(0deg)} to{transform:rotateY(360deg)} }
 @keyframes capsuleGlow { 0%,100%{filter:drop-shadow(0 0 8px rgba(255,255,255,0.3))} 50%{filter:drop-shadow(0 0 20px rgba(255,255,255,0.7))} }
+@keyframes toastIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+.toast-enter { animation: toastIn 0.25s cubic-bezier(0.4,0,0.2,1) forwards; }
 
 /* ── Page transitions ─────────────────────────────────────── */
 .page-enter { animation: fadeInUp 0.5s ease forwards; }

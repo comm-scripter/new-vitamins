@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { hexToRgb, pickTextColor } from '../utils';
 import { useWindowWidth, useFavorites } from '../hooks';
+import { buildShareText } from '../share';
+import ShareMenu from './ShareMenu';
 
 export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const [flipped, setFlipped] = useState(false);
@@ -24,13 +26,15 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     return () => ro.disconnect();
   }, [isMobile]);
 
+  const [shareMenuOpen, setShareMenuOpen] = useState(false);
+  const shareText = flipped && quote.author
+    ? buildShareText(quote.verse, quote.author)
+    : buildShareText(scripture.verse, scripture.ref);
+
   const handleShare = (e) => {
     e.stopPropagation();
-    const text = flipped && quote.author
-      ? `"${quote.verse}" — ${quote.author}`
-      : `"${scripture.verse}"${scripture.ref ? ` — ${scripture.ref}` : ''}`;
-    if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text });
-    else navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+    if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
+    else setShareMenuOpen(o => !o);
   };
 
   const c0 = category.color[0];
@@ -111,6 +115,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
       boxShadow: shadow,
     };
     return (
+      <>
+      {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
       <div style={{ width: '100%', perspective: 1200, cursor: 'pointer', outline: 'none' }}
         onClick={() => setFlipped(f => !f)}>
         <div style={{
@@ -183,6 +189,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           </div>
         </div>
       </div>
+      </>
     );
   }
 
@@ -224,6 +231,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   });
 
   return (
+    <>
+    {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div className="vitamin-card-wrap">
       {/* Category label above pill */}
       <div style={{
@@ -311,5 +320,6 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
