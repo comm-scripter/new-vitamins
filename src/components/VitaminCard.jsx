@@ -85,7 +85,7 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
         }}>
           <div style={{flex:1, display:'flex', flexDirection:'column', justifyContent:'center'}}>
             <p style={{
-              fontFamily:'Playfair Display', fontStyle:'italic',
+              fontFamily:'Playfair Display',
               fontSize: cardW > 280 ? 16 : 14,
               color:'#f3e8ff', lineHeight:1.65, marginBottom:12,
               textAlign:'center',

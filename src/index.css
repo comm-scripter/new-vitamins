@@ -3,7 +3,7 @@
   --fs-2xs:  12px;
   --fs-xs:   14px;
   --fs-sm:   16px;
-  --fs-base: 17px;
+  --fs-base: 20px;
   --fs-lg:   20px;
   --fs-xl:   24px;
   --fs-2xl:  28px;
@@ -14,7 +14,7 @@
     --fs-2xs:  13px;
     --fs-xs:   15px;
     --fs-sm:   17px;
-    --fs-base: 18px;
+    --fs-base: 21px;
     --fs-lg:   21px;
     --fs-xl:   26px;
     --fs-2xl:  32px;
@@ -26,7 +26,7 @@
     --fs-2xs:  14px;
     --fs-xs:   17px;
     --fs-sm:   20px;
-    --fs-base: 22px;
+    --fs-base: 25px;
     --fs-lg:   26px;
     --fs-xl:   32px;
     --fs-2xl:  42px;
@@ -196,7 +196,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
     --fs-2xs:  15px;
     --fs-xs:   19px;
     --fs-sm:   22px;
-    --fs-base: 24px;
+    --fs-base: 28px;
     --fs-lg:   28px;
     --fs-xl:   36px;
     --fs-2xl:  48px;
@@ -212,7 +212,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
     --fs-2xs:  17px;
     --fs-xs:   22px;
     --fs-sm:   26px;
-    --fs-base: 28px;
+    --fs-base: 32px;
     --fs-lg:   32px;
     --fs-xl:   44px;
     --fs-2xl:  58px;
