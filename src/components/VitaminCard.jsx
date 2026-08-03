@@ -3,9 +3,11 @@ import CapsuleSVG from './CapsuleSVG';
 import { hexToRgb } from '../utils';
 import { buildShareText } from '../share';
 import ShareMenu from './ShareMenu';
+import { useWindowWidth } from '../hooks';
 
 export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100, favorited, onToggleFavorite }) {
   const [flipped, setFlipped] = useState(false);
+  const isMobile = useWindowWidth() < 640;
   const [localSaved, setLocalSaved] = useState(false);
   const saved = favorited ?? localSaved;
   const handleSave = (e) => {
@@ -18,7 +20,9 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
 
   const handleShare = (e) => {
     e.stopPropagation();
-    if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
+    // See LargeVitaminCard.jsx: navigator.share() also exists on desktop
+    // Chrome/Edge on Windows, but only trust it on an actual mobile viewport.
+    if (isMobile && navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
     else setShareMenuOpen(o => !o);
   };
 
