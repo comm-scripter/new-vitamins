@@ -33,7 +33,11 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
 
   const handleShare = (e) => {
     e.stopPropagation();
-    if (navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
+    // navigator.share() also exists on desktop Chrome/Edge on Windows, but it
+    // opens the OS's native Share flyout there — which never lists Facebook/
+    // Instagram/X, only whatever's registered as a Windows share target. Only
+    // trust it on an actual mobile viewport, where real apps are wired in.
+    if (isMobile && navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
     else setShareMenuOpen(o => !o);
   };
 
