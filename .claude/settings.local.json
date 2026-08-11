@@ -8,7 +8,11 @@
       "Bash(Get-ChildItem -Path \"D:\\\\new vitamin project\\\\src\" -Recurse -Include \"*.jsx\", \"*.js\")",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git checkout *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -w \"\\\\n[%{http_code}]\\\\n\" http://localhost:5174/admin/)",
+      "Bash(node *)"
     ]
   }
 }
