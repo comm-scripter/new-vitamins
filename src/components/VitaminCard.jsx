@@ -68,7 +68,7 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
           )}
           {category.image ? (
             <img src={category.image} alt="" style={{
-              width: size*0.38*2.2, height: size*0.38, borderRadius: '9999px', objectFit: 'cover',
+              width: size*0.38*2.2, height: size*0.38, borderRadius: '9999px', objectFit: 'fill',
               border: `2px solid ${category.color[0]}`,
               boxShadow: `0 4px 14px ${category.color[0]}66`,
             }}/>
