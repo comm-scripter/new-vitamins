@@ -133,7 +133,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           <div style={{ ...face, justifyContent: 'flex-start', paddingTop: 8, background: `linear-gradient(145deg, ${c0}, ${c1})` }}>
             {category.image ? (
               <img src={category.image} alt="" style={{
-                width: '65%', maxWidth: 220, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'cover',
+                width: '65%', maxWidth: 220, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
                 border: '3px solid rgba(255,255,255,0.6)',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.35)',
                 flexShrink: 0,
@@ -260,7 +260,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
       }}>
         {category.image && (
           <img src={category.image} alt="" style={{
-            width: '85%', maxWidth: 420, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'cover',
+            width: '85%', maxWidth: 420, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
             border: `3px solid ${c0}`,
             boxShadow: `0 6px 24px rgba(${r0},0.4), 0 2px 10px rgba(0,0,0,0.35)`,
           }}/>
