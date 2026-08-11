@@ -6,7 +6,7 @@ const categoryModules = import.meta.glob('../content/categories/*.json', { eager
 
 const categoryEntries = Object.values(categoryModules).sort((a, b) => a.order - b.order);
 
-export const CATEGORIES = categoryEntries.map(({ id, label, color, emoji }) => ({ id, label, color, emoji }));
+export const CATEGORIES = categoryEntries.map(({ id, label, color, emoji, image }) => ({ id, label, color, emoji, image }));
 
 // ── Category groups (4 faces of the drum sidebar) ────────────
 export const CATEGORY_GROUPS = groupDefs.map(group => ({

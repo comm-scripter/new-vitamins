@@ -113,9 +113,9 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
       borderRadius: 24,
       backfaceVisibility: 'hidden',
       WebkitBackfaceVisibility: 'hidden',
-      padding: '28px 22px',
+      padding: '24px 22px',
       display: 'flex', flexDirection: 'column',
-      alignItems: 'center', justifyContent: 'center', gap: 16,
+      alignItems: 'center', justifyContent: 'center', gap: 12,
       boxShadow: shadow,
     };
     return (
@@ -124,34 +124,49 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
       <div style={{ width: '100%', perspective: 1200, cursor: 'pointer', outline: 'none' }}
         onClick={() => setFlipped(f => !f)}>
         <div style={{
-          position: 'relative', width: '100%', paddingBottom: '90%',
+          position: 'relative', width: '100%', paddingBottom: 'calc(90% + 40px)',
           transformStyle: 'preserve-3d',
           transition: 'transform 0.75s cubic-bezier(0.4,0,0.2,1)',
           transform: flipped ? 'rotateY(180deg)' : 'none',
         }}>
           {/* FRONT — scripture */}
-          <div style={{ ...face, background: `linear-gradient(145deg, ${c0}, ${c1})` }}>
-            <div style={{ fontSize: 40 }}>{category.emoji}</div>
-            <div style={{
-              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-              color: textSoft, textTransform: 'uppercase',
-              letterSpacing: '0.1em', textAlign: 'center',
-            }}>{dayLabel} · {category.label}</div>
-            <p style={{
-              fontFamily: 'Playfair Display',
-              fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
-              textAlign: 'center', margin: 0,
-              textShadow: verseShadow,
-            }}>{scripture.verse}</p>
-            {scripture.ref && (
-              <p style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
-                color: textStrong, textAlign: 'center', margin: 0,
-              }}>— {scripture.ref}</p>
+          <div style={{ ...face, justifyContent: 'flex-start', paddingTop: 8, background: `linear-gradient(145deg, ${c0}, ${c1})` }}>
+            {category.image ? (
+              <img src={category.image} alt="" style={{
+                width: '65%', maxWidth: 220, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'cover',
+                border: '3px solid rgba(255,255,255,0.6)',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.35)',
+                flexShrink: 0,
+              }}/>
+            ) : (
+              <div style={{ fontSize: 40, flexShrink: 0 }}>{category.emoji}</div>
             )}
+            {/* Flexible region: absorbs long verses by scrolling internally
+                instead of pushing the badge above (min-height:0 lets it shrink).
+                Top-aligned (not centered) so overflow is clipped/scrolled at the
+                bottom only — centering here clipped the verse's first line
+                right under the badge whenever the text didn't fit. */}
+            <div style={{
+              flex: 1, minHeight: 0, width: '100%',
+              display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center',
+              gap: 8, overflowY: 'auto',
+            }}>
+              <p style={{
+                fontFamily: 'Playfair Display',
+                fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
+                textAlign: 'center', margin: 0,
+                textShadow: verseShadow,
+              }}>{scripture.verse}</p>
+              {scripture.ref && (
+                <p style={{
+                  fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                  color: textStrong, textAlign: 'center', margin: 0,
+                }}>— {scripture.ref}</p>
+              )}
+            </div>
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: textFaint,
+              color: textFaint, flexShrink: 0,
             }}>↻ tap for quote</div>
           </div>
           {/* BACK — quote */}
@@ -238,22 +253,18 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     <>
     {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div className="vitamin-card-wrap">
-      {/* Category label above pill */}
+      {/* Category image + label above pill */}
       <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-        marginBottom: 14,
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10,
+        marginBottom: 18,
       }}>
-        <span style={{ fontSize: 'clamp(18px,2vw,24px)' }}>{category.emoji}</span>
-        <span style={{
-          fontFamily: 'Playfair Display', fontSize: 'var(--fs-lg)',
-          color: '#f3e8ff', fontWeight: 600,
-          textShadow: '0 1px 6px rgba(0,0,0,0.5)',
-        }}>{category.label}</span>
-        <span style={{
-          fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 600,
-          color: 'rgba(196,181,253,0.7)', textTransform: 'uppercase', letterSpacing: '0.1em',
-          marginLeft: 4,
-        }}>· {dayLabel}</span>
+        {category.image && (
+          <img src={category.image} alt="" style={{
+            width: '85%', maxWidth: 420, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'cover',
+            border: `3px solid ${c0}`,
+            boxShadow: `0 6px 24px rgba(${r0},0.4), 0 2px 10px rgba(0,0,0,0.35)`,
+          }}/>
+        )}
       </div>
 
       {/* Flip card */}

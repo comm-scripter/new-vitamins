@@ -80,6 +80,15 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
   flex-wrap: wrap;
 }
 
+/* TEMP: hidden on mobile to test whether reclaiming this space helps the
+   vitamin card badge stay fully visible — revert by removing this rule.
+   .app-content needs the header's height back as padding-top since the
+   greeting banner (padding-top: 72px) was what cleared the fixed header. */
+@media (max-width: 639px) {
+  .app-greeting { display: none; }
+  .app-content { padding-top: 64px; }
+}
+
 @media (min-width: 640px) {
   .app-greeting { display: block; padding-bottom: 12px; }
 }

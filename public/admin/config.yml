@@ -33,6 +33,10 @@ collections:
         min: 2
         max: 2
         field: { label: "Hex", name: "hex", widget: "color" }
+      - label: "Background image"
+        name: "image"
+        widget: "image"
+        required: false
       - label: "Group"
         name: "group"
         widget: "select"

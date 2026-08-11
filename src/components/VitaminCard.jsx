@@ -66,7 +66,15 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
               textTransform:'uppercase', whiteSpace:'nowrap',
             }}>Today</div>
           )}
-          <CapsuleSVG color1={category.color[0]} color2={category.color[1]} size={size*0.38}/>
+          {category.image ? (
+            <img src={category.image} alt="" style={{
+              width: size*0.38*2.2, height: size*0.38, borderRadius: '9999px', objectFit: 'cover',
+              border: `2px solid ${category.color[0]}`,
+              boxShadow: `0 4px 14px ${category.color[0]}66`,
+            }}/>
+          ) : (
+            <CapsuleSVG color1={category.color[0]} color2={category.color[1]} size={size*0.38}/>
+          )}
           <div style={{textAlign:'center'}}>
             <div style={{fontFamily:'DM Sans', fontSize:13, color:category.color[0], fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', marginBottom:4}}>
               {category.emoji} {dayLabel}
