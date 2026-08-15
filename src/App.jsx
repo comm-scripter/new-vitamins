@@ -12,6 +12,7 @@ import AboutPage from './components/AboutPage';
 import FeedbackPage from './components/FeedbackPage';
 import DevotionalPage from './components/DevotionalPage';
 import FavoritesPage from './components/FavoritesPage';
+import SalvationPage from './components/SalvationPage';
 import { CATEGORIES } from './data';
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
                   onCatChange={setSavedCat} onDayChange={setSavedDay}/>,
     favorites:  <FavoritesPage onNavigate={handleNavigate}/>,
     info:       <InfoPage onNavigate={handleNavigate}/>,
+    salvation:  <SalvationPage onNavigate={handleNavigate}/>,
     about:      <AboutPage onNavigate={handleNavigate}/>,
     feedback:   <FeedbackPage onNavigate={handleNavigate}/>,
     devotional: <DevotionalPage

@@ -28,7 +28,7 @@ export default function FavoritesPage({ onNavigate }) {
 
         {!loading && favorites.length === 0 && (
           <p style={{
-            fontFamily:'DM Sans', fontSize:15, color:'rgba(233,213,255,0.5)',
+            fontFamily:'DM Sans', fontSize:18, color:'rgba(233,213,255,0.5)',
             textAlign:'center',
           }}>No favorites yet — tap ♡ on any vitamin.</p>
         )}
