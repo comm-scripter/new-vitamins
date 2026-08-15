@@ -2,13 +2,14 @@ import StarField from './StarField';
 
 export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLogout }) {
   const items = [
-    { id:'home',     label:'Home',        icon:'🏠' },
-    { id:'app',      label:'My Vitamins', icon:'💊', requireAuth:true },
-    { id:'favorites',label:'Favorites',   icon:'💛', requireAuth:true },
-    { id:'info',     label:'Info',        icon:'ℹ️' },
-    { id:'about',    label:'About',       icon:'✨' },
-    { id:'feedback', label:'Feedback',    icon:'💬' },
-    { id:'logout',   label:'Log Out',     icon:'🚪', requireAuth:true, action:true },
+    { id:'home',      label:'Home',           icon:'🏠' },
+    { id:'app',       label:'My Vitamins',    icon:'💊', requireAuth:true },
+    { id:'favorites', label:'Favorites',      icon:'💛', requireAuth:true },
+    { id:'info',      label:'Info',           icon:'ℹ️' },
+    { id:'salvation', label:'How to be Saved',icon:'🙏' },
+    { id:'about',     label:'About',          icon:'✨', iconImage:'/icons/about-megaphone.png' },
+    { id:'feedback',  label:'Feedback',       icon:'💬' },
+    { id:'logout',    label:'Log Out',        icon:'🚪', requireAuth:true, action:true },
   ];
   return (
     <div style={{
@@ -35,7 +36,11 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLog
           onMouseEnter={e=>e.currentTarget.style.background='rgba(168,85,247,0.15)'}
           onMouseLeave={e=>e.currentTarget.style.background='none'}
           >
-            <span style={{fontSize:28}}>{item.icon}</span>
+            {item.iconImage ? (
+              <img src={item.iconImage} alt="" style={{width:32, height:32, objectFit:'contain', flexShrink:0}}/>
+            ) : (
+              <span style={{fontSize:28}}>{item.icon}</span>
+            )}
             <span style={{
               fontFamily:'Playfair Display',
               fontSize:36, color:'#f3e8ff',

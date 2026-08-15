@@ -13,7 +13,7 @@ export default function FeedbackPage({ onNavigate }) {
       <div style={{maxWidth:480, margin:'0 auto'}}>
         <BackButton onNavigate={onNavigate}/>
         <h2 style={{fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff', marginBottom:8, fontWeight:700}}>Share Your Thoughts</h2>
-        <p style={{fontFamily:'DM Sans', fontSize:14, color:'rgba(233,213,255,0.55)', marginBottom:28}}>
+        <p style={{fontFamily:'DM Sans', fontSize:17, color:'rgba(233,213,255,0.55)', marginBottom:28}}>
           Help us grow Spiritual Vitamins into the best it can be.
         </p>
         {!sent ? (
@@ -25,7 +25,7 @@ export default function FeedbackPage({ onNavigate }) {
               style={{
                 width:'100%', padding:'16px', borderRadius:14,
                 background:'rgba(255,255,255,0.05)', border:'1px solid rgba(168,85,247,0.3)',
-                color:'#f3e8ff', fontFamily:'DM Sans', fontSize:14, resize:'vertical',
+                color:'#f3e8ff', fontFamily:'DM Sans', fontSize:17, resize:'vertical',
                 outline:'none', lineHeight:1.7,
               }}
             />
@@ -45,7 +45,7 @@ export default function FeedbackPage({ onNavigate }) {
           }}>
             <div style={{fontSize:40, marginBottom:12}}>🙏</div>
             <h3 style={{fontFamily:'Playfair Display', fontSize:22, color:'#f3e8ff', marginBottom:8}}>Thank You!</h3>
-            <p style={{fontFamily:'DM Sans', fontSize:14, color:'rgba(233,213,255,0.6)'}}>Your feedback has been received. May God bless your journey.</p>
+            <p style={{fontFamily:'DM Sans', fontSize:17, color:'rgba(233,213,255,0.6)'}}>Your feedback has been received. May God bless your journey.</p>
           </div>
         )}
       </div>

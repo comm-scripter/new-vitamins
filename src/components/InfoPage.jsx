@@ -16,7 +16,7 @@ export default function InfoPage({ onNavigate }) {
       <div style={{maxWidth:540, margin:'0 auto'}}>
         <BackButton onNavigate={onNavigate}/>
         <h2 style={{fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff', marginBottom:8, fontWeight:700}}>What are Spiritual Vitamins?</h2>
-        <p style={{fontFamily:'DM Sans', fontSize:15, color:'rgba(233,213,255,0.65)', lineHeight:1.8, marginBottom:32}}>
+        <p style={{fontFamily:'DM Sans', fontSize:18, color:'rgba(233,213,255,0.65)', lineHeight:1.8, marginBottom:32}}>
           Just as your body needs daily vitamins to thrive, your soul needs daily nourishment from scripture and wisdom to flourish.
         </p>
         {items.map(item=>(
@@ -26,8 +26,8 @@ export default function InfoPage({ onNavigate }) {
           }}>
             <span style={{fontSize:28, flexShrink:0}}>{item.icon}</span>
             <div>
-              <h3 style={{fontFamily:'Playfair Display', fontSize:17, color:'#f3e8ff', marginBottom:6, fontWeight:600}}>{item.title}</h3>
-              <p style={{fontFamily:'DM Sans', fontSize:14, color:'rgba(233,213,255,0.6)', lineHeight:1.7}}>{item.text}</p>
+              <h3 style={{fontFamily:'Playfair Display', fontSize:19, color:'#f3e8ff', marginBottom:6, fontWeight:600}}>{item.title}</h3>
+              <p style={{fontFamily:'DM Sans', fontSize:17, color:'rgba(233,213,255,0.6)', lineHeight:1.7}}>{item.text}</p>
             </div>
           </div>
         ))}
