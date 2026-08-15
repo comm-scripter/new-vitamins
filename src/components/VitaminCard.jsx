@@ -1,37 +1,14 @@
 import { useState } from 'react';
 import CapsuleSVG from './CapsuleSVG';
 import { hexToRgb } from '../utils';
-import { buildShareText } from '../share';
-import ShareMenu from './ShareMenu';
-import { useWindowWidth } from '../hooks';
 
-export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100, favorited, onToggleFavorite }) {
+export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100 }) {
   const [flipped, setFlipped] = useState(false);
-  const isMobile = useWindowWidth() < 640;
-  const [localSaved, setLocalSaved] = useState(false);
-  const saved = favorited ?? localSaved;
-  const handleSave = (e) => {
-    e.stopPropagation();
-    onToggleFavorite ? onToggleFavorite() : setLocalSaved(s => !s);
-  };
-
-  const [shareMenuOpen, setShareMenuOpen] = useState(false);
-  const shareText = buildShareText(vitamin.verse, vitamin.ref || vitamin.author);
-
-  const handleShare = (e) => {
-    e.stopPropagation();
-    // See LargeVitaminCard.jsx: navigator.share() also exists on desktop
-    // Chrome/Edge on Windows, but only trust it on an actual mobile viewport.
-    if (isMobile && navigator.share) navigator.share({ title: 'Spiritual Vitamins', text: shareText });
-    else setShareMenuOpen(o => !o);
-  };
 
   const cardW = size * 2.6;
   const cardH = size * 1.6;
 
   return (
-    <>
-    {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div style={{
       width: cardW, height: cardH,
       perspective: 1000,
@@ -97,50 +74,27 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
           background:`linear-gradient(135deg, rgba(${hexToRgb(category.color[1])},0.2), rgba(13,8,32,0.95))`,
           border:`1px solid rgba(${hexToRgb(category.color[0])},0.4)`,
           display:'flex', flexDirection:'column',
-          justifyContent:'space-between',
+          justifyContent:'center',
           padding:20,
           overflow:'hidden',
         }}>
-          <div style={{flex:1, display:'flex', flexDirection:'column', justifyContent:'center'}}>
-            <p style={{
-              fontFamily:'Playfair Display',
-              fontSize: cardW > 280 ? 16 : 14,
-              color:'#f3e8ff', lineHeight:1.65, marginBottom:12,
-              textAlign:'center',
-            }}>
-              {vitamin.verse}
-            </p>
-            <p style={{
-              fontFamily:'DM Sans', fontSize:14,
-              color: category.color[0],
-              textAlign:'center', fontWeight:600,
-            }}>
-              — {vitamin.ref || vitamin.author}
-            </p>
-          </div>
-          <div style={{display:'flex', justifyContent:'center', gap:12, marginTop:12}}>
-            <button onClick={handleSave} style={{
-              padding:'7px 16px', borderRadius:50,
-              background: saved ? `linear-gradient(90deg,${category.color[0]},${category.color[1]})` : 'rgba(255,255,255,0.08)',
-              border:'none', cursor:'pointer', color:'white',
-              fontFamily:'DM Sans', fontSize:14, fontWeight:500,
-              transition:'all 0.2s', display:'flex', alignItems:'center', gap:5,
-            }}>
-              {saved ? '♥' : '♡'} Save
-            </button>
-            <button onClick={handleShare} style={{
-              padding:'7px 16px', borderRadius:50,
-              background:'rgba(255,255,255,0.08)',
-              border:'none', cursor:'pointer', color:'white',
-              fontFamily:'DM Sans', fontSize:14, fontWeight:500,
-              transition:'all 0.2s', display:'flex', alignItems:'center', gap:5,
-            }}>
-              ↗ Share
-            </button>
-          </div>
+          <p style={{
+            fontFamily:'Playfair Display',
+            fontSize: cardW > 280 ? 16 : 14,
+            color:'#f3e8ff', lineHeight:1.65, marginBottom:12,
+            textAlign:'center',
+          }}>
+            {vitamin.verse}
+          </p>
+          <p style={{
+            fontFamily:'DM Sans', fontSize:14,
+            color: category.color[0],
+            textAlign:'center', fontWeight:600,
+          }}>
+            — {vitamin.ref || vitamin.author}
+          </p>
         </div>
       </div>
     </div>
-    </>
   );
 }

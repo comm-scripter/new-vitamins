@@ -109,15 +109,19 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
 }
 
 /* ── Vitamin card wrapper (controls max-width) ──────────────
-   The pill's height is 40% of its width, so on desktop the width is
-   also capped by viewport height (calc terms below) to guarantee the
-   day picker + Bonus button stay on screen without scrolling. */
+   From 640px+ the card fills the available height of
+   .vitamins-card-scroll (a flex:1 flex item), so this wrapper needs an
+   explicit height for the card's height:100% to resolve against. */
 .vitamin-card-wrap {
   width: 100%; max-width: 520px; margin: 0 auto;
 }
 
+@media (min-width: 640px) {
+  .vitamin-card-wrap { max-width: 640px; height: 100%; }
+}
+
 @media (min-width: 1024px) {
-  .vitamin-card-wrap { max-width: clamp(320px, calc(250vh - 720px), 760px); }
+  .vitamin-card-wrap { max-width: 760px; }
 }
 
 /* ── AllVitaminsView responsive layout ───────────────────── */
@@ -213,7 +217,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
   }
   .app-header { padding: 0 56px; }
   .vitamins-main { padding: 32px 56px 40px; gap: 24px; }
-  .vitamin-card-wrap { max-width: clamp(340px, calc(250vh - 800px), 1000px); }
+  .vitamin-card-wrap { max-width: 900px; }
 }
 
 @media (min-width: 1920px) {
@@ -228,7 +232,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: n
   }
   .app-header { padding: 0 80px; }
   .vitamins-main { padding: 40px 80px 48px; gap: 32px; }
-  .vitamin-card-wrap { max-width: clamp(360px, calc(250vh - 880px), 1160px); }
+  .vitamin-card-wrap { max-width: 1080px; }
 }
 
 /* ── Scrollbar ────────────────────────────────────────────── */
