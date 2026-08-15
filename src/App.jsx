@@ -60,11 +60,11 @@ export default function App() {
     app:        <AppPage userEmail={userEmail} onNavigate={handleNavigate}
                   savedCat={savedCat} savedDay={savedDay}
                   onCatChange={setSavedCat} onDayChange={setSavedDay}/>,
-    favorites:  <FavoritesPage onNavigate={handleNavigate}/>,
-    info:       <InfoPage onNavigate={handleNavigate}/>,
-    salvation:  <SalvationPage onNavigate={handleNavigate}/>,
-    about:      <AboutPage onNavigate={handleNavigate}/>,
-    feedback:   <FeedbackPage onNavigate={handleNavigate}/>,
+    favorites:  <FavoritesPage onOpenMenu={()=>setMenuOpen(true)}/>,
+    info:       <InfoPage onNavigate={handleNavigate} onOpenMenu={()=>setMenuOpen(true)}/>,
+    salvation:  <SalvationPage onNavigate={handleNavigate} onOpenMenu={()=>setMenuOpen(true)}/>,
+    about:      <AboutPage onNavigate={handleNavigate} onOpenMenu={()=>setMenuOpen(true)}/>,
+    feedback:   <FeedbackPage onOpenMenu={()=>setMenuOpen(true)}/>,
     devotional: <DevotionalPage
                   category={CATEGORIES.find(c => c.id === devotionalCatId)}
                   onNavigate={handleNavigate}/>,
@@ -90,7 +90,15 @@ export default function App() {
         loggedIn={loggedIn}
         onLogout={handleLogout}
       />
-      <div style={{width:'100%', height:'100%'}}>
+      {/* Recede/dim the page behind the menu overlay while it's open, and ease
+          back in when it closes, instead of the content just sitting there
+          static and popping back into view the instant the overlay fades out. */}
+      <div style={{
+        width:'100%', height:'100%',
+        opacity: menuOpen ? 0.4 : 1,
+        transform: menuOpen ? 'scale(0.97)' : 'scale(1)',
+        transition: 'opacity 0.4s ease, transform 0.4s ease',
+      }}>
         {pageMap[page] || pageMap.home}
       </div>
     </div>

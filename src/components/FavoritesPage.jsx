@@ -3,7 +3,7 @@ import VitaminCard from './VitaminCard';
 import { useFavorites } from '../hooks';
 import { CATEGORIES } from '../data';
 
-export default function FavoritesPage({ onNavigate }) {
+export default function FavoritesPage({ onOpenMenu }) {
   const { favorites, loading } = useFavorites();
 
   // Favorite docs only store id/label/emoji/color (see hooks.js toggleFavorite),
@@ -20,7 +20,7 @@ export default function FavoritesPage({ onNavigate }) {
       padding:'80px 24px 40px',
     }}>
       <div style={{maxWidth:900, margin:'0 auto'}}>
-        <BackButton onNavigate={onNavigate}/>
+        <BackButton onOpenMenu={onOpenMenu}/>
         <h2 style={{
           fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff',
           marginBottom:24, fontWeight:700, textAlign:'center',

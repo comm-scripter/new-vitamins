@@ -9,7 +9,7 @@ const STORY = [
   `If this resonates with you, please share this app with your friends and family members and help "Get the Word out" to the ones close to you.`
 ];
 
-export default function AboutPage({ onNavigate }) {
+export default function AboutPage({ onNavigate, onOpenMenu }) {
   return (
     <div className="page-enter" style={{
       width:'100%', height:'100%', overflowY:'auto',
@@ -17,7 +17,7 @@ export default function AboutPage({ onNavigate }) {
       padding:'80px 24px 40px',
     }}>
       <div style={{maxWidth:540, margin:'0 auto', textAlign:'center'}}>
-        <BackButton onNavigate={onNavigate}/>
+        <BackButton onOpenMenu={onOpenMenu}/>
         <div style={{marginBottom:24, display:'flex', justifyContent:'center'}}>
           <img src="/icons/about-megaphone.png" alt="" style={{width:64, height:'auto'}}/>
         </div>

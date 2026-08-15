@@ -1,6 +1,6 @@
 import BackButton from './BackButton';
 
-export default function InfoPage({ onNavigate }) {
+export default function InfoPage({ onNavigate, onOpenMenu }) {
   const items = [
     { icon:'💊', title:'Daily Vitamins', text:'Receive a curated verse or quote each day of the week, tailored to themes that matter: Faith, Hope, Love, and more.' },
     { icon:'🌀', title:'Flip to Reveal', text:'Each capsule holds a hidden message. Tap it to flip and reveal the scripture or wisdom inside.' },
@@ -14,7 +14,7 @@ export default function InfoPage({ onNavigate }) {
       padding:'80px 24px 40px',
     }}>
       <div style={{maxWidth:540, margin:'0 auto'}}>
-        <BackButton onNavigate={onNavigate}/>
+        <BackButton onOpenMenu={onOpenMenu}/>
         <h2 style={{fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff', marginBottom:8, fontWeight:700}}>What are Spiritual Vitamins?</h2>
         <p style={{fontFamily:'DM Sans', fontSize:18, color:'rgba(233,213,255,0.65)', lineHeight:1.8, marginBottom:32}}>
           Just as your body needs daily vitamins to thrive, your soul needs daily nourishment from scripture and wisdom to flourish.

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import BackButton from './BackButton';
 
-export default function FeedbackPage({ onNavigate }) {
+export default function FeedbackPage({ onOpenMenu }) {
   const [msg, setMsg] = useState('');
   const [sent, setSent] = useState(false);
   return (
@@ -11,7 +11,7 @@ export default function FeedbackPage({ onNavigate }) {
       padding:'80px 24px 40px',
     }}>
       <div style={{maxWidth:480, margin:'0 auto'}}>
-        <BackButton onNavigate={onNavigate}/>
+        <BackButton onOpenMenu={onOpenMenu}/>
         <h2 style={{fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff', marginBottom:8, fontWeight:700}}>Share Your Thoughts</h2>
         <p style={{fontFamily:'DM Sans', fontSize:17, color:'rgba(233,213,255,0.55)', marginBottom:28}}>
           Help us grow Spiritual Vitamins into the best it can be.
