@@ -1,4 +1,5 @@
 import BackButton from './BackButton';
+import { withBase } from '../utils';
 
 const STORY = [
   `While reading my Devotions one morning about 2 years ago I heard a voice (yes, it was audible for me) say, "Get my Word out!" I understood it to be God speaking to me. It was not a dream as I was wide awake. I answered and said, "Lord, I am a nobody. I am not a preacher nor do I teach women or children in church. How can I get Your Word out?"`,
@@ -19,7 +20,7 @@ export default function AboutPage({ onNavigate, onOpenMenu }) {
       <div style={{maxWidth:540, margin:'0 auto', textAlign:'center'}}>
         <BackButton onOpenMenu={onOpenMenu}/>
         <div style={{marginBottom:24, display:'flex', justifyContent:'center'}}>
-          <img src="/icons/about-megaphone.png" alt="" style={{width:64, height:'auto'}}/>
+          <img src={withBase('/icons/about-megaphone.png')} alt="" style={{width:64, height:'auto'}}/>
         </div>
         <h2 style={{fontFamily:'Playfair Display', fontSize:32, color:'#f3e8ff', marginBottom:8, fontWeight:700}}>"Get the Word out!"</h2>
         <p style={{fontFamily:'DM Sans', fontSize:12, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', color:'#d8b4fe', marginBottom:28}}>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { hexToRgb, pickTextColor } from '../utils';
+import { hexToRgb, pickTextColor, withBase } from '../utils';
 import { useWindowWidth, useFavorites } from '../hooks';
 import { buildShareText } from '../share';
 import ShareMenu from './ShareMenu';
@@ -101,7 +101,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               ↗
             </button>
             {category.image ? (
-              <img src={category.image} alt="" style={{
+              <img src={withBase(category.image)} alt="" style={{
                 width: '65%', maxWidth: 220, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
                 border: '3px solid rgba(255,255,255,0.6)',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.35)',
@@ -221,7 +221,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               ↗
             </button>
             {category.image ? (
-              <img src={category.image} alt="" style={{
+              <img src={withBase(category.image)} alt="" style={{
                 width: '45%', maxWidth: 340, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
                 border: '3px solid rgba(255,255,255,0.6)',
                 boxShadow: '0 4px 16px rgba(0,0,0,0.35)',

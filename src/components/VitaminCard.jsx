@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import CapsuleSVG from './CapsuleSVG';
-import { hexToRgb } from '../utils';
+import { hexToRgb, withBase } from '../utils';
 
 export default function VitaminCard({ vitamin, category, isToday, dayLabel, size=100 }) {
   const [flipped, setFlipped] = useState(false);
@@ -44,7 +44,7 @@ export default function VitaminCard({ vitamin, category, isToday, dayLabel, size
             }}>Today</div>
           )}
           {category.image ? (
-            <img src={category.image} alt="" style={{
+            <img src={withBase(category.image)} alt="" style={{
               width: size*0.38*2.2, height: size*0.38, borderRadius: '9999px', objectFit: 'fill',
               border: `2px solid ${category.color[0]}`,
               boxShadow: `0 4px 14px ${category.color[0]}66`,
