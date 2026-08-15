@@ -31,29 +31,34 @@ export default function DevotionalPage({ category, onNavigate }) {
           ← Back to My Vitamins
         </button>
 
-        {/* Category header */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 32 }}>
-          <div style={{
-            width: 54, height: 54, borderRadius: 14, flexShrink: 0,
-            background: `linear-gradient(135deg,${c1},${c2})`,
-            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26,
-            boxShadow: `0 4px 24px rgba(${hexToRgb(c1)},0.45)`,
-          }}>{category.emoji}</div>
-          <div>
-            <div style={{
-              fontFamily: 'DM Sans', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em',
-              textTransform: 'uppercase', marginBottom: 5,
-              color: c1,
-            }}>
-              {category.label} · Devotional
-            </div>
-            <h1 style={{
-              fontFamily: 'Playfair Display', fontSize: 'clamp(22px, 5vw, 28px)',
-              color: '#f3e8ff', fontWeight: 700, lineHeight: 1.2, margin: 0,
-            }}>
-              {devotional.title}
-            </h1>
+        {/* Badge/image */}
+        {category.image && (
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+            <img src={category.image} alt="" style={{
+              width: '60%', maxWidth: 260, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
+              border: `3px solid ${c1}`,
+              boxShadow: `0 6px 24px rgba(${hexToRgb(c1)},0.4), 0 2px 10px rgba(0,0,0,0.35)`,
+            }}/>
           </div>
+        )}
+
+        {/* Category header */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, marginBottom: 32 }}>
+          {!category.image && (
+            <div style={{
+              width: 54, height: 54, borderRadius: 14, flexShrink: 0,
+              background: `linear-gradient(135deg,${c1},${c2})`,
+              display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26,
+              boxShadow: `0 4px 24px rgba(${hexToRgb(c1)},0.45)`,
+            }}>{category.emoji}</div>
+          )}
+          <h1 style={{
+            fontFamily: 'Playfair Display', fontSize: 'clamp(22px, 5vw, 28px)',
+            color: '#f3e8ff', fontWeight: 700, lineHeight: 1.2, margin: 0,
+            textAlign: 'center',
+          }}>
+            {devotional.title}
+          </h1>
         </div>
 
         {/* Gradient divider */}
@@ -70,14 +75,14 @@ export default function DevotionalPage({ category, onNavigate }) {
             border: `1px solid rgba(${hexToRgb(c1)},0.3)`,
           }}>
             <p style={{
-              fontFamily: 'Playfair Display', fontSize: 16, color: '#f3e8ff',
+              fontFamily: 'Playfair Display', fontSize: 19, color: '#f3e8ff',
               lineHeight: 1.85, fontStyle: 'italic', margin: '0 0 10px',
             }}>
               {devotional.scripture.verse}
             </p>
             {devotional.scripture.ref && (
               <p style={{
-                fontFamily: 'DM Sans', fontSize: 13, fontWeight: 600, margin: 0,
+                fontFamily: 'DM Sans', fontSize: 15, fontWeight: 600, margin: 0,
                 color: c1,
               }}>
                 — {devotional.scripture.ref}
@@ -89,7 +94,7 @@ export default function DevotionalPage({ category, onNavigate }) {
         {/* Body paragraphs */}
         {devotional.body.map((para, i) => (
           <p key={i} style={{
-            fontFamily: 'DM Sans', fontSize: 15, color: 'rgba(233,213,255,0.75)',
+            fontFamily: 'DM Sans', fontSize: 18, color: 'rgba(233,213,255,0.75)',
             lineHeight: 1.9, marginBottom: i === devotional.body.length - 1 ? 40 : 18,
           }}>
             {para}
