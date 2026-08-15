@@ -1,4 +1,5 @@
 import StarField from './StarField';
+import { withBase } from '../utils';
 
 export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLogout }) {
   const items = [
@@ -37,7 +38,7 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLog
           onMouseLeave={e=>e.currentTarget.style.background='none'}
           >
             {item.iconImage ? (
-              <img src={item.iconImage} alt="" style={{width:32, height:32, objectFit:'contain', flexShrink:0}}/>
+              <img src={withBase(item.iconImage)} alt="" style={{width:32, height:32, objectFit:'contain', flexShrink:0}}/>
             ) : (
               <span style={{fontSize:28}}>{item.icon}</span>
             )}

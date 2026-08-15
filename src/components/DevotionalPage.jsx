@@ -1,5 +1,5 @@
 import { DEVOTIONALS } from '../data';
-import { hexToRgb } from '../utils';
+import { hexToRgb, withBase } from '../utils';
 
 export default function DevotionalPage({ category, onNavigate }) {
   if (!category) return null;
@@ -34,7 +34,7 @@ export default function DevotionalPage({ category, onNavigate }) {
         {/* Badge/image */}
         {category.image && (
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-            <img src={category.image} alt="" style={{
+            <img src={withBase(category.image)} alt="" style={{
               width: '60%', maxWidth: 260, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
               border: `3px solid ${c1}`,
               boxShadow: `0 6px 24px rgba(${hexToRgb(c1)},0.4), 0 2px 10px rgba(0,0,0,0.35)`,

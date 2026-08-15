@@ -1,3 +1,12 @@
+// Category/menu images are authored as root-relative paths (e.g.
+// "/uploads/faith.jpg") in content JSON, but the site can be served from a
+// sub-path (GitHub Pages project sites, e.g. /new-vitamins/) — prefix with
+// Vite's configured base so they still resolve there.
+export function withBase(path) {
+  if (!path) return path;
+  return import.meta.env.BASE_URL.replace(/\/$/, '') + path;
+}
+
 let measureCtx = null;
 
 // Pixel width of `text` rendered with the given CSS font shorthand,
