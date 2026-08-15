@@ -1,6 +1,6 @@
 {
   "id": "love-2",
-  "order": 14,
+  "order": 38,
   "label": "Love",
   "emoji": "💕",
   "color": [
@@ -8,7 +8,7 @@
     "#fb923c"
   ],
   "image": "/uploads/love-2.jpg",
-  "group": "g1",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

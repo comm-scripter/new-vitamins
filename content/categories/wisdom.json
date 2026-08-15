@@ -1,6 +1,6 @@
 {
   "id": "wisdom",
-  "order": 25,
+  "order": 19,
   "label": "Wisdom from Above",
   "emoji": "🦉",
   "color": [
@@ -8,7 +8,7 @@
     "#f97316"
   ],
   "image": "/uploads/wisdom.jpg",
-  "group": "g2",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

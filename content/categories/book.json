@@ -1,6 +1,6 @@
 {
   "id": "book",
-  "order": 24,
+  "order": 30,
   "label": "Book of Love Letters",
   "emoji": "📖",
   "color": [
@@ -8,7 +8,7 @@
     "#6366f1"
   ],
   "image": "/uploads/book.jpg",
-  "group": "g1",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "hate",
-  "order": 37,
+  "order": 46,
   "label": "God's Message About Hate",
   "emoji": "🚫",
   "color": [
@@ -8,7 +8,7 @@
     "#44403c"
   ],
   "image": "/uploads/hate.jpg",
-  "group": "g2",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

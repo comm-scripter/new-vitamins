@@ -1,6 +1,6 @@
 {
   "id": "happiness",
-  "order": 20,
+  "order": 3,
   "label": "Happiness in Heaven",
   "emoji": "😄",
   "color": [
@@ -8,7 +8,7 @@
     "#fbbf24"
   ],
   "image": "/uploads/happiness.jpg",
-  "group": "g1",
+  "group": "season1",
   "vitamins": [
     {
       "scripture": {

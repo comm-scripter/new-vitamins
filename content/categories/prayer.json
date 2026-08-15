@@ -1,6 +1,6 @@
 {
   "id": "prayer",
-  "order": 7,
+  "order": 22,
   "label": "The Lord's Prayer",
   "emoji": "🙏",
   "color": [
@@ -8,7 +8,7 @@
     "#818cf8"
   ],
   "image": "/uploads/prayer.jpg",
-  "group": "g0",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

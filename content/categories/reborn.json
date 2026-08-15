@@ -1,6 +1,6 @@
 {
   "id": "reborn",
-  "order": 49,
+  "order": 24,
   "label": "Born Again",
   "emoji": "🐣",
   "color": [
@@ -8,7 +8,7 @@
     "#22c55e"
   ],
   "image": "/uploads/reborn.jpg",
-  "group": "g3",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "victory",
-  "order": 30,
+  "order": 41,
   "label": "Victory",
   "emoji": "🏆",
   "color": [
@@ -8,7 +8,7 @@
     "#f59e0b"
   ],
   "image": "/uploads/victory.jpg",
-  "group": "g2",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "grief",
-  "order": 16,
+  "order": 33,
   "label": "Grief",
   "emoji": "💙",
   "color": [
@@ -8,7 +8,7 @@
     "#8b5cf6"
   ],
   "image": "/uploads/grief.jpg",
-  "group": "g1",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

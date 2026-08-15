@@ -1,6 +1,6 @@
 {
   "id": "holy",
-  "order": 11,
+  "order": 32,
   "label": "Holy Lord",
   "emoji": "👑",
   "color": [
@@ -8,7 +8,7 @@
     "#f59e0b"
   ],
   "image": "/uploads/holy.jpg",
-  "group": "g0",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

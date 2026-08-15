@@ -1,6 +1,6 @@
 {
   "id": "angels",
-  "order": 21,
+  "order": 37,
   "label": "Angels",
   "emoji": "👼",
   "color": [
@@ -8,7 +8,7 @@
     "#a5b4fc"
   ],
   "image": "/uploads/angels.jpg",
-  "group": "g1",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

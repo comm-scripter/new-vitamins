@@ -1,6 +1,6 @@
 {
   "id": "study",
-  "order": 36,
+  "order": 8,
   "label": "Studying Scripture",
   "emoji": "📚",
   "color": [
@@ -8,7 +8,7 @@
     "#3b82f6"
   ],
   "image": "/uploads/study.jpg",
-  "group": "g2",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

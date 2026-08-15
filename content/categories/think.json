@@ -1,6 +1,6 @@
 {
   "id": "think",
-  "order": 35,
+  "order": 12,
   "label": "Think About...",
   "emoji": "💭",
   "color": [
@@ -8,7 +8,7 @@
     "#475569"
   ],
   "image": "/uploads/think.jpg",
-  "group": "g2",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

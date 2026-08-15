@@ -1,6 +1,6 @@
 {
   "id": "grace-2",
-  "order": 5,
+  "order": 48,
   "label": "God's Grace",
   "emoji": "💐",
   "color": [
@@ -8,7 +8,7 @@
     "#c084fc"
   ],
   "image": "/uploads/grace-2.jpg",
-  "group": "g0",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

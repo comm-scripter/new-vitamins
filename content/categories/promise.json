@@ -1,6 +1,6 @@
 {
   "id": "promise",
-  "order": 41,
+  "order": 2,
   "label": "God's Rainbow Promise",
   "emoji": "🌈",
   "color": [
@@ -8,7 +8,7 @@
     "#22d3ee"
   ],
   "image": "/uploads/promise.jpg",
-  "group": "g3",
+  "group": "season1",
   "vitamins": [
     {
       "scripture": {

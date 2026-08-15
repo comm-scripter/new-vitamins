@@ -1,6 +1,6 @@
 {
   "id": "faith",
-  "order": 0,
+  "order": 9,
   "label": "Fellowship of Faith",
   "emoji": "✨",
   "color": [
@@ -8,7 +8,7 @@
     "#ec4899"
   ],
   "image": "/uploads/faith.jpg",
-  "group": "g0",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "mystery",
-  "order": 23,
+  "order": 39,
   "label": "Mystery",
   "emoji": "🔮",
   "color": [
@@ -8,7 +8,7 @@
     "#a855f7"
   ],
   "image": "/uploads/mystery.jpg",
-  "group": "g1",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "satan",
-  "order": 39,
+  "order": 26,
   "label": "Evil Enemy",
   "emoji": "🐍",
   "color": [
@@ -8,7 +8,7 @@
     "#0f172a"
   ],
   "image": "/uploads/satan.jpg",
-  "group": "g3",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

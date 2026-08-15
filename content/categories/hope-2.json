@@ -1,6 +1,6 @@
 {
   "id": "hope-2",
-  "order": 3,
+  "order": 44,
   "label": "Hope",
   "emoji": "🌤️",
   "color": [
@@ -8,7 +8,7 @@
     "#60a5fa"
   ],
   "image": "/uploads/hope-2.jpg",
-  "group": "g0",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

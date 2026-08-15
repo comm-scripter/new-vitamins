@@ -1,6 +1,6 @@
 {
   "id": "spirit",
-  "order": 12,
+  "order": 7,
   "label": "The Holy Spirit",
   "emoji": "💨",
   "color": [
@@ -8,7 +8,7 @@
     "#818cf8"
   ],
   "image": "/uploads/spirit.jpg",
-  "group": "g0",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

@@ -13,6 +13,12 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const isMobile = useWindowWidth() < 640;
 
   const { scripture, quote } = vitamin;
+  // Some early vitamins were authored without a distinct quote — the CMS
+  // just duplicated the scripture verse into the quote field as a
+  // placeholder (author left null). Treat that as "no quote": disable the
+  // flip and hide its hint. Purely data-driven, so filling in a real quote
+  // later re-enables both automatically.
+  const hasQuote = Boolean(quote?.verse) && quote.verse !== scripture.verse;
 
   const [shareMenuOpen, setShareMenuOpen] = useState(false);
   // Save/Share live on the scripture face only, so they always act on the scripture.
@@ -76,8 +82,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     return (
       <>
       {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
-      <div style={{ width: '100%', perspective: 1200, cursor: 'pointer', outline: 'none' }}
-        onClick={() => setFlipped(f => !f)}>
+      <div style={{ width: '100%', perspective: 1200, cursor: hasQuote ? 'pointer' : 'default', outline: 'none' }}
+        onClick={() => hasQuote && setFlipped(f => !f)}>
         <div style={{
           position: 'relative', width: '100%', paddingBottom: 'calc(90% + 40px)',
           transformStyle: 'preserve-3d',
@@ -127,10 +133,12 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
                 }}>— {scripture.ref}</p>
               )}
             </div>
-            <div style={{
-              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: textFaint, flexShrink: 0,
-            }}>↻ tap for quote</div>
+            {hasQuote && (
+              <div style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
+                color: textFaint, flexShrink: 0,
+              }}>↻ tap for quote</div>
+            )}
           </div>
           {/* BACK — quote */}
           <div style={{ ...face, transform: 'rotateY(180deg)', background: `linear-gradient(145deg, ${c1}, ${c0})` }}>
@@ -194,8 +202,8 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     <>
     {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div className="vitamin-card-wrap">
-      <div style={{ perspective: 1600, cursor: 'pointer', width: '100%', height: '100%', outline: 'none' }}
-        onClick={() => setFlipped(f => !f)}>
+      <div style={{ perspective: 1600, cursor: hasQuote ? 'pointer' : 'default', width: '100%', height: '100%', outline: 'none' }}
+        onClick={() => hasQuote && setFlipped(f => !f)}>
         <div style={{
           position: 'relative', width: '100%', height: '100%',
           transformStyle: 'preserve-3d',
@@ -244,10 +252,12 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
                 }}>— {scripture.ref}</p>
               )}
             </div>
-            <div style={{
-              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: textFaint, flexShrink: 0,
-            }}>↻ tap for quote</div>
+            {hasQuote && (
+              <div style={{
+                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
+                color: textFaint, flexShrink: 0,
+              }}>↻ tap for quote</div>
+            )}
           </div>
 
           {/* BACK — quote */}

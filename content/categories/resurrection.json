@@ -1,6 +1,6 @@
 {
   "id": "resurrection",
-  "order": 46,
+  "order": 20,
   "label": "Royal Resurrection",
   "emoji": "✝️",
   "color": [
@@ -8,7 +8,7 @@
     "#a855f7"
   ],
   "image": "/uploads/resurrection.jpg",
-  "group": "g3",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

@@ -1,6 +1,6 @@
 {
   "id": "grace",
-  "order": 4,
+  "order": 18,
   "label": "Grace",
   "emoji": "🌷",
   "color": [
@@ -8,7 +8,7 @@
     "#c084fc"
   ],
   "image": "/uploads/grace.jpg",
-  "group": "g0",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

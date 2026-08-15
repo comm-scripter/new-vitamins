@@ -1,6 +1,6 @@
 {
   "id": "pride",
-  "order": 28,
+  "order": 31,
   "label": "Pride",
   "emoji": "🦚",
   "color": [
@@ -8,7 +8,7 @@
     "#dc2626"
   ],
   "image": "/uploads/pride.jpg",
-  "group": "g2",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

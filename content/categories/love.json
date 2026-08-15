@@ -1,6 +1,6 @@
 {
   "id": "love",
-  "order": 13,
+  "order": 6,
   "label": "Valentines - God's Love",
   "emoji": "❤️",
   "color": [
@@ -8,7 +8,7 @@
     "#fb923c"
   ],
   "image": "/uploads/love.jpg",
-  "group": "g1",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

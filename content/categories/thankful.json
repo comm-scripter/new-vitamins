@@ -1,6 +1,6 @@
 {
   "id": "thankful",
-  "order": 18,
+  "order": 15,
   "label": "Thankful Hearts",
   "emoji": "🙌",
   "color": [
@@ -8,7 +8,7 @@
     "#f97316"
   ],
   "image": "/uploads/thankful.jpg",
-  "group": "g1",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

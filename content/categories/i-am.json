@@ -1,6 +1,6 @@
 {
   "id": "i-am",
-  "order": 10,
+  "order": 43,
   "label": "I AM",
   "emoji": "🔥",
   "color": [
@@ -8,7 +8,7 @@
     "#dc2626"
   ],
   "image": "/uploads/i-am.jpg",
-  "group": "g0",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {
