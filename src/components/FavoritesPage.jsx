@@ -1,15 +1,17 @@
 import BackButton from './BackButton';
 import VitaminCard from './VitaminCard';
 import { useFavorites } from '../hooks';
+import { CATEGORIES } from '../data';
 
 export default function FavoritesPage({ onNavigate }) {
-  const { favorites, loading, toggleFavorite } = useFavorites();
+  const { favorites, loading } = useFavorites();
 
-  const toggleArgsFor = (fav) => ({
-    category: { id: fav.categoryId, label: fav.categoryLabel, emoji: fav.categoryEmoji, color: fav.categoryColor },
-    vitamin: { scripture: fav.scripture, quote: fav.quote, day: fav.isBonus ? undefined : fav.day },
-    dayLabel: fav.dayLabel,
-  });
+  // Favorite docs only store id/label/emoji/color (see hooks.js toggleFavorite),
+  // not the category's image, so look the live category up by id to get its
+  // badge image instead of always falling back to the generic capsule icon.
+  const categoryFor = (fav) => CATEGORIES.find(c => c.id === fav.categoryId) ?? {
+    id: fav.categoryId, label: fav.categoryLabel, emoji: fav.categoryEmoji, color: fav.categoryColor,
+  };
 
   return (
     <div className="page-enter" style={{
@@ -36,10 +38,9 @@ export default function FavoritesPage({ onNavigate }) {
             <VitaminCard
               key={fav.id}
               vitamin={{ verse: fav.scripture.verse, ref: fav.scripture.ref }}
-              category={{ id: fav.categoryId, label: fav.categoryLabel, emoji: fav.categoryEmoji, color: fav.categoryColor }}
+              category={categoryFor(fav)}
               dayLabel={fav.dayLabel}
-              favorited
-              onToggleFavorite={() => toggleFavorite(toggleArgsFor(fav))}
+              size={130}
             />
           ))}
         </div>

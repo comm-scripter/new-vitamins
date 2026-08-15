@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { hexToRgb, pickTextColor } from '../utils';
 import { useWindowWidth, useFavorites } from '../hooks';
 import { buildShareText } from '../share';
@@ -14,22 +14,9 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
 
   const { scripture, quote } = vitamin;
 
-  const pillRef = useRef(null);
-  const [pillW, setPillW] = useState(0);
-
-  useEffect(() => {
-    if (isMobile) return;
-    const el = pillRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([entry]) => setPillW(entry.contentRect.width));
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [isMobile]);
-
   const [shareMenuOpen, setShareMenuOpen] = useState(false);
-  const shareText = flipped && quote.author
-    ? buildShareText(quote.verse, quote.author)
-    : buildShareText(scripture.verse, scripture.ref);
+  // Save/Share live on the scripture face only, so they always act on the scripture.
+  const shareText = buildShareText(scripture.verse, scripture.ref);
 
   const handleShare = (e) => {
     e.stopPropagation();
@@ -61,50 +48,18 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
   const btnBgActive= isLightBg ? 'rgba(27,16,51,0.22)' : 'rgba(255,255,255,0.3)';
   const btnBorder  = isLightBg ? 'rgba(27,16,51,0.28)' : 'rgba(255,255,255,0.35)';
 
-  /**
-   * Computes the largest verse font size (px) that fits inside the pill
-   * without overlapping the absolutely-positioned controls pinned to the bottom.
-   *
-   * Pill geometry (CSS % padding is always relative to element width):
-   *   face height  = pillW × 0.40   (paddingBottom: '40%' on container)
-   *   usable width = pillW × 0.64   (18% padding each side)
-   *   usable height= pillW × 0.30   (face height − 5% top/bottom padding each)
-   *
-   * Controls sit at bottom: 16px from the face's bottom border.
-   * Face bottom padding = 5% of pillW. The distance the controls intrude
-   * into the content area = max(0, 16 + controlsH − 5%·pillW).
-   * Because the verse is flex-centered in usableH, we need equal clearance
-   * top and bottom, so reserve 2× that intrusion.
-   */
-  function calcFontPx(text, isBack, hasCaption) {
-    if (!pillW) return null;
-
-    const usableW  = pillW * 0.75;
-    const usableH  = pillW * 0.30;
-
-    const facePadBot     = pillW * 0.05;
-    const controlsH      = isBack ? 36 : 16;
-    const ctrlsTopFromBot = 16 + controlsH;
-    const ctrlsInContent = Math.max(0, ctrlsTopFromBot - facePadBot);
-
-    // The reference/author caption sits in the flex group with the verse (gap: 8 + ~20px text)
-    const refH = hasCaption ? 28 : 0;
-
-    const maxVerseH = usableH - refH - 2 * ctrlsInContent;
-
-    let fs = Math.min(Math.round(pillW / 24), 30);
-    while (fs > 13) {
-      const charsPerLine = Math.floor(usableW / (fs * 0.56));
-      if (charsPerLine < 1) { fs--; continue; }
-      const lines = Math.ceil(text.length / charsPerLine);
-      if (lines * fs * 1.75 <= maxVerseH) break;
-      fs--;
-    }
-    return `${Math.max(fs, 13)}px`;
-  }
-
-  const verseFontFront = calcFontPx(scripture.verse, false, !!scripture.ref) ?? 'var(--fs-base)';
-  const verseFontBack  = calcFontPx(quote.verse, true, !!quote.author)  ?? 'var(--fs-base)';
+  // Save/Share sit as icon buttons pinned to the scripture face's top
+  // corners (out of flex flow) so they never compete with the verse
+  // text for vertical space.
+  const iconBtn = (size, extra) => ({
+    position: 'absolute', top: size === 44 ? 20 : 14,
+    width: size, height: size, borderRadius: '50%',
+    border: `1px solid ${btnBorder}`, cursor: 'pointer', color: textMain,
+    fontSize: size === 44 ? 19 : 16,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    transition: 'all 0.2s', outline: 'none', zIndex: 1,
+    ...extra,
+  });
 
   /* ── Mobile: stacked card (no pill) ── */
   if (isMobile) {
@@ -131,6 +86,14 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
         }}>
           {/* FRONT — scripture */}
           <div style={{ ...face, justifyContent: 'flex-start', paddingTop: 8, background: `linear-gradient(145deg, ${c0}, ${c1})` }}>
+            <button onClick={handleSave} title={saved ? 'Unsave' : 'Save'}
+              style={iconBtn(36, { left: 14, background: saved ? btnBgActive : btnBg })}>
+              {saved ? '♥' : '♡'}
+            </button>
+            <button onClick={handleShare} title="Share"
+              style={iconBtn(36, { right: 14, background: btnBg })}>
+              ↗
+            </button>
             {category.image ? (
               <img src={category.image} alt="" style={{
                 width: '65%', maxWidth: 220, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
@@ -171,39 +134,30 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
           </div>
           {/* BACK — quote */}
           <div style={{ ...face, transform: 'rotateY(180deg)', background: `linear-gradient(145deg, ${c1}, ${c0})` }}>
-            <p style={{
-              fontFamily: 'Playfair Display',
-              fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
-              textAlign: 'center', margin: 0,
-              textShadow: verseShadow,
-            }}>{quote.verse}</p>
-            {quote.author && (
+            {/* Same flex:1-then-hint structure as the scripture face, so
+                "tap for scripture" lands at the exact same bottom offset
+                as "tap for quote" regardless of how much text is above it. */}
+            <div style={{
+              flex: 1, minHeight: 0, width: '100%',
+              display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+              gap: 8, overflowY: 'auto',
+            }}>
               <p style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
-                color: textStrong, textAlign: 'center',
-              }}>— {quote.author}</p>
-            )}
-            <div style={{ display: 'flex', gap: 12 }}>
-              <button onClick={handleSave} style={{
-                padding: '11px 24px', borderRadius: 50,
-                background: saved ? btnBgActive : btnBg,
-                border: `1px solid ${btnBorder}`,
-                cursor: 'pointer', color: textMain,
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 600,
-                display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s',
-              }}>{saved ? '♥' : '♡'} Save</button>
-              <button onClick={handleShare} style={{
-                padding: '11px 24px', borderRadius: 50,
-                background: btnBg,
-                border: `1px solid ${btnBorder}`,
-                cursor: 'pointer', color: textMain,
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 600,
-                display: 'flex', alignItems: 'center', gap: 6, transition: 'all 0.2s',
-              }}>↗ Share</button>
+                fontFamily: 'Playfair Display',
+                fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
+                textAlign: 'center', margin: 0,
+                textShadow: verseShadow,
+              }}>{quote.verse}</p>
+              {quote.author && (
+                <p style={{
+                  fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                  color: textStrong, textAlign: 'center', margin: 0,
+                }}>— {quote.author}</p>
+              )}
             </div>
             <div style={{
               fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
-              color: textFaint,
+              color: textFaint, flexShrink: 0,
             }}>↻ tap for scripture</div>
           </div>
         </div>
@@ -212,126 +166,118 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
     );
   }
 
-  /* ── Desktop: pill shape ── */
-  const pillBg = `
+  /* ── Medium/large: rectangular card filling the available space,
+     badge positioned just above the scripture text — same layout as
+     the mobile card above, just bigger and height-driven instead of
+     width/aspect-ratio-driven. ── */
+  const cardBg = `
     radial-gradient(ellipse 30% 55% at 20% 25%, rgba(255,255,255,0.18) 0%, transparent 70%),
     linear-gradient(135deg, ${c0} 0%, ${c1} 100%)
   `;
-  const pillBgFlip = `
+  const cardBgFlip = `
     radial-gradient(ellipse 30% 55% at 20% 25%, rgba(255,255,255,0.18) 0%, transparent 70%),
     linear-gradient(135deg, ${c1} 0%, ${c0} 100%)
   `;
 
-  const sharedFace = {
+  const face = {
     position: 'absolute', inset: 0,
-    borderRadius: '9999px',
+    borderRadius: 28,
     backfaceVisibility: 'hidden',
     WebkitBackfaceVisibility: 'hidden',
+    padding: '40px 56px',
     display: 'flex', flexDirection: 'column',
-    alignItems: 'center', justifyContent: 'center',
-    padding: '5% 18%',
-    gap: 8,
+    alignItems: 'center', justifyContent: 'center', gap: 20,
     boxShadow: shadow,
   };
-
-  // Controls pinned to the bottom of the pill on both faces
-  const ctrlRow = {
-    position: 'absolute', bottom: 16,
-    left: 0, right: 0,
-    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
-  };
-
-  const iconBtn = (extra) => ({
-    width: 36, height: 36, borderRadius: '50%', border: 'none',
-    cursor: 'pointer', color: 'white', fontSize: 18,
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-    transition: 'all 0.2s', outline: 'none', flexShrink: 0,
-    ...extra,
-  });
 
   return (
     <>
     {shareMenuOpen && <ShareMenu text={shareText} onClose={() => setShareMenuOpen(false)}/>}
     <div className="vitamin-card-wrap">
-      {/* Category image + label above pill */}
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10,
-        marginBottom: 18,
-      }}>
-        {category.image && (
-          <img src={category.image} alt="" style={{
-            width: '85%', maxWidth: 420, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
-            border: `3px solid ${c0}`,
-            boxShadow: `0 6px 24px rgba(${r0},0.4), 0 2px 10px rgba(0,0,0,0.35)`,
-          }}/>
-        )}
-      </div>
-
-      {/* Flip card */}
-      <div style={{ perspective: 1400, cursor: 'pointer', width: '100%', outline: 'none' }}
+      <div style={{ perspective: 1600, cursor: 'pointer', width: '100%', height: '100%', outline: 'none' }}
         onClick={() => setFlipped(f => !f)}>
-        <div ref={pillRef} style={{
-          position: 'relative', width: '100%', paddingBottom: '40%',
+        <div style={{
+          position: 'relative', width: '100%', height: '100%',
           transformStyle: 'preserve-3d',
           transition: 'transform 0.85s cubic-bezier(0.4,0,0.2,1)',
           transform: flipped ? 'rotateY(180deg)' : 'none',
         }}>
-
           {/* FRONT — scripture */}
-          <div style={{ ...sharedFace, background: pillBg }}>
-            <p style={{
-              fontFamily: 'Playfair Display',
-              fontSize: verseFontFront, color: textMain, lineHeight: 1.75,
-              textAlign: 'center', margin: 0, textShadow: verseShadow,
-            }}>{scripture.verse}</p>
-            {scripture.ref && (
-              <p style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-                color: textStrong, textAlign: 'center', margin: 0,
-                textShadow: verseShadow,
-              }}>— {scripture.ref}</p>
+          <div style={{ ...face, justifyContent: 'flex-start', paddingTop: 40, background: cardBg }}>
+            <button onClick={handleSave} title={saved ? 'Unsave' : 'Save'}
+              style={iconBtn(44, { left: 20, background: saved ? btnBgActive : btnBg })}>
+              {saved ? '♥' : '♡'}
+            </button>
+            <button onClick={handleShare} title="Share"
+              style={iconBtn(44, { right: 20, background: btnBg })}>
+              ↗
+            </button>
+            {category.image ? (
+              <img src={category.image} alt="" style={{
+                width: '45%', maxWidth: 340, aspectRatio: '2.2', borderRadius: '9999px', objectFit: 'fill',
+                border: '3px solid rgba(255,255,255,0.6)',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.35)',
+                flexShrink: 0,
+              }}/>
+            ) : (
+              <div style={{ fontSize: 56, flexShrink: 0 }}>{category.emoji}</div>
             )}
-            {/* hint pinned to bottom */}
-            <div style={ctrlRow}>
-              <span style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
-                color: textFaint,
-              }}>↻ tap for quote</span>
+            {/* Flexible region: absorbs long verses by scrolling internally
+                instead of pushing the badge above (min-height:0 lets it shrink).
+                Top-aligned (not centered) so overflow is clipped/scrolled at the
+                bottom only — see LargeVitaminCard mobile face for the same fix. */}
+            <div style={{
+              flex: 1, minHeight: 0, width: '100%',
+              display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center',
+              gap: 12, overflowY: 'auto',
+            }}>
+              <p style={{
+                fontFamily: 'Playfair Display',
+                fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
+                textAlign: 'center', margin: 0,
+                textShadow: verseShadow,
+              }}>{scripture.verse}</p>
+              {scripture.ref && (
+                <p style={{
+                  fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                  color: textStrong, textAlign: 'center', margin: 0,
+                }}>— {scripture.ref}</p>
+              )}
             </div>
+            <div style={{
+              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
+              color: textFaint, flexShrink: 0,
+            }}>↻ tap for quote</div>
           </div>
 
           {/* BACK — quote */}
-          <div style={{ ...sharedFace, transform: 'rotateY(180deg)', background: pillBgFlip }}>
-            <p style={{
-              fontFamily: 'Playfair Display',
-              fontSize: verseFontBack, color: textMain, lineHeight: 1.75,
-              textAlign: 'center', margin: 0, textShadow: verseShadow,
-            }}>{quote.verse}</p>
-            {quote.author && (
+          <div style={{ ...face, transform: 'rotateY(180deg)', background: cardBgFlip }}>
+            {/* Same flex:1-then-hint structure as the scripture face, so
+                "tap for scripture" lands at the exact same bottom offset
+                as "tap for quote" regardless of how much text is above it. */}
+            <div style={{
+              flex: 1, minHeight: 0, width: '100%',
+              display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+              gap: 12, overflowY: 'auto',
+            }}>
               <p style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)', fontWeight: 700,
-                color: textStrong, textAlign: 'center', margin: 0,
+                fontFamily: 'Playfair Display',
+                fontSize: 'var(--fs-base)', color: textMain, lineHeight: 1.8,
+                textAlign: 'center', margin: 0,
                 textShadow: verseShadow,
-              }}>— {quote.author}</p>
-            )}
-            {/* save / share / hint pinned to bottom */}
-            <div style={ctrlRow}>
-              <button onClick={handleSave}
-                title={saved ? 'Unsave' : 'Save'}
-                style={iconBtn({ background: saved ? btnBgActive : btnBg, color: textMain })}>
-                {saved ? '♥' : '♡'}
-              </button>
-              <button onClick={handleShare} title="Share"
-                style={iconBtn({ background: btnBg, color: textMain })}>
-                ↗
-              </button>
-              <span style={{
-                fontFamily: 'DM Sans', fontSize: 'var(--fs-2xs)',
-                color: textFaint,
-              }}>↻ tap for scripture</span>
+              }}>{quote.verse}</p>
+              {quote.author && (
+                <p style={{
+                  fontFamily: 'DM Sans', fontSize: 'var(--fs-sm)', fontWeight: 700,
+                  color: textStrong, textAlign: 'center', margin: 0,
+                }}>— {quote.author}</p>
+              )}
             </div>
+            <div style={{
+              fontFamily: 'DM Sans', fontSize: 'var(--fs-xs)',
+              color: textFaint, flexShrink: 0,
+            }}>↻ tap for scripture</div>
           </div>
-
         </div>
       </div>
     </div>
