@@ -11,7 +11,11 @@ const SIDEBAR_CHROME_PX = 161;
 const SIDEBAR_MIN_PX = 220;
 
 export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatChange, onDayChange }) {
-  const defaultCat = CATEGORIES[TODAY_IDX % CATEGORIES.length].id;
+  // Always opens on the very first category (Season 1's first vitamin) —
+  // picking by weekday used to coincidentally stay inside the first
+  // thematic group when it had 13+ categories, but seasons vary in size
+  // (Season 1 now has only 5), so that could land in a later season.
+  const defaultCat = CATEGORIES[0].id;
   const [selectedCat, setSelectedCat] = useState(savedCat ?? defaultCat);
   const [selectedDay, setSelectedDay] = useState(savedDay ?? TODAY_IDX);
   const [showBonus, setShowBonus] = useState(false);
