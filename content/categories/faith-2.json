@@ -1,6 +1,6 @@
 {
   "id": "faith-2",
-  "order": 1,
+  "order": 45,
   "label": "Faith",
   "emoji": "🕯️",
   "color": [
@@ -8,7 +8,7 @@
     "#a855f7"
   ],
   "image": "/uploads/faith-2.jpg",
-  "group": "g0",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

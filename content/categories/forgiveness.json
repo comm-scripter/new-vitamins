@@ -1,6 +1,6 @@
 {
   "id": "forgiveness",
-  "order": 26,
+  "order": 11,
   "label": "Forgiveness",
   "emoji": "💜",
   "color": [
@@ -8,7 +8,7 @@
     "#f472b6"
   ],
   "image": "/uploads/forgiveness.jpg",
-  "group": "g2",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

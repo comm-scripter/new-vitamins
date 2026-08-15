@@ -1,6 +1,6 @@
 {
   "id": "time",
-  "order": 43,
+  "order": 5,
   "label": "Time",
   "emoji": "⏳",
   "color": [
@@ -8,7 +8,7 @@
     "#65a30d"
   ],
   "image": "/uploads/time.jpg",
-  "group": "g3",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

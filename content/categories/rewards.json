@@ -1,6 +1,6 @@
 {
   "id": "rewards",
-  "order": 31,
+  "order": 4,
   "label": "Crowns of Rewards",
   "emoji": "🏅",
   "color": [
@@ -8,7 +8,7 @@
     "#eab308"
   ],
   "image": "/uploads/rewards.jpg",
-  "group": "g2",
+  "group": "season1",
   "vitamins": [
     {
       "scripture": {

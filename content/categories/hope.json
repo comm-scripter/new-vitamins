@@ -1,6 +1,6 @@
 {
   "id": "hope",
-  "order": 2,
+  "order": 16,
   "label": "Hope of Glory",
   "emoji": "🌅",
   "color": [
@@ -8,7 +8,7 @@
     "#34d399"
   ],
   "image": "/uploads/hope.jpg",
-  "group": "g0",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

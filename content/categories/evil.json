@@ -1,6 +1,6 @@
 {
   "id": "evil",
-  "order": 38,
+  "order": 14,
   "label": "Evil Abounds",
   "emoji": "😈",
   "color": [
@@ -8,7 +8,7 @@
     "#1e293b"
   ],
   "image": "/uploads/evil.jpg",
-  "group": "g3",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

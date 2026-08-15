@@ -1,6 +1,6 @@
 {
   "id": "pray",
-  "order": 8,
+  "order": 10,
   "label": "Pray Daily",
   "emoji": "🕊️",
   "color": [
@@ -8,7 +8,7 @@
     "#818cf8"
   ],
   "image": "/uploads/pray.jpg",
-  "group": "g0",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

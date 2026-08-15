@@ -1,6 +1,6 @@
 {
   "id": "harvest",
-  "order": 33,
+  "order": 27,
   "label": "Harvest",
   "emoji": "🧺",
   "color": [
@@ -8,7 +8,7 @@
     "#84cc16"
   ],
   "image": "/uploads/harvest.jpg",
-  "group": "g2",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

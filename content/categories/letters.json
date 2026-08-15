@@ -1,6 +1,6 @@
 {
   "id": "letters",
-  "order": 22,
+  "order": 17,
   "label": "Love Letters from God",
   "emoji": "💌",
   "color": [
@@ -8,7 +8,7 @@
     "#f472b6"
   ],
   "image": "/uploads/letters.jpg",
-  "group": "g1",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

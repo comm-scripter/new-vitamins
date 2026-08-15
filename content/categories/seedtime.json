@@ -1,6 +1,6 @@
 {
   "id": "seedtime",
-  "order": 32,
+  "order": 49,
   "label": "Seedtime and Harvest",
   "emoji": "🌱",
   "color": [
@@ -8,7 +8,7 @@
     "#22c55e"
   ],
   "image": "/uploads/seedtime.jpg",
-  "group": "g2",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

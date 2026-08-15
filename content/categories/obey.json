@@ -1,6 +1,6 @@
 {
   "id": "obey",
-  "order": 27,
+  "order": 21,
   "label": "Obedience to God",
   "emoji": "🧭",
   "color": [
@@ -8,7 +8,7 @@
     "#16a34a"
   ],
   "image": "/uploads/obey.jpg",
-  "group": "g2",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

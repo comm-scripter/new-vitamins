@@ -1,6 +1,6 @@
 {
   "id": "ark",
-  "order": 44,
+  "order": 0,
   "label": "Noah's Ark",
   "emoji": "🚢",
   "color": [
@@ -8,7 +8,7 @@
     "#0ea5e9"
   ],
   "image": "/uploads/ark.jpg",
-  "group": "g3",
+  "group": "season1",
   "vitamins": [
     {
       "scripture": {
@@ -92,7 +92,7 @@
     }
   },
   "devotional": {
-    "title": "Noah 1",
+    "title": "Noah's Ark",
     "scripture": {
       "ref": "Exodus 20:5-6",
       "verse": "\"You shall not worship them (other gods), for I the LORD your God am a jealous God visiting the sins of the fathers on the children to the 3rd and 4th generation of those who hate me, but showing lovingkindness to thousands to those who love me and keep my commandments.\""

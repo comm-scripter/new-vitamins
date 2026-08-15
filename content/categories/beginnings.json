@@ -1,6 +1,6 @@
 {
   "id": "beginnings",
-  "order": 34,
+  "order": 29,
   "label": "Great Beginnings",
   "emoji": "🌄",
   "color": [
@@ -8,7 +8,7 @@
     "#0ea5e9"
   ],
   "image": "/uploads/beginnings.jpg",
-  "group": "g2",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

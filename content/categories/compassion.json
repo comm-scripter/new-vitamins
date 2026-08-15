@@ -1,6 +1,6 @@
 {
   "id": "compassion",
-  "order": 17,
+  "order": 47,
   "label": "Compassion",
   "emoji": "🤗",
   "color": [
@@ -8,7 +8,7 @@
     "#f472b6"
   ],
   "image": "/uploads/compassion.jpg",
-  "group": "g1",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

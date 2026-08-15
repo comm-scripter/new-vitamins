@@ -1,6 +1,6 @@
 {
   "id": "resurrection-2",
-  "order": 47,
+  "order": 40,
   "label": "The Resurrection",
   "emoji": "🌇",
   "color": [
@@ -8,7 +8,7 @@
     "#f59e0b"
   ],
   "image": "/uploads/resurrection-2.jpg",
-  "group": "g3",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

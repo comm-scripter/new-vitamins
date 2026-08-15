@@ -1,24 +1,44 @@
 {
   "groups": [
     {
-      "id": "g0",
-      "label": "Faith & Spirit",
-      "color": ["#a855f7", "#ec4899"]
+      "id": "season1",
+      "label": "Season 1",
+      "color": [
+        "#a855f7",
+        "#ec4899"
+      ]
     },
     {
-      "id": "g1",
-      "label": "Heart & Soul",
-      "color": ["#60a5fa", "#34d399"]
+      "id": "season2",
+      "label": "Season 2",
+      "color": [
+        "#60a5fa",
+        "#34d399"
+      ]
     },
     {
-      "id": "g2",
-      "label": "Character & Virtue",
-      "color": ["#10b981", "#0ea5e9"]
+      "id": "season3",
+      "label": "Season 3",
+      "color": [
+        "#10b981",
+        "#0ea5e9"
+      ]
     },
     {
-      "id": "g3",
-      "label": "Life & Relationships",
-      "color": ["#fbbf24", "#f97316"]
+      "id": "season4",
+      "label": "Season 4",
+      "color": [
+        "#fbbf24",
+        "#f97316"
+      ]
+    },
+    {
+      "id": "season5",
+      "label": "Season 5",
+      "color": [
+        "#22d3ee",
+        "#6366f1"
+      ]
     }
   ]
 }

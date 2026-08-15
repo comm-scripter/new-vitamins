@@ -1,6 +1,6 @@
 {
   "id": "promises",
-  "order": 42,
+  "order": 25,
   "label": "Promises",
   "emoji": "🤝",
   "color": [
@@ -8,7 +8,7 @@
     "#10b981"
   ],
   "image": "/uploads/promises.jpg",
-  "group": "g3",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

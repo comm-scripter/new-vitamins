@@ -1,6 +1,6 @@
 {
   "id": "immanuel",
-  "order": 9,
+  "order": 28,
   "label": "Immanuel",
   "emoji": "⭐",
   "color": [
@@ -8,7 +8,7 @@
     "#a855f7"
   ],
   "image": "/uploads/immanuel.jpg",
-  "group": "g0",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

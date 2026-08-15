@@ -1,6 +1,6 @@
 {
   "id": "purity",
-  "order": 29,
+  "order": 34,
   "label": "Purity",
   "emoji": "🤍",
   "color": [
@@ -8,7 +8,7 @@
     "#cbd5e1"
   ],
   "image": "/uploads/purity.jpg",
-  "group": "g2",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

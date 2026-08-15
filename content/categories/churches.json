@@ -1,6 +1,6 @@
 {
   "id": "churches",
-  "order": 48,
+  "order": 42,
   "label": "The Seven Churches",
   "emoji": "⛪",
   "color": [
@@ -8,7 +8,7 @@
     "#6366f1"
   ],
   "image": "/uploads/churches.jpg",
-  "group": "g3",
+  "group": "season5",
   "vitamins": [
     {
       "scripture": {

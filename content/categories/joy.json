@@ -1,6 +1,6 @@
 {
   "id": "joy",
-  "order": 15,
+  "order": 36,
   "label": "Joy",
   "emoji": "😊",
   "color": [
@@ -8,7 +8,7 @@
     "#ef4444"
   ],
   "image": "/uploads/joy.jpg",
-  "group": "g1",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

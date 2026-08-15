@@ -1,6 +1,6 @@
 {
   "id": "thankful-2",
-  "order": 19,
+  "order": 35,
   "label": "Thankful",
   "emoji": "🌾",
   "color": [
@@ -8,7 +8,7 @@
     "#f59e0b"
   ],
   "image": "/uploads/thankful-2.jpg",
-  "group": "g1",
+  "group": "season4",
   "vitamins": [
     {
       "scripture": {

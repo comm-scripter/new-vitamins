@@ -1,6 +1,6 @@
 {
   "id": "sword",
-  "order": 40,
+  "order": 13,
   "label": "Sword of the Spirit",
   "emoji": "⚔️",
   "color": [
@@ -8,7 +8,7 @@
     "#334155"
   ],
   "image": "/uploads/sword.jpg",
-  "group": "g3",
+  "group": "season2",
   "vitamins": [
     {
       "scripture": {

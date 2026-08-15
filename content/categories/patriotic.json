@@ -1,6 +1,6 @@
 {
   "id": "patriotic",
-  "order": 45,
+  "order": 23,
   "label": "One Nation Under God",
   "emoji": "🇺🇸",
   "color": [
@@ -8,7 +8,7 @@
     "#3b82f6"
   ],
   "image": "/uploads/patriotic.jpg",
-  "group": "g3",
+  "group": "season3",
   "vitamins": [
     {
       "scripture": {

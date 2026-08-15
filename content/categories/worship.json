@@ -1,6 +1,6 @@
 {
   "id": "worship",
-  "order": 6,
+  "order": 1,
   "label": "Worship the Lord",
   "emoji": "🎵",
   "color": [
@@ -8,7 +8,7 @@
     "#a855f7"
   ],
   "image": "/uploads/worship.jpg",
-  "group": "g0",
+  "group": "season1",
   "vitamins": [
     {
       "scripture": {
