@@ -36,13 +36,21 @@ export default function Header({ onMenuToggle, menuOpen, onNavigate, loggedIn, u
       </button>
       <button onClick={onMenuToggle} style={{
         background:'none', border:'none', cursor:'pointer',
-        display:'flex', flexDirection:'column', gap:6, padding:8,
+        display:'flex', flexDirection:'column', alignItems:'center', gap:6, padding:8,
         transition:'opacity 0.2s',
       }}>
+        {/* Vertical center-to-center distance between bars (height 2 + gap 6).
+            Bars translate straight down/up by exactly this before rotating,
+            so the two diagonal legs cross dead-center — translateY listed
+            before rotate() applies in screen space *after* the rotation,
+            giving a precisely symmetrical X (the old rotate()-then-translate()
+            order rotated the offset itself, landing the legs a couple px
+            apart and making one side of the X look shorter). Widening the
+            bars slightly in the X state reads as a bolder, more balanced X. */}
         <span style={{
-          display:'block', width:barWidth, height:2, background:'#e9d5ff', borderRadius:2,
-          transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
-          transition:'transform 0.3s ease',
+          display:'block', width: menuOpen ? barWidth + 8 : barWidth, height:2, background:'#e9d5ff', borderRadius:2,
+          transform: menuOpen ? 'translateY(8px) rotate(45deg)' : 'none',
+          transition:'transform 0.3s ease, width 0.3s ease',
         }}/>
         <span style={{
           display:'block', width:barWidth, height:2, background:'#e9d5ff', borderRadius:2,
@@ -50,9 +58,9 @@ export default function Header({ onMenuToggle, menuOpen, onNavigate, loggedIn, u
           transition:'opacity 0.3s ease',
         }}/>
         <span style={{
-          display:'block', width:barWidth, height:2, background:'#e9d5ff', borderRadius:2,
-          transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
-          transition:'transform 0.3s ease',
+          display:'block', width: menuOpen ? barWidth + 8 : barWidth, height:2, background:'#e9d5ff', borderRadius:2,
+          transform: menuOpen ? 'translateY(-8px) rotate(-45deg)' : 'none',
+          transition:'transform 0.3s ease, width 0.3s ease',
         }}/>
       </button>
     </header>

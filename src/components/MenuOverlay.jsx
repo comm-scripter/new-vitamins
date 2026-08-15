@@ -2,8 +2,8 @@ import StarField from './StarField';
 
 export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLogout }) {
   const items = [
-    { id:'home',      label:'Home',           icon:'🏠' },
-    { id:'app',       label:'My Vitamins',    icon:'💊', requireAuth:true },
+    { id:'home',      label:'Home',           icon:'🏠', hideWhenAuth:true },
+    { id:'app',       label:'Vitamins',       icon:'💊', requireAuth:true },
     { id:'favorites', label:'Favorites',      icon:'💛', requireAuth:true },
     { id:'info',      label:'Info',           icon:'ℹ️' },
     { id:'salvation', label:'How to be Saved',icon:'🙏' },
@@ -25,7 +25,7 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLog
     }}>
       <StarField/>
       <nav style={{display:'flex', flexDirection:'column', gap:8, alignItems:'center'}}>
-        {items.filter(it => !it.requireAuth || loggedIn).map((item, i) => (
+        {items.filter(it => (!it.requireAuth || loggedIn) && !(it.hideWhenAuth && loggedIn)).map((item, i) => (
           <button key={item.id} onClick={()=>{ item.action ? onLogout() : onNavigate(item.id); onClose(); }} style={{
             background:'none', border:'none', cursor:'pointer',
             display:'flex', alignItems:'center', gap:16, padding:'14px 40px',
