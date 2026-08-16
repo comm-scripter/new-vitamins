@@ -9,7 +9,7 @@ export default function MenuOverlay({ open, onClose, onNavigate, loggedIn, onLog
     { id:'info',      label:'Info',           icon:'ℹ️' },
     { id:'salvation', label:'How to be Saved',icon:'🙏' },
     { id:'about',     label:'About',          icon:'✨', iconImage:'/icons/about-megaphone.png' },
-    { id:'feedback',  label:'Feedback',       icon:'💬' },
+    { id:'feedback',  label:'Feedback',       icon:'💬', requireAuth:true },
     { id:'logout',    label:'Log Out',        icon:'🚪', requireAuth:true, action:true },
   ];
   return (

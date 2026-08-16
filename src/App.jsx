@@ -44,7 +44,7 @@ export default function App() {
   };
 
   const handleNavigate = (p) => {
-    if ((p==='app' || p==='favorites') && !loggedIn) { setPage('login'); return; }
+    if ((p==='app' || p==='favorites' || p==='feedback') && !loggedIn) { setPage('login'); return; }
     if (p==='home' && loggedIn) { setPage('app'); return; }
     if (p.startsWith('devotional:')) {
       setDevotionalCatId(p.split(':')[1]);
