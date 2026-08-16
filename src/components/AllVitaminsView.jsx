@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { CATEGORIES, TODAY_IDX, VITAMINS, BONUS_VITAMINS, DAYS } from '../data';
+import { CATEGORIES, TODAY_IDX, VITAMINS, BONUS_VITAMINS, DAYS, DEVOTIONALS } from '../data';
 import { hexToRgb, measureTextWidth } from '../utils';
 import LargeVitaminCard from './LargeVitaminCard';
 import DrumSidebar from './DrumSidebar';
@@ -131,7 +131,7 @@ export default function AllVitaminsView({ onNavigate, savedCat, savedDay, onCatC
         </div>
         <div className="vitamins-bottom-controls">
           {dayPicker}
-          {cat && (
+          {cat && DEVOTIONALS[cat.id] && (
             <button
               className="devotional-btn-mobile"
               onClick={() => onNavigate(`devotional:${cat.id}`)}

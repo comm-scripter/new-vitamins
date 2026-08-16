@@ -1,4 +1,5 @@
 import { hexToRgb } from '../utils';
+import { DEVOTIONALS } from '../data';
 
 export default function TopicBtn({ cat, selected, onSelect, onNavigate }) {
   const r0 = hexToRgb(cat.color[0]);
@@ -28,7 +29,7 @@ export default function TopicBtn({ cat, selected, onSelect, onNavigate }) {
           color: selected ? '#f3e8ff' : '#c4b5fd',
         }}>{cat.label}</span>
       </button>
-      {selected && (
+      {selected && DEVOTIONALS[cat.id] && (
         <button
           onClick={() => onNavigate(`devotional:${cat.id}`)}
           style={{
