@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import BackButton from './BackButton';
+import { useSendFeedback } from '../hooks';
 
 export default function FeedbackPage({ onOpenMenu }) {
   const [msg, setMsg] = useState('');
   const [sent, setSent] = useState(false);
+  const { sending, error, sendFeedback } = useSendFeedback();
+
+  const handleSend = async () => {
+    if (!msg.trim() || sending) return;
+    if (await sendFeedback(msg.trim())) setSent(true);
+  };
+
   return (
     <div className="page-enter" style={{
       width:'100%', height:'100%', overflowY:'auto',
@@ -22,6 +30,7 @@ export default function FeedbackPage({ onOpenMenu }) {
               value={msg} onChange={e=>setMsg(e.target.value)}
               placeholder="Share your experience, suggestions, or a verse that changed your life..."
               rows={6}
+              disabled={sending}
               style={{
                 width:'100%', padding:'16px', borderRadius:14,
                 background:'rgba(255,255,255,0.05)', border:'1px solid rgba(168,85,247,0.3)',
@@ -29,13 +38,17 @@ export default function FeedbackPage({ onOpenMenu }) {
                 outline:'none', lineHeight:1.7,
               }}
             />
-            <button onClick={()=>{if(msg.trim())setSent(true)}} style={{
+            {error && (
+              <p style={{fontFamily:'DM Sans', fontSize:14, color:'#fca5a5'}}>{error}</p>
+            )}
+            <button onClick={handleSend} disabled={sending || !msg.trim()} style={{
               padding:'14px', borderRadius:12,
               background:'linear-gradient(135deg,#a855f7,#ec4899)',
-              color:'white', border:'none', cursor:'pointer',
+              color:'white', border:'none', cursor: sending ? 'default' : 'pointer',
               fontFamily:'DM Sans', fontSize:15, fontWeight:600,
+              opacity: sending || !msg.trim() ? 0.6 : 1,
             }}>
-              Send Feedback ✨
+              {sending ? 'Sending…' : 'Send Feedback ✨'}
             </button>
           </div>
         ) : (

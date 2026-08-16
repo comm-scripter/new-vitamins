@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { collection, doc, onSnapshot, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, doc, addDoc, onSnapshot, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
 import { auth, db } from './firebase';
 
 export function useWindowWidth() {
@@ -61,4 +61,32 @@ export function useFavorites() {
   }, [uid, favoriteIds]);
 
   return { favorites, loading, isFavorite, toggleFavorite };
+}
+
+// Writes to a top-level `feedback` collection (not user-scoped like
+// favorites) — firestore.rules only allows create, not read/update/
+// delete, so submitted messages are only visible via the Firebase console.
+export function useSendFeedback() {
+  const { user } = useAuth();
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(null);
+
+  const sendFeedback = useCallback(async (message) => {
+    if (!user) return false;
+    setSending(true);
+    setError(null);
+    try {
+      await addDoc(collection(db, 'feedback'), {
+        message, uid: user.uid, email: user.email ?? null, sentAt: serverTimestamp(),
+      });
+      return true;
+    } catch (e) {
+      setError('Something went wrong sending your feedback. Please try again.');
+      return false;
+    } finally {
+      setSending(false);
+    }
+  }, [user]);
+
+  return { sending, error, sendFeedback };
 }
