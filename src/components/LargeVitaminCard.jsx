@@ -85,7 +85,15 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
       <div style={{ width: '100%', perspective: 1200, cursor: hasQuote ? 'pointer' : 'default', outline: 'none' }}
         onClick={() => hasQuote && setFlipped(f => !f)}>
         <div style={{
-          position: 'relative', width: '100%', paddingBottom: 'calc(90% + 40px)',
+          // Was "calc(90% + 40px)" — too short for longer verses (e.g. two
+          // sentences with a reference), which relied on scrolling inside
+          // the flex:1 text region to reach the rest. That scroll has no
+          // visible scrollbar on iOS and can be blocked by the surrounding
+          // 3D flip transform, so it read as the text just being cut off.
+          // Taller card means most verses fit outright; the page itself now
+          // scrolls properly (see .vitamins-card-scroll min-height fix) for
+          // the rare card that's still taller than the viewport.
+          position: 'relative', width: '100%', paddingBottom: 'calc(100% + 120px)',
           transformStyle: 'preserve-3d',
           transition: 'transform 0.75s cubic-bezier(0.4,0,0.2,1)',
           transform: flipped ? 'rotateY(180deg)' : 'none',
@@ -119,6 +127,11 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               flex: 1, minHeight: 0, width: '100%',
               display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center',
               gap: 8, overflowY: 'auto',
+              // Backstop for the rare verse still taller than the (now much
+              // roomier) card: WebKit can otherwise block touch-scrolling on
+              // overflow content nested inside a 3D-transformed ancestor
+              // (the flip animation) unless it gets its own compositing layer.
+              WebkitOverflowScrolling: 'touch', transform: 'translateZ(0)',
             }}>
               <p style={{
                 fontFamily: 'Playfair Display',
@@ -149,6 +162,7 @@ export default function LargeVitaminCard({ vitamin, category, dayLabel }) {
               flex: 1, minHeight: 0, width: '100%',
               display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
               gap: 8, overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch', transform: 'translateZ(0)',
             }}>
               <p style={{
                 fontFamily: 'Playfair Display',
