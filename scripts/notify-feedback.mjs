@@ -2,7 +2,8 @@
 // last run and emails a summary. Runs hourly via .github/workflows/notify-feedback.yml.
 // Uses firebase-admin (service account), which bypasses firestore.rules entirely —
 // that's expected, since the feedback collection is intentionally client-unreadable.
-import admin from 'firebase-admin';
+import { initializeApp, cert } from 'firebase-admin/app';
+import { getFirestore, Timestamp } from 'firebase-admin/firestore';
 import nodemailer from 'nodemailer';
 
 const {
@@ -18,10 +19,10 @@ for (const [name, val] of Object.entries({
   if (!val) throw new Error(`Missing required env var: ${name}`);
 }
 
-admin.initializeApp({
-  credential: admin.credential.cert(JSON.parse(FIREBASE_SERVICE_ACCOUNT_KEY)),
+initializeApp({
+  credential: cert(JSON.parse(FIREBASE_SERVICE_ACCOUNT_KEY)),
 });
-const db = admin.firestore();
+const db = getFirestore();
 
 const CURSOR_REF = db.doc('_meta/feedbackNotifier');
 
@@ -32,7 +33,7 @@ async function main() {
   // first run would email every historical feedback doc (including test
   // submissions) all at once.
   if (!cursorSnap.exists) {
-    await CURSOR_REF.set({ lastNotifiedAt: admin.firestore.Timestamp.now() });
+    await CURSOR_REF.set({ lastNotifiedAt: Timestamp.now() });
     console.log('No cursor found — initialized to now. Nothing sent this run.');
     return;
   }
